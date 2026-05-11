@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Кухня Nicolle",
+      "price": 159648,
+      "image": "./Assets/img/kitchen-1.png",
+      "popular": true
+    },
+    {
+      "id": "2",
+      "name": "Кухня Teramo",
+      "price": 158122,
+      "image": "./Assets/img/kitchen-2.png",
+      "popular": true
+    },
+    {
+      "id": "3",
+      "name": "Кухня Antro",
+      "price": 249793,
+      "image": "./Assets/img/kitchen-3.png",
+      "popular": false
+    },
+    {
+      "id": "4",
+      "name": "Кухня Mix 22",
+      "price": 155539,
+      "image": "./Assets/img/kitchen-4.png",
+      "popular": true
+    }
+  ]
+}
