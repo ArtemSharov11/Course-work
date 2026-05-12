@@ -5,6 +5,8 @@
       "name": "Кухня Nicolle",
       "price": 159648,
       "image": "./Assets/img/kitchen-1.png",
+      "category": "classic",
+      "material": "МДФ",
       "popular": true
     },
     {
@@ -12,6 +14,8 @@
       "name": "Кухня Teramo",
       "price": 158122,
       "image": "./Assets/img/kitchen-2.png",
+      "category": "modern",
+      "material": "МДФ",
       "popular": true
     },
     {
@@ -19,6 +23,8 @@
       "name": "Кухня Antro",
       "price": 249793,
       "image": "./Assets/img/kitchen-3.png",
+      "category": "modern",
+      "material": "Дерево",
       "popular": false
     },
     {
@@ -26,7 +32,46 @@
       "name": "Кухня Mix 22",
       "price": 155539,
       "image": "./Assets/img/kitchen-4.png",
+      "category": "modern",
+      "material": "ЛДСП",
       "popular": true
     }
-  ]
+  ],
+  "categories": [
+    {
+      "id": "classic",
+      "name": "Классические"
+    },
+    {
+      "id": "modern",
+      "name": "Современные"
+    },
+    {
+      "id": "neoclassic",
+      "name": "Неоклассика"
+    }
+  ],
+  "users": [
+    {
+      "id": "ZpwiGB3rP5Q",
+      "name": "Шаров Артем Александрович",
+      "email": "starlightsfaq708@gmail.com",
+      "phone": "+375291797363",
+      "dob": "2006-03-22",
+      "nickname": "DarkTiger981",
+      "password": "As07051977*",
+      "role": "клиент"
+    },
+    {
+      "id": "phnoytIZfdg",
+      "name": "Шаров Артем Александрович",
+      "email": "starlightsfaq708@gmail.com",
+      "phone": "+375291797363",
+      "dob": "2000-05-08",
+      "nickname": "FastTiger201",
+      "password": "As07051977*",
+      "role": "клиент"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

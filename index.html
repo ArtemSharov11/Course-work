@@ -7,39 +7,57 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amaranth&family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="themes.css"> 
     <link rel="stylesheet" href="styles.css">  
+    <link rel="stylesheet" href="mobile.css">
     <link rel="stylesheet" href="animations.css"> 
 </head>
 <body>
 
     <header class="header">
         <div class="container header__container">
+
             <div class="header__logo">
                 <div class="font-logo-neff">NEFF</div>
-                <div class="font-logo-subtitle">Кухни и шкафы</div>
+                <div class="font-logo-subtitle" data-i18n="logo-subtitle">Кухни и шкафы</div>
             </div>
 
             <nav class="header__nav desktop-only">
                 <div class="header__nav-top">
-                    <a href="#" class="font-nav-top">франшиза</a>
-                    <a href="#" class="font-nav-top">застройщику</a>
-                    <a href="#" class="font-nav-top">дизайнеру</a>
-                    <a href="#" class="font-nav-top">обратная связь</a>
+                    <a href="#" class="font-nav-top" data-i18n="nav-franchise">франшиза</a>
+                    <a href="#" class="font-nav-top" data-i18n="nav-developer">застройщику</a>
+                    <a href="#" class="font-nav-top" data-i18n="nav-designer">дизайнеру</a>
+                    <a href="#" class="font-nav-top" data-i18n="nav-feedback">обратная связь</a>
+                    <a href="login.html" class="font-nav-top auth-nav-link" id="auth-link" style="color: var(--accent-color); font-weight: 700;">ВОЙТИ</a>
                 </div>
                 <div class="header__nav-bottom">
-                    <a href="catalog.html" class="font-nav-bottom" id="dropdown-trigger">кухни</a>
-                    <a href="#" class="font-nav-bottom">шкафы</a>
-                    <a href="#" class="font-nav-bottom">спальни</a>
-                    <a href="#" class="font-nav-bottom">ванные</a>
-                    <a href="portfolio.html" class="font-nav-bottom">портфолио</a>
-                    <a href="promos.html" class="font-nav-bottom">акции</a>
-                    <a href="#" class="font-nav-bottom">покупателям</a>
+                    <a href="catalog.html" class="font-nav-bottom" id="dropdown-trigger" data-i18n="nav-kitchens">кухни</a>
+                    <a href="#" class="font-nav-bottom" data-i18n="nav-wardrobes">шкафы</a>
+                    <a href="#" class="font-nav-bottom" data-i18n="nav-bedrooms">спальни</a>
+                    <a href="#" class="font-nav-bottom" data-i18n="nav-bathrooms">ванные</a>
+                    <a href="portfolio.html" class="font-nav-bottom" data-i18n="nav-portfolio">портфолио</a>
+                    <a href="promos.html" class="font-nav-bottom" data-i18n="nav-promos">акции</a>
+                    <a href="#" class="font-nav-bottom" data-i18n="nav-buyers">покупателям</a>
                 </div>
             </nav>
 
             <div class="header__contacts desktop-only">
                 <a href="tel:88001003131" class="font-phone">8 800 100 31 31</a>
-                <button class="btn-order">ЗАКАЗАТЬ ПРОЕКТ</button>
+                <button class="btn-order" data-i18n="btn-order">ЗАКАЗАТЬ ПРОЕКТ</button>
+            </div>
+
+            <div class="settings-controls" style="display: flex; align-items: center; gap: 15px;">
+                <!-- Переключатель языка -->
+                <div class="lang-switcher" style="margin-right: 5px;">
+                    <a href="#" class="lang-btn" data-lang="ru">RU</a> | 
+                    <a href="#" class="lang-btn" data-lang="en">EN</a>
+                </div>
+                
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <button id="impaired-toggle" class="btn-impaired">АА</button>
             </div>
 
             <div class="burger-menu" id="burger-btn">
@@ -57,7 +75,9 @@
                 </div>
                 <div class="close-menu" id="close-btn">&times;</div>
             </div>
+            
             <button class="btn-order mobile-btn">ЗАКАЗАТЬ ПРОЕКТ</button>
+            
             <nav class="mobile-nav">
                 <a href="#" class="font-nav-bottom">Кухни</a>
                 <a href="#" class="font-nav-bottom">Шкафы</a>
@@ -66,6 +86,10 @@
                 <a href="#" class="font-nav-bottom">Портфолио</a>
                 <a href="#" class="font-nav-bottom">Акции</a>
                 <a href="#" class="font-nav-bottom">Покупателям</a>
+                <a href="#" class="font-nav-top">Франшиза</a>
+                <a href="#" class="font-nav-top">Застройщику</a>
+                <a href="#" class="font-nav-top">Дизайнеру</a>
+                <a href="#" class="font-nav-top">Обратная связь</a>
             </nav>
         </div>
     </div>
@@ -74,14 +98,14 @@
         <section class="promo">
             <div class="container promo__container">
                 <div class="promo__content">
-                    <h2 class="section-title">СУПЕРРАССРОЧКА <br> 0/0/12</h2>
+                    <h2 class="section-title" data-i18n="hero-title">СУПЕРРАССРОЧКА <br> 0/0/12</h2>
                     <div class="promo__action">
                         <button class="circle-btn">
                             <img src="./Assets/icons/arrow-right-circle.png" alt="">
                         </button>
                     </div>
                     <div class="promo__description">
-                        <p class="promo__footer-text section-subtitle">
+                        <p class="promo__footer-text section-subtitle" data-i18n="hero-subtitle">
                             Мебель «NEFF» без первоначального взноса и переплаты на 12 месяцев.
                         </p>
                     </div>
@@ -792,7 +816,9 @@
 
         </div>
     </footer>
+    <script src="i18n.js"></script> 
     <script src="animations.js"></script>
-    <script src="catalog.js"></script>
+    <script src="settings.js"></script>
+    <script src="catalog.js"></script> 
 </body>
 </html>
