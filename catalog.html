@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEFF - Каталог</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth&family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">  
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="catalog.css">
+    <link rel="stylesheet" href="catalog-mobile.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__logo">
+                <a href="index.html" style="text-decoration: none;">
+                    <div class="font-logo-neff">NEFF</div>
+                    <div class="font-logo-subtitle">Кухни и шкафы</div>
+                </a>
+            </div>
+
+            <nav class="header__nav desktop-only">
+                <div class="header__nav-top">
+                    <a href="#" class="font-nav-top">франшиза</a>
+                    <a href="#" class="font-nav-top">застройщику</a>
+                    <a href="#" class="font-nav-top">дизайнеру</a>
+                    <a href="#" class="font-nav-top">обратная связь</a>
+                </div>
+                <div class="header__nav-bottom">
+                    <a href="catalog.html" class="font-nav-bottom">кухни</a>
+                    <a href="#" class="font-nav-bottom">шкафы</a>
+                    <a href="#" class="font-nav-bottom">спальни</a>
+                    <a href="#" class="font-nav-bottom">ванные</a>
+                    <a href="portfolio.html" class="font-nav-bottom">портфолио</a>
+                    <a href="promos.html" class="font-nav-bottom">акции</a>
+                    <a href="#" class="font-nav-bottom">покупателям</a>
+                </div>
+            </nav>
+
+            <div class="header__contacts desktop-only">
+                <a href="tel:88001003131" class="font-phone">8 800 100 31 31</a>
+                <button class="btn-order">ЗАКАЗАТЬ ПРОЕКТ</button>
+            </div>
+
+            <div class="burger-menu" id="burger-btn">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu">...</div>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="index.html" class="secondary-section-subtitle">Главная</a>
+                <span class="secondary-section-subtitle divider">›</span>
+                <span class="secondary-section-subtitle current">Каталог</span>
+            </nav>
+            
+            <section class="catalog-page-section">
+                
+                <header class="catalog-page-header">
+                    <h1 class="font-heading-huge">КАТАЛОГ</h1>
+                    <div class="catalog-page-intro">
+                        <p class="secondary-section-subtitle" style="width: 40rem;">Компания «NEFF» создает мебель, которая в радость!</p>
+                        <p class="secondary-section-subtitle" style="letter-spacing: 0.004rem;">Нас знают и любят в 130 городах России и стран СНГ. Вместе принесли счастье в более чем 500 000 семей, создав индивидуальные проекты кухонь, шкафов и мебели для ванных комнат.</p>
+                    </div>
+                </header>
+
+                <nav class="catalog-page-tabs">
+                    <a href="#" class="font-tab active">КУХНИ</a>
+                    <a href="#" class="font-tab">ШКАФЫ</a>
+                    <a href="#" class="font-tab">ВАННЫЕ</a>
+                    <a href="#" class="font-tab">ДИВАНЫ</a>
+                </nav>
+
+                <div class="catalog-page-grid">
+                    
+                    <article class="catalog-page-card">
+                        <div class="catalog-card-image">
+                            <span class="badge-popular">ПОПУЛЯРНОЕ</span>
+                            <img src="./Assets/img/kitchen-2.png" alt="Кухня Nicolle">
+                        </div>
+                        <div class="catalog-card-content">
+                            <h3 class="font-card-title">Кухня Nicolle</h3>
+                            <div class="catalog-card-meta">
+                                <span class="secondary-section-subtitle">Неоклассика</span>
+                                <span class="secondary-section-subtitle">МДФ</span>
+                            </div>
+                            <p class="font-card-price">от 159 648 ₽</p>
+                        </div>
+                        <div class="catalog-card-line"></div>
+                    </article>
+
+                    <article class="catalog-page-card">
+                        <div class="catalog-card-image">
+                            <span class="badge-popular">ПОПУЛЯРНОЕ</span>
+                            <img src="./Assets/img/portfolio-1.png" alt="Кухня Teramo">
+                        </div>
+                        <div class="catalog-card-content">
+                            <h3 class="font-card-title">Кухня Teramo</h3>
+                            <div class="catalog-card-meta">
+                                <span class="secondary-section-subtitle">Современные</span>
+                                <span class="secondary-section-subtitle">МДФ</span>
+                            </div>
+                            <p class="font-card-price">от 158 122 ₽</p>
+                        </div>
+                        <div class="catalog-card-line"></div>
+                    </article>
+
+                    <article class="catalog-page-card">
+                        <div class="catalog-card-image">
+                            <span class="badge-popular">ПОПУЛЯРНОЕ</span>
+                            <img src="./Assets/img/kitchen-5.png" alt="Кухня Antro">
+                        </div>
+                        <div class="catalog-card-content">
+                            <h3 class="font-card-title">Кухня Antro</h3>
+                            <div class="catalog-card-meta">
+                                <span class="secondary-section-subtitle">Современные</span>
+                                <span class="secondary-section-subtitle">МДФ</span>
+                            </div>
+                            <p class="font-card-price">от 249 793 ₽</p>
+                        </div>
+                        <div class="catalog-card-line"></div>
+                    </article>
+
+
+
+                    <article class="catalog-page-card">
+                        <div class="catalog-card-image">
+                            <span class="badge-popular">ПОПУЛЯРНОЕ</span>
+                            <img src="./Assets/img/kitchen-2.png" alt="Кухня Nicolle">
+                        </div>
+                        <div class="catalog-card-content">
+                            <h3 class="font-card-title">Кухня Mix 22</h3>
+                            <div class="catalog-card-meta">
+                                <span class="secondary-section-subtitle">Современные</span>
+                                <span class="secondary-section-subtitle">МДФ</span>
+                            </div>
+                            <p class="font-card-price">от 155 539 ₽</p>
+                        </div>
+                        <div class="catalog-card-line"></div>
+                    </article>
+
+                    <article class="catalog-page-card">
+                        <div class="catalog-card-image">
+                            <span class="badge-popular">ПОПУЛЯРНОЕ</span>
+                            <img src="./Assets/img/portfolio-1.png" alt="Кухня Teramo">
+                        </div>
+                        <div class="catalog-card-content">
+                            <h3 class="font-card-title">Кухня Spark</h3>
+                            <div class="catalog-card-meta">
+                                <span class="secondary-section-subtitle">Современные</span>
+                                <span class="secondary-section-subtitle">МДФ</span>
+                            </div>
+                            <p class="font-card-price">от 184 450 ₽</p>
+                        </div>
+                        <div class="catalog-card-line"></div>
+                    </article>
+
+                    <article class="catalog-page-card">
+                        <div class="catalog-card-image">
+                            <span class="badge-popular">ПОПУЛЯРНОЕ</span>
+                            <img src="./Assets/img/kitchen-5.png" alt="Кухня Antro">
+                        </div>
+                        <div class="catalog-card-content">
+                            <h3 class="font-card-title">Кухня Mix 22</h3>
+                            <div class="catalog-card-meta">
+                                <span class="secondary-section-subtitle">Современные</span>
+                                <span class="secondary-section-subtitle">МДФ</span>
+                            </div>
+                            <p class="font-card-price">от 155 539 ₽</p>
+                        </div>
+                        <div class="catalog-card-line"></div>
+                    </article>
+
+                    <article class="catalog-page-card">
+                        <div class="catalog-card-image">
+                            <span class="badge-popular">ПОПУЛЯРНОЕ</span>
+                            <img src="./Assets/img/kitchen-2.png" alt="Кухня Nicolle">
+                        </div>
+                        <div class="catalog-card-content">
+                            <h3 class="font-card-title">Кухня Nicolle</h3>
+                            <div class="catalog-card-meta">
+                                <span class="secondary-section-subtitle">Неоклассика</span>
+                                <span class="secondary-section-subtitle">МДФ</span>
+                            </div>
+                            <p class="font-card-price">от 159 648 ₽</p>
+                        </div>
+                        <div class="catalog-card-line"></div>
+                    </article>
+
+                    <article class="catalog-page-card">
+                        <div class="catalog-card-image">
+                            <span class="badge-popular">ПОПУЛЯРНОЕ</span>
+                            <img src="./Assets/img/portfolio-1.png" alt="Кухня Teramo">
+                        </div>
+                        <div class="catalog-card-content">
+                            <h3 class="font-card-title">Кухня Teramo</h3>
+                            <div class="catalog-card-meta">
+                                <span class="secondary-section-subtitle">Современные</span>
+                                <span class="secondary-section-subtitle">МДФ</span>
+                            </div>
+                            <p class="font-card-price">от 158 122 ₽</p>
+                        </div>
+                        <div class="catalog-card-line"></div>
+                    </article>
+
+                    <article class="catalog-page-card">
+                        <div class="catalog-card-image">
+                            <span class="badge-popular">ПОПУЛЯРНОЕ</span>
+                            <img src="./Assets/img/kitchen-5.png" alt="Кухня Antro">
+                        </div>
+                        <div class="catalog-card-content">
+                            <h3 class="font-card-title">Кухня Antro</h3>
+                            <div class="catalog-card-meta">
+                                <span class="secondary-section-subtitle">Современные</span>
+                                <span class="secondary-section-subtitle">МДФ</span>
+                            </div>
+                            <p class="font-card-price">от 249 793 ₽</p>
+                        </div>
+                        <div class="catalog-card-line"></div>
+                    </article>
+
+
+
+                    <article class="catalog-page-card">
+                        <div class="catalog-card-image">
+                            <span class="badge-popular">ПОПУЛЯРНОЕ</span>
+                            <img src="./Assets/img/kitchen-2.png" alt="Кухня Nicolle">
+                        </div>
+                        <div class="catalog-card-content">
+                            <h3 class="font-card-title">Кухня Mix 22</h3>
+                            <div class="catalog-card-meta">
+                                <span class="secondary-section-subtitle">Современные</span>
+                                <span class="secondary-section-subtitle">МДФ</span>
+                            </div>
+                            <p class="font-card-price">от 155 539 ₽</p>
+                        </div>
+                        <div class="catalog-card-line"></div>
+                    </article>
+
+                    <article class="catalog-page-card">
+                        <div class="catalog-card-image">
+                            <span class="badge-popular">ПОПУЛЯРНОЕ</span>
+                            <img src="./Assets/img/portfolio-1.png" alt="Кухня Teramo">
+                        </div>
+                        <div class="catalog-card-content">
+                            <h3 class="font-card-title">Кухня Spark</h3>
+                            <div class="catalog-card-meta">
+                                <span class="secondary-section-subtitle">Современные</span>
+                                <span class="secondary-section-subtitle">МДФ</span>
+                            </div>
+                            <p class="font-card-price">от 184 450 ₽</p>
+                        </div>
+                        <div class="catalog-card-line"></div>
+                    </article>
+
+                    <article class="catalog-page-card">
+                        <div class="catalog-card-image">
+                            <span class="badge-popular">ПОПУЛЯРНОЕ</span>
+                            <img src="./Assets/img/kitchen-5.png" alt="Кухня Antro">
+                        </div>
+                        <div class="catalog-card-content">
+                            <h3 class="font-card-title">Кухня Mix 22</h3>
+                            <div class="catalog-card-meta">
+                                <span class="secondary-section-subtitle">Современные</span>
+                                <span class="secondary-section-subtitle">МДФ</span>
+                            </div>
+                            <p class="font-card-price">от 155 539 ₽</p>
+                        </div>
+                        <div class="catalog-card-line"></div>
+                    </article>
+
+
+                    <article class="catalog-page-card">
+                        <div class="catalog-card-image">
+                            <span class="badge-popular">ПОПУЛЯРНОЕ</span>
+                            <img src="./Assets/img/kitchen-2.png" alt="Кухня Nicolle">
+                        </div>
+                        <div class="catalog-card-content">
+                            <h3 class="font-card-title">Кухня Nicolle</h3>
+                            <div class="catalog-card-meta">
+                                <span class="secondary-section-subtitle">Неоклассика</span>
+                                <span class="secondary-section-subtitle">МДФ</span>
+                            </div>
+                            <p class="font-card-price">от 159 648 ₽</p>
+                        </div>
+                        <div class="catalog-card-line"></div>
+                    </article>
+
+                    <article class="catalog-page-card">
+                        <div class="catalog-card-image">
+                            <span class="badge-popular">ПОПУЛЯРНОЕ</span>
+                            <img src="./Assets/img/portfolio-1.png" alt="Кухня Teramo">
+                        </div>
+                        <div class="catalog-card-content">
+                            <h3 class="font-card-title">Кухня Teramo</h3>
+                            <div class="catalog-card-meta">
+                                <span class="secondary-section-subtitle">Современные</span>
+                                <span class="secondary-section-subtitle">МДФ</span>
+                            </div>
+                            <p class="font-card-price">от 158 122 ₽</p>
+                        </div>
+                        <div class="catalog-card-line"></div>
+                    </article>
+
+                    <article class="catalog-page-card">
+                        <div class="catalog-card-image">
+                            <span class="badge-popular">ПОПУЛЯРНОЕ</span>
+                            <img src="./Assets/img/kitchen-5.png" alt="Кухня Antro">
+                        </div>
+                        <div class="catalog-card-content">
+                            <h3 class="font-card-title">Кухня Antro</h3>
+                            <div class="catalog-card-meta">
+                                <span class="secondary-section-subtitle">Современные</span>
+                                <span class="secondary-section-subtitle">МДФ</span>
+                            </div>
+                            <p class="font-card-price">от 249 793 ₽</p>
+                        </div>
+                        <div class="catalog-card-line"></div>
+                    </article>
+
+
+
+                    <article class="catalog-page-card">
+                        <div class="catalog-card-image">
+                            <span class="badge-popular">ПОПУЛЯРНОЕ</span>
+                            <img src="./Assets/img/kitchen-2.png" alt="Кухня Nicolle">
+                        </div>
+                        <div class="catalog-card-content">
+                            <h3 class="font-card-title">Кухня Mix 22</h3>
+                            <div class="catalog-card-meta">
+                                <span class="secondary-section-subtitle">Современные</span>
+                                <span class="secondary-section-subtitle">МДФ</span>
+                            </div>
+                            <p class="font-card-price">от 155 539 ₽</p>
+                        </div>
+                        <div class="catalog-card-line"></div>
+                    </article>
+
+                    <article class="catalog-page-card">
+                        <div class="catalog-card-image">
+                            <span class="badge-popular">ПОПУЛЯРНОЕ</span>
+                            <img src="./Assets/img/portfolio-1.png" alt="Кухня Teramo">
+                        </div>
+                        <div class="catalog-card-content">
+                            <h3 class="font-card-title">Кухня Spark</h3>
+                            <div class="catalog-card-meta">
+                                <span class="secondary-section-subtitle">Современные</span>
+                                <span class="secondary-section-subtitle">МДФ</span>
+                            </div>
+                            <p class="font-card-price">от 184 450 ₽</p>
+                        </div>
+                        <div class="catalog-card-line"></div>
+                    </article>
+
+                    <article class="catalog-page-card">
+                        <div class="catalog-card-image">
+                            <span class="badge-popular">ПОПУЛЯРНОЕ</span>
+                            <img src="./Assets/img/kitchen-5.png" alt="Кухня Antro">
+                        </div>
+                        <div class="catalog-card-content">
+                            <h3 class="font-card-title">Кухня Mix 22</h3>
+                            <div class="catalog-card-meta">
+                                <span class="secondary-section-subtitle">Современные</span>
+                                <span class="secondary-section-subtitle">МДФ</span>
+                            </div>
+                            <p class="font-card-price">от 155 539 ₽</p>
+                        </div>
+                        <div class="catalog-card-line"></div>
+                    </article>
+
+                </div>
+            </section>
+        </div>
+
+        <section class="help-selection-section">
+            <div class="container">
+                
+                <header class="help-header">
+                    <h2 class="font-heading-huge" style="text-transform: none; letter-spacing: 0.08rem; line-height: 1.15;">Поможем выбрать<br>вашу мебель</h2>
+                </header>
+
+                <div class="help-form-card">
+                    <form action="#" class="help-horizontal-form">
+                        
+                        <div class="form-main-row">
+                            <div class="form-group-h">
+                                <label class="secondary-section-subtitle">Имя</label>
+                                <input type="text" class="font-portfolio-desc" value="Ваше имя" style="margin-bottom: 0; border-bottom: 1px solid #E0E0E0;">
+                            </div>
+
+                            <div class="form-group-h" style="margin-left: 1rem;">
+                                <label class="secondary-section-subtitle">Телефон</label>
+                                <input type="tel" class="font-portfolio-desc" value="+7 (000) 000-00-00" style="border-bottom: 1px solid #E0E0E0; margin-bottom: 0;">
+                            </div>
+
+                            <div class="form-group-h" style="margin-left: 0.8rem;">
+                                <label class="secondary-section-subtitle">Город</label>
+                                <div class="select-custom-wrapper" style="border-bottom: 1px solid #E0E0E0;">
+                                    <select class="font-portfolio-desc" style="margin-bottom: 0;">
+                                        <option value="moscow">Москва</option>
+                                        <option value="spb">Санкт-Петербург</option>
+                                    </select>
+                                    <img src="./Assets/icons/select-arrows.png" class="select-icon-h" alt="">
+                                </div>
+                            </div>
+
+                            <div class="form-button-h">
+                                <button type="submit" class="btn-order">ОТПРАВИТЬ ЗАЯВКУ</button>
+                            </div>
+                        </div>
+
+                        <div class="form-footer-h">
+                            <label class="checkbox-h">
+                                <input type="checkbox" checked>
+                                <span class="checkmark-h"></span>
+                            </label>
+                            <p class="secondary-section-subtitle agreement-text-h">
+                                Согласен с обработкой персональных данных в соответствии с <a href="">Лицензионным соглашением</a>
+                            </p>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="articles-section-dark">
+            <div class="container">
+                
+                <header class="articles-dark-header">
+                    <h2 class="font-heading-huge">СТАТЬИ</h2>
+                </header>
+
+                <nav class="articles-dark-nav-wrapper">
+                    <div class="articles-dark-nav">
+                        <a href="#" class="dark-tab active" style="padding: 0.7rem 1.3rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Красивые проекты</a>
+                        <a href="#" class="dark-tab" style="padding: 0.7rem 1.3rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Звездные кухни</a>
+                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Дизайн</a>
+                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Выбор</a>
+                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Тренды</a>
+                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Разбор</a>
+                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Уход</a>
+                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Достижения</a>
+                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Кухни наших сотрудников</a>
+                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Мария в СМИ</a>
+                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Проект месяца</a>
+                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Дайджест</a>
+                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Выставки</a>
+                    </div>
+                </nav>
+
+                <div class="articles-dark-flex">
+                    
+                    <article class="article-dark-item" style="height: 25.5rem;">
+                        <div class="article-dark-img">
+                            <img src="./Assets/img/article-dark-1.png" alt="">
+                        </div>
+                        <h3 class="font-card-title">7 советов, как создать на кухне уют и красоту</h3>
+                        <div class="article-dark-line"></div>
+                    </article>
+
+                    <article class="article-dark-item" style="height: 34rem;">
+                        <div class="article-dark-img" style="height: 27rem;">
+                            <img src="./Assets/img/article-dark-2.png" alt="">
+                        </div>
+                        <h3 class="font-card-title" style="font-size: 1.3rem; line-height: 1; margin-top: 0.5rem; letter-spacing: 0.01rem;">Маленькая кухня: 6 способов сделать ее удобной</h3>
+                        <div class="article-dark-line"></div>
+                    </article>
+
+                    <article class="article-dark-item" style="height: 25.5rem;">
+                        <div class="article-dark-img" style="height: 20rem;">
+                            <img src="./Assets/img/article-dark-3.png" alt="">
+                        </div>
+                        <h3 class="font-card-title">Голубые кухни: дизайн, фото в интерьере</h3>
+                        <div class="article-dark-line"></div>
+                    </article>
+
+                </div>
+
+                <div class="articles-dark-footer">
+                    <button class="btn-outline-dark">СМОТРЕТЬ ЕЩЕ</button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <script src="animations.js"></script>
+</body>
+</html>

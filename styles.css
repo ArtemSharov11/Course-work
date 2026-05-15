@@ -158,6 +158,7 @@ body {
     color: var(--text-color);
     font-weight: 400;
     line-height: 1.4;
+    margin-bottom: 1.5rem;
     letter-spacing: 0.04rem;
 }
 
@@ -644,7 +645,6 @@ body {
 
 
 
-
 .portfolio-section {
     padding: 6.4rem 0 0 0;
     background: var(--bg-color);
@@ -682,7 +682,7 @@ body {
 }
 
 .portfolio-meta-wrapper {
-    padding-top: 3.4rem;
+    padding-top: 1.8rem;
     width: 100%;
     border-top: 1px solid #E0E0E0;
     display: flex;
@@ -953,6 +953,7 @@ body {
 .promos-date-block .font-portfolio-desc {
     font-size: 1.5rem;
     margin-bottom: 0rem;
+    margin-left: -12.4rem;
 }
 
 .promos-main {
@@ -1702,17 +1703,18 @@ body {
 }
 
 .footer__top {
-    padding-right: 1.4rem;
     justify-content: space-between;
     align-items: center;
 }
 
 .footer__socials {
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
 .social-link img {
+    width: 40px;
+    height: auto;
     transition: 0.3s;
 }
 
@@ -1853,19 +1855,6 @@ input:checked + .slider:before {
 
 
 
-
-.lang-btn {
-    text-decoration: none;
-    color: var(--secondary-text);
-    font-size: 0.85rem;
-    transition: 0.3s;
-}
-.lang-btn.active {
-    color: var(--accent-color);
-    font-weight: 700;
-    text-decoration: underline;
-}
-
 .burger-menu {
     display: none;
 }
@@ -1873,4 +1862,3 @@ input:checked + .slider:before {
 .mobile-overlay {
     display: none;
 }
-

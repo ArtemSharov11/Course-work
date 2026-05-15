@@ -19,40 +19,33 @@
 
             <div class="header__logo">
                 <div class="font-logo-neff">NEFF</div>
-                <div class="font-logo-subtitle" data-i18n="logo-subtitle">Кухни и шкафы</div>
+                <div class="font-logo-subtitle">Кухни и шкафы</div>
             </div>
 
             <nav class="header__nav desktop-only">
                 <div class="header__nav-top">
-                    <a href="#" class="font-nav-top" data-i18n="nav-franchise">франшиза</a>
-                    <a href="#" class="font-nav-top" data-i18n="nav-developer">застройщику</a>
-                    <a href="#" class="font-nav-top" data-i18n="nav-designer">дизайнеру</a>
-                    <a href="#" class="font-nav-top" data-i18n="nav-feedback">обратная связь</a>
-                    <a href="login.html" class="font-nav-top auth-nav-link" id="auth-link" style="color: var(--accent-color); font-weight: 700;">ВОЙТИ</a>
+                    <a href="#" class="font-nav-top">франшиза</a>
+                    <a href="#" class="font-nav-top">застройщику</a>
+                    <a href="#" class="font-nav-top">дизайнеру</a>
+                    <a href="#" class="font-nav-top">обратная связь</a>
                 </div>
                 <div class="header__nav-bottom">
-                    <a href="catalog.html" class="font-nav-bottom" id="dropdown-trigger" data-i18n="nav-kitchens">кухни</a>
-                    <a href="#" class="font-nav-bottom" data-i18n="nav-wardrobes">шкафы</a>
-                    <a href="#" class="font-nav-bottom" data-i18n="nav-bedrooms">спальни</a>
-                    <a href="#" class="font-nav-bottom" data-i18n="nav-bathrooms">ванные</a>
-                    <a href="portfolio.html" class="font-nav-bottom" data-i18n="nav-portfolio">портфолио</a>
-                    <a href="promos.html" class="font-nav-bottom" data-i18n="nav-promos">акции</a>
-                    <a href="#" class="font-nav-bottom" data-i18n="nav-buyers">покупателям</a>
+                    <a href="catalog.html" class="font-nav-bottom" id="dropdown-trigger">кухни</a>
+                    <a href="#" class="font-nav-bottom">шкафы</a>
+                    <a href="#" class="font-nav-bottom">спальни</a>
+                    <a href="#" class="font-nav-bottom">ванные</a>
+                    <a href="portfolio.html" class="font-nav-bottom">портфолио</a>
+                    <a href="promos.html" class="font-nav-bottom">акции</a>
+                    <a href="#" class="font-nav-bottom">покупателям</a>
                 </div>
             </nav>
 
             <div class="header__contacts desktop-only">
                 <a href="tel:88001003131" class="font-phone">8 800 100 31 31</a>
-                <button class="btn-order" data-i18n="btn-order">ЗАКАЗАТЬ ПРОЕКТ</button>
+                <button class="btn-order">ЗАКАЗАТЬ ПРОЕКТ</button>
             </div>
 
-            <div class="settings-controls" style="display: flex; align-items: center; gap: 15px;">
-                <!-- Переключатель языка -->
-                <div class="lang-switcher" style="margin-right: 5px;">
-                    <a href="#" class="lang-btn" data-lang="ru">RU</a> | 
-                    <a href="#" class="lang-btn" data-lang="en">EN</a>
-                </div>
-                
+            <div class="settings-controls">
                 <label class="theme-switch">
                     <input type="checkbox" id="theme-checkbox">
                     <span class="slider round"></span>
@@ -61,7 +54,41 @@
             </div>
 
             <div class="burger-menu" id="burger-btn">
-                <span></span><span></span><span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="dropdown-menu" id="dropdown-menu">
+            <div class="container dropdown__container">
+                <div class="dropdown__col dropdown__col--left">
+                    <a href="#" class="dropdown__link-large">Современный стиль</a>
+                    <a href="#" class="dropdown__link-large">Неоклассический стиль</a>
+                    <a href="#" class="dropdown__link-large">Классический стиль</a>
+                </div>
+
+                <div class="dropdown__divider"></div>
+
+                <div class="dropdown__col dropdown__col--middle">
+                    <a href="#" class="dropdown__link-small">Распашные</a>
+                    <a href="#" class="dropdown__link-small">Купе</a>
+                    <a href="#" class="dropdown__link-small">Dali</a>
+                    <a href="#" class="dropdown__link-small">Dante</a>
+                    <a href="#" class="dropdown__link-small">Гардеробные</a>
+                </div>
+
+                <div class="dropdown__divider"></div>
+
+                <div class="dropdown__col dropdown__col--right">
+                    <div class="dropdown__promo">
+                        <img src="./Assets/img/kitchen.png" alt="Кухня" class="dropdown__promo-img">
+                        <div class="dropdown__promo-text">
+                            <h3 class="dropdown__promo-title">Скидка 19% на топ-модели!</h3>
+                            <p class="dropdown__promo-subtitle">Модели месяца по специальной цене!</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -97,23 +124,43 @@
     <main>
         <section class="promo">
             <div class="container promo__container">
+
                 <div class="promo__content">
-                    <h2 class="section-title" data-i18n="hero-title">СУПЕРРАССРОЧКА <br> 0/0/12</h2>
+                    <h2 class="section-title">СУПЕРРАССРОЧКА <br> 0/0/12</h2>
+                    <div class="promo__line desktop-only-hidden"></div>
+                    
                     <div class="promo__action">
                         <button class="circle-btn">
-                            <img src="./Assets/icons/arrow-right-circle.png" alt="">
+                            <img src="./Assets/icons/arrow-right-circle.png" alt="Подробнее">
                         </button>
                     </div>
-                    <div class="promo__description">
-                        <p class="promo__footer-text section-subtitle" data-i18n="hero-subtitle">
+
+                     <div class="promo__description">
+                        <p class="promo__footer-text section-subtitle">
                             Мебель «NEFF» без первоначального взноса и переплаты на 12 месяцев.
                         </p>
                     </div>
                 </div>
+
                 <div class="promo__slider">
                     <div class="slider-container">
-                        <div class="slide fade active"><img src="./Assets/img/promo-slide-1.png" alt=""></div>
-                        <div class="slide fade"><img src="./Assets/img/promo-slide-2.png" alt=""></div>
+                        <div class="slide fade active">
+                            <img src="./Assets/img/promo-slide-1.png" alt="Кухня 1">
+                        </div>
+                        <div class="slide fade">
+                            <img src="./Assets/img/promo-slide-2.png" alt="Кухня 2">
+                        </div>
+
+                        <button class="slider-prev" onclick="changeSlide(-1)">
+                            <img src="./Assets/icons/arrow-left.png" alt="Назад">
+                        </button>
+                        <button class="slider-next" onclick="changeSlide(1)">
+                            <img src="./Assets/icons/arrow-right.png" alt="Вперед">
+                        </button>
+                        <div class="slider-dots">
+                            <span class="dot active" onclick="currentSlide(0)"></span>
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -121,31 +168,96 @@
 
         <section class="about-section">
             <div class="container about-wrapper">
+                
                 <div class="about-left">
                     <div class="font-heading-secondary">80 458</div>
-                    <div class="secondary-section-subtitle" data-i18n="about-stat">заказов выполнено<br>с 2008 года</div>
+                    <div class="secondary-section-subtitle">
+                        заказов выполнено<br>
+                        с 2008 года
+                    </div>
                 </div>
+
                 <div class="about-right">
-                    <h2 class="font-heading-secondary about-heading" data-i18n="about-title">Кухни на заказ от<br>фабрики «NEFF»</h2>
-                    <p class="secondary-section-subtitle" data-i18n="about-desc">
-                        Мебельная фабрика NEFF. Мы занимаемся разработкой, производством и реализацией мебели по индивидуальному проекту.
+                    <h2 class="font-heading-secondary about-heading">Кухни на заказ от<br>фабрики «NEFF»</h2>
+                    
+                    <p class="secondary-section-subtitle">
+                        Кухни на заказ от фабрики NEFF<br>
+                        Мебельная фабрика NEFF. Мы занимаемся разработкой, производством и реализацией мебели в<br> Москве и РФ. Изготовим мебель для Вас за 14 дней. Вся мебель изготавливается<br> по индивидуальному проекту.
                     </p>
-                    <button class="btn-order about-btn" data-i18n="btn-free-design">БЕСПЛАТНЫЙ ДИЗАЙН-ПРОЕКТ</button>
+
+                    <button class="btn-order about-btn">БЕСПЛАТНЫЙ ДИЗАЙН-ПРОЕКТ</button>
                 </div>
+
             </div>
         </section>
 
-         <section class="catalog-section">
+        <section class="catalog-section">
             <div class="container">
+                
                 <div class="catalog__header">
-                    <h2 class="font-heading-huge" data-i18n="catalog-title">КАТАЛОГ</h2>
+                    <h2 class="font-heading-huge">КАТАЛОГ</h2>
+                    
+                    <div class="catalog__arrows">
+
+                        <button class="circle-btn-outline">
+                            <img src="./Assets/icons/arrow-left.png" alt="Назад">
+                        </button>
+                        <button class="circle-btn-outline">
+                            
+                            <img src="./Assets/icons/arrow-right.png" alt="Вперед">
+                        </button>
+                    </div>
                 </div>
+
+                <div class="catalog__tabs-wrapper">
+                    <div class="catalog__tabs">
+                        <a href="#" class="font-tab active">КУХНИ</a>
+                        <a href="#" class="font-tab">ШКАФЫ</a>
+                        <a href="#" class="font-tab">ВАННЫЕ</a>
+                        <a href="#" class="font-tab">ДИВАНЫ</a>
+                    </div>
+                </div>
+
                 <div class="catalog__grid" id="catalog-grid">
-                    <!-- JS вставит карточки сюда -->
+                    
+                    <div class="catalog-card">
+                        <img src="./Assets/img/kitchen-1.png" alt="Кухня Nicolle" class="catalog-card__img">
+                        <div class="catalog-card__info">
+                            <h3 class="font-card-title">Кухня Nicolle</h3>
+                            <p class="font-card-price">от 159 648 ₽</p>
+                        </div>
+                    </div>
+
+                    <div class="catalog-card">
+                        <img src="./Assets/img/kitchen-2.png" alt="Кухня Teramo" class="catalog-card__img">
+                        <div class="catalog-card__info">
+                            <h3 class="font-card-title">Кухня Teramo</h3>
+                            <p class="font-card-price">от 158 122 ₽</p>
+                        </div>
+                    </div>
+
+                    <div class="catalog-card">
+                        <img src="./Assets/img/kitchen-3.png" alt="Кухня Antro" class="catalog-card__img">
+                        <div class="catalog-card__info">
+                            <h3 class="font-card-title">Кухня Antro</h3>
+                            <p class="font-card-price">от 249 793 ₽</p>
+                        </div>
+                    </div>
+
+                    <div class="catalog-card">
+                        <img src="./Assets/img/kitchen-4.png" alt="Кухня Mix 22" class="catalog-card__img">
+                        <div class="catalog-card__info">
+                            <h3 class="font-card-title">Кухня Mix 22</h3>
+                            <p class="font-card-price">от 155 539 ₽</p>
+                        </div>
+                    </div>
+
                 </div>
+
                 <div class="catalog__action">
-                    <a href="catalog.html" class="btn-outline-cyan" data-i18n="btn-more">СМОТРЕТЬ ЕЩЕ</a>
+                    <a href="catalog.html" class="btn-outline-cyan">СМОТРЕТЬ ЕЩЕ</a>
                 </div>
+
             </div>
         </section>
 
@@ -816,9 +928,8 @@
 
         </div>
     </footer>
-    <script src="i18n.js"></script> 
+
     <script src="animations.js"></script>
-    <script src="settings.js"></script>
-    <script src="catalog.js"></script> 
+    <script src="settings.js"></script> 
 </body>
 </html>

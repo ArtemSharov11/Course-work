@@ -1,0 +1,358 @@
+.breadcrumbs {
+    padding-top: 1.3rem;
+    padding-left: 0.6rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    color: var(--secondary-text);
+    transition: color 0.3s;
+}
+
+.breadcrumbs a:hover {
+    color: #00B9BE;
+}
+
+.breadcrumbs .divider {
+    margin: 0 0.6rem;
+    color: #BDBDBD;
+    font-size: 0.8rem;
+}
+
+.breadcrumbs .current {
+    color: #BDBDBD;
+    cursor: default;
+}
+
+.catalog-page-section {
+    padding-top: 3.9rem;
+    width: 100%;
+}
+
+.catalog-page-header {
+    margin-left: -0.5rem;
+    margin-bottom: 3.7rem;
+}
+
+.catalog-page-intro {
+    margin-top: 2.1rem;
+    padding-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    max-width: 63rem;
+}
+
+.catalog-page-tabs {
+    display: flex;
+    gap: 1.6rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.catalog-page-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2.5rem;
+    row-gap: 3.85rem;
+}
+
+.catalog-page-card {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.catalog-card-image {
+    position: relative;
+    width: 100%;
+    height: 27.2rem;  
+    border-radius: 1.25rem;
+    overflow: hidden;
+    margin-bottom: 0.7rem;
+}
+
+.catalog-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.badge-popular {
+    position: absolute;
+    top: 1.3rem;
+    left: 1.7rem;
+    background: var(--accent-color);
+    color: #fff;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    z-index: 5;
+}
+
+.catalog-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex-grow: 1;
+}
+
+.catalog-card-meta {
+    display: flex;
+    gap: 1.3rem;
+}
+
+.catalog-card-line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-color);
+    margin-top: 0.9rem;
+}
+
+.font-card-price {
+    padding-top: 1.4rem;
+}
+
+
+
+
+
+
+.help-selection-section {
+    background-color: var(--section-bg);
+    margin-top: 4.8rem;
+    margin-left: 12.5rem;
+    margin-right: 12.5rem;
+    padding-top: 5.7rem;
+    padding-bottom: 5.1rem;
+}
+
+.help-horizontal-form {
+    padding-bottom: 3rem;
+}
+
+.help-header {
+    padding-left: 1.2rem;
+    margin-bottom: 1.1rem;
+}
+
+.help-header h2 {
+    line-height: 1.1;
+    text-align: left;
+}
+
+.help-form-card {
+    background: var(--card-bg);
+    border-radius: 1.25rem;
+    padding: 1.3rem 0.8rem 0 1.5rem;
+    margin: 0 1.2rem;
+}
+
+.form-main-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group-h {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.form-group-h label {
+    color: #828282;
+}
+
+.form-group-h input, 
+.form-group-h select {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    padding: 0;
+}
+
+.select-custom-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.select-custom-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.select-icon-h {
+    position: absolute;
+    right: 1rem;
+    top: 0rem;
+    height: auto;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.form-button-h {
+    flex-shrink: 0;
+}
+
+.form-button-h .btn-order {
+    margin-top: 1rem;
+    padding: 1.1rem 2.9rem;
+    font-size: 0.7rem;
+}
+
+.form-footer-h {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-top: 1.3rem;
+}
+
+.checkbox-h input {
+    width: 18px;
+    height: 18px;
+    accent-color: #00B9BE;
+    cursor: pointer;
+}
+
+.agreement-text-h {
+    font-size: 0.75rem;
+    letter-spacing: 0.002rem;
+    color: #828282;
+}
+
+.agreement-text-h a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+.articles-section-dark {
+    background-color: #0F0F0F;
+    margin: 0 12.5rem;
+    padding: 9.5rem 1.2rem 8.6rem 1.2rem;
+    color: #FFFFFF;
+}
+
+.articles-dark-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1.6rem;
+}
+
+.articles-dark-header h2 {
+    color: #FFFFFF;
+}
+
+.articles-dark-nav-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-bottom: 3.5rem;
+}
+
+.articles-dark-nav-wrapper::-webkit-scrollbar 
+{ 
+    display: none; 
+}
+
+.articles-dark-nav {
+    display: flex;
+    gap: 0.4rem;
+    width: max-content;
+}
+
+.dark-tab {
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 0.4rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 0.75rem;
+    transition: 0.3s;
+}
+
+.dark-tab:hover, .dark-tab.active {
+    background: rgba(255, 255, 255, 0.15);
+    color: #FFFFFF;
+}
+
+.articles-dark-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+    width: 100%;
+}
+
+.article-dark-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-dark-img {
+    width: 100%;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+}
+
+.article-dark-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.article-dark-item .font-card-title {
+    color: #FFFFFF;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.02rem;
+}
+
+.article-dark-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.30);
+    margin-top: auto;
+}
+
+.articles-dark-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.4rem;
+}
+
+.btn-outline-dark {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #FFFFFF;
+    padding: 1.1rem 9.1rem;
+    border-radius: 0.65rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-outline-dark:hover {
+    background: #FFFFFF;
+    color: #0F0F0F;
+}
