@@ -4,15 +4,10 @@
 }
 
 .promos-page-title {
-    padding-bottom: 2.5rem;
-    border-bottom: 0.1rem solid var(--border-color);
-    margin-bottom: 4rem;
-    margin-top: 1.6rem;
-}
-
-.font-heading-huge {
     padding-bottom: 2rem;
+    border-bottom: 0.1rem solid var(--border-color);
     margin-bottom: 1.8rem;
+    margin-top: 1.6rem;
 }
 
 .promos-page-layout {
@@ -106,4 +101,24 @@
 
 body.dark-theme .circle-btn-outline img {
     filter: invert(1);
+}
+
+.addresses-section {
+    margin-bottom: 5.2rem;
+}
+
+.addresses-header {
+    margin-bottom: 2rem;
+}
+
+.address-card__info {
+    gap: 0;
+}
+
+.address-details {
+    margin-top: 0.8rem;
+}
+
+.design-info {
+    padding-top: 4.8rem;
 }
