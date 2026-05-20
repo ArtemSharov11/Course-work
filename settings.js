@@ -27,4 +27,26 @@ document.addEventListener('DOMContentLoaded', () => {
         const state = body.classList.contains('visually-impaired') ? 'on' : 'off';
         localStorage.setItem('impaired', state);
     });
+    const authLinks = document.querySelectorAll('.auth-nav-link');
+    const currentUserStr = localStorage.getItem('currentUser');
+
+    if (currentUserStr) {
+        const currentUser = JSON.parse(currentUserStr);
+        
+        authLinks.forEach(link => {
+            link.textContent = `ВЫЙТИ (${currentUser.nickname})`;
+            link.href = "#";
+            
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                localStorage.removeItem('currentUser');
+                window.location.reload();
+            });
+        });
+    } else {
+        authLinks.forEach(link => {
+            link.textContent = "ВОЙТИ";
+            link.href = "login.html";
+        });
+    }
 });

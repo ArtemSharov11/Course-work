@@ -62,7 +62,8 @@
 
 .catalog-page-card {
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
+    
 }
 
 .catalog-card-image {

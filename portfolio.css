@@ -27,7 +27,6 @@
 }
 
 .portfolio-page {
-    padding-bottom: 6rem;
     background-color: var(--bg-color);
 }
 
@@ -235,3 +234,158 @@ body.dark-theme .pagination__item a {
 body.dark-theme .pagination__item--arrow img {
     filter: brightness(1.5);
 }
+
+
+
+
+.addresses-section {
+    margin-top: 0;
+    padding-top: 0.2rem;
+}
+
+.design-order {
+    min-height: 42rem; 
+    background-image: url('./Assets/img/design-bg.png');
+    background-repeat: no-repeat;
+    background-position: center top; 
+    background-size: cover;
+    background-attachment: scroll;
+    display: flex;
+    margin: 5.1rem 11.6rem 1rem 11.6rem;
+    padding-top: 5.4rem;
+}
+
+.design-order__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.design-order__info {
+    flex: 1;
+}
+
+.design-order__info .font-heading-huge {
+    color: #FFFFFF;
+    line-height: 1.1;
+    text-transform: none;
+    letter-spacing: 0.1rem;
+}
+
+.design-order__card {
+    width: 38.5rem;
+    max-height: 31.3rem; 
+    background: #FFFFFF;
+    border-radius: 0.9rem;
+    margin-right: 0.5rem;
+    padding: 3.3rem 0 0 1.8rem;
+    box-shadow: 0 1.2rem 2.5rem rgba(0, 0, 0, 0.1);
+}
+
+.design-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.design-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    border-bottom: 0.1rem solid var(--border-color);
+}
+
+.design-form__group label {
+    color: #757575;
+}
+
+.design-form__input, 
+.design-form__select {
+    border: none;
+    outline: none;
+    padding: 0.5rem 0;
+    background: transparent;
+    width: 100%;
+    color: var(--text-color);
+}
+
+.design-form__input::placeholder {
+    color: var(--text-color);
+}
+
+.design-form__select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-right: 1.6rem;
+}
+
+.design-form__select {
+    appearance: none;
+    cursor: pointer;
+}
+
+.design-form__select-icon {
+    position: absolute;
+    right: 0.5rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-right: 2px solid #666;
+    border-bottom: 2px solid #666;
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+.design-form__agreement {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.form-agreement {
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+    padding-left: 0rem;
+}
+
+.design-form__agreement p {
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+.custom-checkbox {
+    position: relative;
+    cursor: pointer;
+    width: 1.3rem;
+    height: 1.3rem;
+    flex-shrink: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: var(--accent-color);
+    border-radius: 0.3rem;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    left: 0.4rem; 
+    top: 0.2rem;
+    width: 1rem; 
+    height: 0.7rem;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.design-form__btn {
+    width: fit-content;
+    padding: 1.1rem 2.6rem;
+    margin-top: 1rem;
+}
+

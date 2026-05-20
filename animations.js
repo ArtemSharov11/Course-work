@@ -1,101 +1,149 @@
-const burgerBtn = document.getElementById('burger-btn');
-const closeBtn = document.getElementById('close-btn');
-const mobileMenu = document.getElementById('mobile-menu');
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // ==========================================
+    // 1. БУРГЕР-МЕНЮ (ДЛЯ МОБИЛЬНОЙ ВЕРСИИ)
+    // ==========================================
+    const burgerButton = document.getElementById('burger-btn');
+    const closeButton = document.getElementById('close-btn');
+    const mobileMenuOverlay = document.getElementById('mobile-menu');
 
-burgerBtn.addEventListener('click', () => {
-    mobileMenu.classList.add('is-open');
-    burgerBtn.classList.add('is-active');
-});
+    // Если на странице есть кнопка бургера и само меню
+    if (burgerButton && mobileMenuOverlay) {
+        burgerButton.addEventListener('click', function() {
+            mobileMenuOverlay.classList.add('is-open');
+            burgerButton.classList.add('is-active');
+        });
+    }
 
-closeBtn.addEventListener('click', () => {
-    mobileMenu.classList.remove('is-open');
-    burgerBtn.classList.remove('is-active');
-});
+    // Если на странице есть кнопка закрытия
+    if (closeButton && mobileMenuOverlay) {
+        closeButton.addEventListener('click', function() {
+            mobileMenuOverlay.classList.remove('is-open');
+            // Убираем анимацию крестика у кнопки бургера, если она есть
+            if (burgerButton) {
+                burgerButton.classList.remove('is-active');
+            }
+        });
+    }
 
 
-document.addEventListener('DOMContentLoaded', () => {
+    // ==========================================
+    // 2. ВЫПАДАЮЩЕЕ МЕНЮ В ШАПКЕ (КАТАЛОГ)
+    // ==========================================
     const dropdownTrigger = document.getElementById('dropdown-trigger');
     const dropdownMenu = document.getElementById('dropdown-menu');
 
-    dropdownTrigger.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        dropdownMenu.classList.toggle('is-active');
-    });
+    if (dropdownTrigger && dropdownMenu) {
+        dropdownTrigger.addEventListener('click', function(event) {
+            event.preventDefault(); // Чтобы страница не прыгала вверх
+            event.stopPropagation(); // Чтобы клик не уходил дальше
+            
+            dropdownMenu.classList.toggle('is-active');
+        });
 
-    document.addEventListener('click', (e) => {
-        if (!dropdownMenu.contains(e.target) && !dropdownTrigger.contains(e.target)) {
-            dropdownMenu.classList.remove('is-active');
-        }
-    });
+        // Закрытие меню при клике в любое другое место экрана
+        document.addEventListener('click', function(event) {
+            const isClickInsideMenu = dropdownMenu.contains(event.target);
+            const isClickOnTrigger = dropdownTrigger.contains(event.target);
 
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            dropdownMenu.classList.remove('is-active');
-        }
-    });
-});
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const loadMoreBtn = document.getElementById('load-more-btn');
-    const catalogGrid = document.getElementById('catalog-grid');
-    const catalogSection = document.querySelector('.catalog-section');
-
-    if (loadMoreBtn && catalogGrid) {
-        const initialCardsHTML = catalogGrid.innerHTML;
-        let isExpanded = false; 
-
-        loadMoreBtn.addEventListener('click', () => {
-            if (!isExpanded) {          
-                catalogGrid.innerHTML += initialCardsHTML;
-                loadMoreBtn.textContent = 'СВЕРНУТЬ';
-                isExpanded = true;
-                
-            } else {          
-                catalogGrid.innerHTML = initialCardsHTML;
-                loadMoreBtn.textContent = 'СМОТРЕТЬ ЕЩЕ';
-                isExpanded = false;
-                catalogSection.scrollIntoView({ behavior: 'smooth' });
+            if (!isClickInsideMenu && !isClickOnTrigger) {
+                dropdownMenu.classList.remove('is-active');
             }
         });
+
+        // Закрытие меню при нажатии на клавишу Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                dropdownMenu.classList.remove('is-active');
+            }
+        });
+    }
+
+
+    // ==========================================
+    // 3. АККОРДЕОН (СЕКЦИЯ "ПРОЦЕСС" НА ГЛАВНОЙ)
+    // ==========================================
+    const processSteps = document.querySelectorAll('.process-step');
+
+    if (processSteps.length > 0) {
+        processSteps.forEach(function(step) {
+            step.addEventListener('click', function() {
+                // Если хочешь, чтобы при открытии одного шага другой закрывался,
+                // раскомментируй строки ниже:
+                /*
+                processSteps.forEach(function(item) {
+                    item.classList.remove('is-active');
+                });
+                */
+                step.classList.toggle('is-active');
+            });
+        });
+    }
+
+
+    // ==========================================
+    // 4. ИНИЦИАЛИЗАЦИЯ СЛАЙДЕРА
+    // ==========================================
+    const allSlides = document.querySelectorAll('.slide');
+    if (allSlides.length > 0) {
+        // Показываем самый первый слайд при загрузке
+        showSlides(slideIndex);
     }
 });
 
 
+// ==========================================
+// 5. ЛОГИКА СЛАЙДЕРА (ГЛОБАЛЬНЫЕ ФУНКЦИИ)
+// Эти функции вынесены из DOMContentLoaded, чтобы 
+// атрибуты onclick="changeSlide(1)" в HTML могли их найти.
+// ==========================================
 let slideIndex = 0;
-const slides = document.querySelectorAll('.slide');
-const dots = document.querySelectorAll('.dot');
 
-function showSlides(n) {
-    if (n >= slides.length) slideIndex = 0;
-    if (n < 0) slideIndex = slides.length - 1;
+function showSlides(index) {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    
+    // Если на этой странице нет слайдов, ничего не делаем
+    if (slides.length === 0) {
+        return;
+    }
 
-    slides.forEach(slide => slide.classList.remove('active'));
-    dots.forEach(dot => dot.classList.remove('active'));
+    // Если номер слайда больше количества слайдов — переходим к первому
+    if (index >= slides.length) {
+        slideIndex = 0;
+    }
+    // Если номер меньше нуля — переходим к последнему
+    if (index < 0) {
+        slideIndex = slides.length - 1;
+    }
 
-    slides[slideIndex].classList.add('active');
-    dots[slideIndex].classList.add('active');
-}
-
-function changeSlide(n) {
-    showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    const steps = document.querySelectorAll('.process-step');
-
-    steps.forEach(step => {
-        step.addEventListener('click', () => {
-            // Если хочешь, чтобы открыт был только один — раскомментируй строку ниже:
-            // steps.forEach(s => s.classList.remove('is-active'));
-            
-            step.classList.toggle('is-active');
-        });
+    // Скрываем все слайды
+    slides.forEach(function(slide) {
+        slide.classList.remove('active');
     });
-});
+
+    // Убираем активный класс у всех точек
+    dots.forEach(function(dot) {
+        dot.classList.remove('active');
+    });
+
+    // Показываем нужный слайд и активируем нужную точку
+    if (slides[slideIndex]) {
+        slides[slideIndex].classList.add('active');
+    }
+    if (dots[slideIndex]) {
+        dots[slideIndex].classList.add('active');
+    }
+}
+
+// Функция для кнопок "Вперед" и "Назад"
+function changeSlide(step) {
+    slideIndex = slideIndex + step;
+    showSlides(slideIndex);
+}
+
+// Функция для клика по конкретной точке
+function currentSlide(index) {
+    slideIndex = index;
+    showSlides(slideIndex);
+}

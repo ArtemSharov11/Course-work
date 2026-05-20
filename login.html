@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth&family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="themes.css"> 
+    <link rel="stylesheet" href="styles.css">  
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+
+            <div class="header__logo">
+                <div class="font-logo-neff">NEFF</div>
+                <div class="font-logo-subtitle">Кухни и шкафы</div>
+            </div>
+
+            <nav class="header__nav desktop-only">
+                <div class="header__nav-top">
+                    <a href="#" class="font-nav-top">франшиза</a>
+                    <a href="#" class="font-nav-top">застройщику</a>
+                    <a href="#" class="font-nav-top">дизайнеру</a>
+                    <a href="#" class="font-nav-top">обратная связь</a>
+                </div>
+                <div class="header__nav-bottom">
+                    <a href="catalog.html" class="font-nav-bottom" id="dropdown-trigger">кухни</a>
+                    <a href="#" class="font-nav-bottom">шкафы</a>
+                    <a href="#" class="font-nav-bottom">спальни</a>
+                    <a href="#" class="font-nav-bottom">ванные</a>
+                    <a href="portfolio.html" class="font-nav-bottom">портфолио</a>
+                    <a href="promos.html" class="font-nav-bottom">акции</a>
+                    <a href="#" class="font-nav-bottom">покупателям</a>
+                </div>
+            </nav>
+
+            <div class="header__contacts desktop-only">
+                <a href="tel:88001003131" class="font-phone">8 800 100 31 31</a>
+                <button class="btn-order">ЗАКАЗАТЬ ПРОЕКТ</button>
+            </div>
+
+            <div class="settings-controls">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <button id="impaired-toggle" class="btn-impaired">АА</button>
+            </div>
+
+            <div class="burger-menu" id="burger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="dropdown-menu" id="dropdown-menu">
+            <div class="container dropdown__container">
+                <div class="dropdown__col dropdown__col--left">
+                    <a href="#" class="dropdown__link-large">Современный стиль</a>
+                    <a href="#" class="dropdown__link-large">Неоклассический стиль</a>
+                    <a href="#" class="dropdown__link-large">Классический стиль</a>
+                </div>
+
+                <div class="dropdown__divider"></div>
+
+                <div class="dropdown__col dropdown__col--middle">
+                    <a href="#" class="dropdown__link-small">Распашные</a>
+                    <a href="#" class="dropdown__link-small">Купе</a>
+                    <a href="#" class="dropdown__link-small">Dali</a>
+                    <a href="#" class="dropdown__link-small">Dante</a>
+                    <a href="#" class="dropdown__link-small">Гардеробные</a>
+                </div>
+
+                <div class="dropdown__divider"></div>
+
+                <div class="dropdown__col dropdown__col--right">
+                    <div class="dropdown__promo">
+                        <img src="./Assets/img/kitchen.png" alt="Кухня" class="dropdown__promo-img">
+                        <div class="dropdown__promo-text">
+                            <h3 class="dropdown__promo-title">Скидка 19% на топ-модели!</h3>
+                            <p class="dropdown__promo-subtitle">Модели месяца по специальной цене!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="get-design-section" style="padding-top: 5rem; min-height: 100vh;">
+        <div class="container design-wrapper" style="justify-content: center;">
+            <div class="design-card auth-card" style="width: 35rem; margin: 0 auto;">
+                <h2 class="font-heading-huge" style="font-size: 3rem; text-transform: none; margin-bottom: 2rem;">Вход</h2>
+                
+                <form id="login-form" class="design-form">
+                    
+                    <div class="form-group input-wrapper">
+                        <label class="secondary-section-subtitle">Email</label>
+                        <input type="email" id="login-email" class="font-portfolio-desc form-input" placeholder="example@mail.com" required>
+                        <span class="error-msg"></span>
+                    </div>
+
+                    <div class="form-group input-wrapper">
+                        <label class="secondary-section-subtitle">Пароль</label>
+                        <input type="password" id="login-password" class="font-portfolio-desc form-input" placeholder="Введите пароль" required>
+                        <span class="error-msg"></span>
+                    </div>
+
+                    <button type="submit" id="btn-login" class="btn-order design-submit-btn" style="margin-top: 1rem;">ВОЙТИ</button>
+                </form>
+                
+                <p class="secondary-section-subtitle" style="margin-top: 1.5rem; text-align: center;">
+                    Нет аккаунта? <a href="register.html" style="color: var(--accent-color);">Зарегистрироваться</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer" style="padding-left: 1.8rem;">
+        <div class="container">
+            
+            <div class="footer__row footer__top">
+                <div class="header__logo">
+                    <div class="font-logo-neff">NEFF</div>
+                    <div class="font-logo-subtitle">Кухни и шкафы</div>
+                </div>
+                <div class="footer__socials">
+                    <a href="#" class="social-link"><img src="./Assets/icons/instagram.png" alt="Inst"></a>
+                    <a href="#" class="social-link"><img src="./Assets/icons/vk.png" alt="VK"></a>
+                </div>
+            </div>
+
+            <div class="footer__row footer__nav" style="margin-bottom: 1rem;">
+                <div class="footer__nav-contacts">
+                    <p class="secondary-section-subtitle">Звонок по России бесплатно</p>
+                    <p href="tel:88001003131" class="font-portfolio-desc" style="letter-spacing: 0.03rem; margin-bottom: 1.1rem;">8 800 100 31 31</p>
+                    <button class="btn-order footer-btn">ЗАДАТЬ ВОПРОС</button>
+                </div>
+
+                <div class="footer__nav-cols">
+                    <div class="footer__col" style="margin-right: 7.7rem;">
+                        <h4 class="font-nav-bottom">КУХНИ</h4>
+                        <a href="#" class="secondary-section-subtitle">Современные</a>
+                        <a href="#" class="secondary-section-subtitle">Классические</a>
+                        <a href="#" class="secondary-section-subtitle">Кухни неоклассика</a>
+                        <a href="#" class="secondary-section-subtitle">Мебель для ванных</a>
+                    </div>
+                    <div class="footer__col" style="margin-right: 6.6rem; margin-bottom: 0.8rem;">
+                        <h4 class="font-nav-bottom">ШКАФЫ</h4>
+                        <a href="#" class="secondary-section-subtitle">Выполненные проекты</a>
+                        <a href="#" class="secondary-section-subtitle">Полезные статьи</a>
+                        <a href="#" class="secondary-section-subtitle">Отзывы</a>
+                        <a href="#" class="secondary-section-subtitle">Дизайн кухни</a>
+                    </div>
+                    <div class="footer__col" style="margin-right: 6.5rem;">
+                        <h4 class="font-nav-bottom">ДЕТСКИЕ</h4>
+                        <a href="#" class="secondary-section-subtitle">Выполненные проекты</a>
+                        <a href="#" class="secondary-section-subtitle">Полезные статьи</a>
+                        <a href="#" class="secondary-section-subtitle">Отзывы</a>
+                        <a href="#" class="secondary-section-subtitle">Дизайн кухни</a>
+                    </div>
+                    <div class="footer__col" style="margin-right: 7.3rem;">
+                        <h4 class="font-nav-bottom">СПАЛЬНИ</h4>
+                        <a href="#" class="secondary-section-subtitle">Выполненные проекты</a>
+                        <a href="#" class="secondary-section-subtitle">Полезные статьи</a>
+                        <a href="#" class="secondary-section-subtitle">Отзывы</a>
+                        <a href="#" class="secondary-section-subtitle">Дизайн кухни</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__row footer__info">
+                <div class="footer__info-left">
+                    <p class="secondary-section-subtitle" style="font-size: 0.75rem; letter-spacing: 0rem;">
+                        Copyright © 2002–2023 Мебельная фабрика NEFF — кухонная мебель, дизайн кухни, каталог кухонной мебели.
+                    </p>
+                </div>
+                <div class="footer__info-middle">
+                    <p class="secondary-section-subtitle" style="font-size: 0.75rem; letter-spacing: 0rem;">Офис в г. Москва: 115280, г. Москва, ул. Ленинская Слобода, д.19, БЦ Омега Плаза, 4 этаж, офис 4066</p>
+                    <p class="secondary-section-subtitle" style="font-size: 0.75rem; letter-spacing: 0rem;">Для направления предложений о сотрудничестве с ООО «NEFF»: <br> tender@marya.ru</p>
+                    <p class="secondary-section-subtitle" style="font-size: 0.75rem; letter-spacing: 0rem;">Данные о проведении СОУТ</p>
+                </div>
+                <div class="footer__info-right">
+                    <p class="secondary-section-subtitle" style="width: 27rem; font-size: 0.75rem; letter-spacing: 0rem;">Для направления запросов на изготовление мебели (юридические лица, застройщики): <br> b2b@marya.com</p>
+                    <p class="secondary-section-subtitle" style="font-size: 0.75rem;">Политика конфиденциальности</p>
+                </div>
+            </div>
+
+            <div class="footer__row footer__warning">
+                <p class="secondary-section-subtitle"style="font-size: 0.75rem; letter-spacing: 0rem; line-height: 1.55">
+                    Обращаем ваше внимание! <br>
+                    Актуальную информацию по доступности элементов кухни, цветовых решений, а также товаров для комплектации уточняйте у менеджеров—дизайнеров в студиях или онлайн консультанта. На сайте указана средняя стоимость моделей в базовой компоновке по России и странам СНГ. Точная стоимость выбранной вами кухни определяется регионом, в котором осуществляется продажа, и комплектацией гарнитура. Компания «NEFF» осуществляет взаимодействие с клиентами через партнерскую розничную сеть, расчет стоимости модели и приобретение продукции возможно в любой выбранной вами Кухонной студии.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+    <script src="auth.js"></script>
+</body>
+</html>
