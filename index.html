@@ -49,12 +49,11 @@
 
             <div class="header__contacts desktop-only">
                 <a href="tel:88001003131" class="font-phone">8 800 100 31 31</a>
-                <button class="btn-order" data-i18n="btn-order">ЗАКАЗАТЬ ПРОЕКТ</button>
+                <button class="btn-order" data-open-modal="modal-request" data-i18n="btn-order">ЗАКАЗАТЬ ПРОЕКТ</button>
             </div>
 
             <div class="settings-controls" style="display: flex; align-items: center; gap: 15px;">
-                <!-- Переключатель языка -->
-                <div class="lang-switcher" style="margin-right: 5px;">
+                    <div class="lang-switcher" style="margin-right: 5px;">
                     <a href="#" class="lang-btn" data-lang="ru">RU</a> | 
                     <a href="#" class="lang-btn" data-lang="en">EN</a>
                 </div>
@@ -282,11 +281,11 @@
                             <p class="secondary-section-subtitle">
                                 Наши замерщики приедут в удобное для Вас время
                             </p>
-                            <button class="btn-order process-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                            <button class="btn-order process-btn" data-open-modal="modal-request">ОСТАВИТЬ ЗАЯВКУ</button>
                         </div>
                     </div>
 
-                    <div class="process-step" style="height: 6rem;">
+                    <div class="process-step">
                         <div class="step-header">
                             <h3 class="font-portfolio-desc" style="margin-bottom: 0;">
                                 <span class="step-num">02.</span> Бесплатный дизайн-проект и визуализация
@@ -295,11 +294,11 @@
                         </div>
                         <div class="step-body">
                             <p class="secondary-section-subtitle">Разработаем проект мечты.</p>
-                            <button class="btn-order process-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                            <button class="btn-order process-btn" data-open-modal="modal-request">ОСТАВИТЬ ЗАЯВКУ</button>
                         </div>
                     </div>
 
-                    <div class="process-step" style="height: 6rem">
+                    <div class="process-step">
                         <div class="step-header">
                             <h3 class="font-portfolio-desc" style="margin-bottom: 0;">
                                 <span class="step-num">03.</span> Производство мебели
@@ -308,11 +307,11 @@
                         </div>
                         <div class="step-body">
                             <p class="secondary-section-subtitle">Собственное производство.</p>
-                            <button class="btn-order process-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                            <button class="btn-order process-btn" data-open-modal="modal-request">ОСТАВИТЬ ЗАЯВКУ</button>
                         </div>
                     </div>
 
-                    <div class="process-step" style="height: 7.8rem;">
+                    <div class="process-step">
                         <div class="step-header">
                             <h3 class="font-portfolio-desc" style="margin-bottom: 0;">
                                 <span class="step-num">04.</span> Доставка
@@ -321,7 +320,7 @@
                         </div>
                         <div class="step-body">
                             <p class="secondary-section-subtitle">Доставим бережно и в срок.</p>
-                            <button class="btn-order process-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                            <button class="btn-order process-btn" data-open-modal="modal-request">ОСТАВИТЬ ЗАЯВКУ</button>
                         </div>
                     </div>
 
@@ -334,7 +333,7 @@
                         </div>
                         <div class="step-body">
                             <p class="secondary-section-subtitle">Профессиональный монтаж.</p>
-                            <button class="btn-order process-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                            <button class="btn-order process-btn" data-open-modal="modal-request">ОСТАВИТЬ ЗАЯВКУ</button>
                         </div>
                     </div>
 
@@ -428,7 +427,7 @@
                 
                 <div class="why-neff__main">
                     <h2 class="section-title why-neff__title">Почему кухню стоит<br>заказать в «NEFF»?</h2>
-                    <button class="btn-order why-neff__btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                    <button class="btn-order why-neff__btn" data-open-modal="modal-request">ОСТАВИТЬ ЗАЯВКУ</button>
                 </div>
 
                 <div class="why-neff__benefits">
@@ -822,6 +821,76 @@
 
         </div>
     </footer>
+    <div id="modal-request" class="modal-drawer">
+        <div class="modal-drawer__overlay"></div>
+        
+        <div class="modal-drawer__content">
+            <button class="modal-close-btn">&times;</button>
+            <h2 class="font-heading-huge" style="font-size: 3rem; margin-bottom: 1.6rem; letter-spacing: 0.02rem;">ЗАЯВКА</h2>
+            <div class="service-selector">
+                <div class="service-card active">
+                    <div class="service-card__header">
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                        </label>
+                        <div class="info-icon">i</div>
+                    </div>
+                    <p class="service-card__text">Бесплатный<br>дизайн-проект</p>
+                </div>
+
+                <div class="service-card active">
+                    <div class="service-card__header">
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                        </label>
+                        <div class="info-icon">i</div>
+                    </div>
+                    <p class="service-card__text">Бесплатный<br>дизайн-проект</p>
+                </div>
+            </div>
+
+            <form class="modal-form">
+                <div class="modal-input-group">
+                    <label class="secondary-section-subtitle">Имя</label>
+                    <input type="text" placeholder="Ваше имя" class="modal-input">
+                </div>
+                <div class="modal-input-group">
+                    <label class="secondary-section-subtitle">Телефон</label>
+                    <input type="tel" placeholder="+7 (000) 000-00-00" class="modal-input" style="letter-spacing: -0.02rem;">
+                </div>
+                
+                <div class="modal-input-group">
+                    <label class="secondary-section-subtitle">Город</label>
+                    <div class="select-wrapper" style="position: relative;">
+                        <select class="modal-input" style="appearance: none; cursor: pointer; margin-top: 0.2rem;">
+                            <option>Москва и область</option>
+                            <option>Санкт-Петербург</option>
+                        </select>
+                        <img src="./Assets/icons/select-arrows.png" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); pointer-events: none; width: 12px;">
+                    </div>
+                </div>
+
+                <div class="additional-trigger" id="toggle-extra">ДОПОЛНИТЕЛЬНО +</div>
+                <div id="extra-fields" style="display: none; margin-bottom: 2rem;">
+                    <textarea placeholder="Ваш комментарий..." class="modal-input" style="border: 1px solid var(--border-color); height: 100px; padding: 10px;"></textarea>
+                </div>
+
+                <div class="form-agreement" style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 3rem; padding-left: 0.5rem;">
+                    <label class="checkbox-container">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                    <p class="secondary-section-subtitle" style="font-size: 0.75rem; line-height: 1.2;">
+                        Согласен с обработкой персональных данных в соответствии с <a href="#" style="color: inherit;">Лицензионным соглашением</a>
+                    </p>
+                </div>
+
+                <button type="submit" class="btn-order" style="width: 100%; margin-left: 0.5rem; padding: 1rem 17.7rem;">ОТПРАВИТЬ ЗАЯВКУ</button>
+            </form>
+        </div>
+    </div>
     <script src="i18n.js"></script> 
     <script src="animations.js"></script>
     <script src="settings.js"></script>

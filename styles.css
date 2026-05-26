@@ -236,12 +236,13 @@ body {
 }
 
 .btn-order {
+    white-space: nowrap;
     display: inline-flex;
     padding: 0.9rem 1.25rem;
     min-width: 9.625rem;
     justify-content: center;
     align-items: center;
-    border-radius: 0.65625rem;
+    border-radius: 0.66rem;
     background: #00B9BE;
     border: none;
     cursor: pointer;

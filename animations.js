@@ -1,116 +1,102 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    const burgerButton = document.getElementById('burger-btn');
-    const closeButton = document.getElementById('close-btn');
-    const mobileMenuOverlay = document.getElementById('mobile-menu');
+    // 1. УНИВЕРСАЛЬНЫЕ МОДАЛЬНЫЕ ОКНА (ВЫЕЗД СПРАВА)
+    const openModal = (modalId) => {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.classList.add('is-open');
+            document.body.style.overflow = 'hidden'; // Запрет скролла сайта
+        }
+    };
 
-    if (burgerButton && mobileMenuOverlay) {
-        burgerButton.addEventListener('click', function() {
-            mobileMenuOverlay.classList.add('is-open');
+    const closeModal = (modalElement) => {
+        modalElement.classList.remove('is-open');
+        document.body.style.overflow = ''; // Возврат скролла
+    };
+
+    // Слушаем клики на кнопки открытия
+    document.addEventListener('click', (e) => {
+        const trigger = e.target.closest('[data-open-modal]');
+        if (trigger) {
+            e.preventDefault();
+            const id = trigger.getAttribute('data-open-modal');
+            openModal(id);
+        }
+    });
+
+    // Закрытие (на крестик или фон)
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal-close-btn') || e.target.classList.contains('modal-drawer__overlay')) {
+            const activeModal = e.target.closest('.modal-drawer');
+            closeModal(activeModal);
+        }
+    });
+
+    // Переключатель "Дополнительно" внутри модалки
+    const extraTrigger = document.getElementById('toggle-extra');
+    const extraFields = document.getElementById('extra-fields');
+    if (extraTrigger && extraFields) {
+        extraTrigger.addEventListener('click', () => {
+            const isOpen = extraFields.style.display === 'block';
+            extraFields.style.display = isOpen ? 'none' : 'block';
+            extraTrigger.textContent = isOpen ? 'ДОПОЛНИТЕЛЬНО +' : 'СКРЫТЬ -';
+        });
+    }
+
+
+    // 2. БУРГЕР-МЕНЮ
+    const burgerButton = document.getElementById('burger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenu = document.getElementById('close-btn');
+
+    if (burgerButton && mobileMenu) {
+        burgerButton.addEventListener('click', () => {
+            mobileMenu.classList.add('is-open');
             burgerButton.classList.add('is-active');
         });
     }
 
-    if (closeButton && mobileMenuOverlay) {
-        closeButton.addEventListener('click', function() {
-            mobileMenuOverlay.classList.remove('is-open');
-            if (burgerButton) {
-                burgerButton.classList.remove('is-active');
+    if (closeMenu) {
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('is-open');
+            burgerButton.classList.remove('is-active');
+        });
+    }
+
+
+    // 3. DROPDOWN (ВЫПАДАЮЩЕЕ МЕНЮ)
+    const dropTrigger = document.getElementById('dropdown-trigger');
+    const dropMenu = document.getElementById('dropdown-menu');
+
+    if (dropTrigger && dropMenu) {
+        dropTrigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dropMenu.classList.toggle('is-active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!dropMenu.contains(e.target) && !dropTrigger.contains(e.target)) {
+                dropMenu.classList.remove('is-active');
             }
         });
     }
 
-    const dropdownTrigger = document.getElementById('dropdown-trigger');
-    const dropdownMenu = document.getElementById('dropdown-menu');
 
-    if (dropdownTrigger && dropdownMenu) {
-        dropdownTrigger.addEventListener('click', function(event) {
-            event.preventDefault(); 
-            event.stopPropagation(); 
-            
-            dropdownMenu.classList.toggle('is-active');
-        });
+    // 4. АККОРДЕОН И ПУСТЫЕ ССЫЛКИ
+    document.querySelectorAll('.process-step').forEach(step => {
+        step.addEventListener('click', () => step.classList.toggle('is-active'));
+    });
 
-        document.addEventListener('click', function(event) {
-            const isClickInsideMenu = dropdownMenu.contains(event.target);
-            const isClickOnTrigger = dropdownTrigger.contains(event.target);
-
-            if (!isClickInsideMenu && !isClickOnTrigger) {
-                dropdownMenu.classList.remove('is-active');
-            }
-        });
-
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                dropdownMenu.classList.remove('is-active');
-            }
-        });
-    }
-
-    const processSteps = document.querySelectorAll('.process-step');
-
-    if (processSteps.length > 0) {
-        processSteps.forEach(function(step) {
-            step.addEventListener('click', function() {
-                step.classList.toggle('is-active');
-            });
-        });
-    }
-    const allSlides = document.querySelectorAll('.slide');
-    if (allSlides.length > 0) {
-        showSlides(slideIndex);
-    }
+    document.querySelectorAll('a[href="#"]').forEach(link => {
+        link.addEventListener('click', (e) => e.preventDefault());
+    });
 });
 
-let slideIndex = 0;
-
-function showSlides(index) {
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dot');
-    
-    if (slides.length === 0) {
-        return;
-    }
-
-    if (index >= slides.length) {
-        slideIndex = 0;
-    }
-    if (index < 0) {
-        slideIndex = slides.length - 1;
-    }
-
-    slides.forEach(function(slide) {
-        slide.classList.remove('active');
-    });
-
-    dots.forEach(function(dot) {
-        dot.classList.remove('active');
-    });
-
-    if (slides[slideIndex]) {
-        slides[slideIndex].classList.add('active');
-    }
-    if (dots[slideIndex]) {
-        dots[slideIndex].classList.add('active');
-    }
-}
-
-function changeSlide(step) {
-    slideIndex = slideIndex + step;
-    showSlides(slideIndex);
-}
-
-function currentSlide(index) {
-    slideIndex = index;
-    showSlides(slideIndex);
-}
-
+// 5. ПРЕЛОАДЕР
 window.addEventListener('load', function() {
     const preloader = document.getElementById('preloader');
-    
     if (preloader) {
-        setTimeout(function() {
-            preloader.classList.add('hide');
-        }, 800);
+        setTimeout(() => preloader.classList.add('hide'), 600);
     }
 });
