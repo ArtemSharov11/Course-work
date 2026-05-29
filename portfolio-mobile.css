@@ -1,0 +1,102 @@
+@media (max-width: 768px) {
+    body {
+        min-width: 0;
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 360px;
+        padding: 0 15px;
+    }
+
+    .breadcrumbs {
+        display: none;
+    }
+
+    .portfolio-title {
+        margin: 25px 0 25px;
+        padding-bottom: 15px;
+        font-size: 28px;
+        line-height: 35px;
+        letter-spacing: 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .portfolio-filters-row {
+        display: block;
+        padding-bottom: 25px;
+        border-bottom: 0;
+    }
+
+    .filter-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .filter-pill,
+    .btn-apply {
+        width: auto;
+        min-height: 37px;
+        padding: 10px 12px;
+        border-radius: 10.5px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .btn-apply {
+        margin-top: 10px;
+    }
+
+    .portfolio-grid-4 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .portfolio-item {
+        padding-bottom: 15px;
+    }
+
+    .portfolio-item__image-container {
+        width: 330px;
+        height: 190px;
+        margin-bottom: 25px;
+        border-radius: 14px;
+    }
+
+    .badge-star {
+        top: 9px;
+        left: 9px;
+        font-size: 12.25px;
+        line-height: 14px;
+    }
+
+    .portfolio-item__likes {
+        top: 9px;
+        right: 9px;
+    }
+
+    .portfolio-item__info h3 {
+        margin: 0 0 15px;
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .portfolio-item__meta {
+        gap: 14px;
+    }
+
+    .portfolio-item__meta .secondary-section-subtitle,
+    .designer-label {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .pagination {
+        margin-top: 26px;
+        padding-bottom: 50px;
+        justify-content: flex-start;
+        overflow-x: auto;
+    }
+}

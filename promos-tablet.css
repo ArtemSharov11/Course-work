@@ -1,0 +1,45 @@
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        min-width: 0;
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 768px;
+        padding: 0 30px;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .promos-section-page {
+        padding-top: 48px;
+    }
+
+    .promos-page-title {
+        font-size: 54px;
+        line-height: 58px;
+    }
+
+    .promos-page-layout {
+        gap: 28px;
+    }
+
+    .promos-page-sidebar {
+        width: 150px;
+    }
+
+    .promo-page-item {
+        gap: 24px;
+    }
+
+    .promo-page-item__img {
+        width: 230px;
+        height: 150px;
+    }
+}

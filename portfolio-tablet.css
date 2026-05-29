@@ -1,0 +1,43 @@
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        min-width: 0;
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 768px;
+        padding: 0 30px;
+    }
+
+    .desktop-only,
+    .settings-controls {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .portfolio-title {
+        font-size: 54px;
+        line-height: 58px;
+    }
+
+    .portfolio-filters-row {
+        align-items: flex-start;
+        overflow-x: auto;
+    }
+
+    .filter-pills {
+        flex-wrap: wrap;
+    }
+
+    .portfolio-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 42px 28px;
+    }
+
+    .portfolio-item__image-container {
+        height: 230px;
+    }
+}

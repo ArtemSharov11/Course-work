@@ -1,0 +1,37 @@
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        min-width: 0;
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 768px;
+        padding: 0 30px;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .articles-page {
+        padding-top: 48px;
+    }
+
+    .articles-page__title {
+        font-size: 54px;
+        line-height: 58px;
+    }
+
+    .articles-page__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 42px 28px;
+    }
+
+    .article-page-card__image {
+        height: 230px;
+    }
+}

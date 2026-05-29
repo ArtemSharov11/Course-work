@@ -1806,7 +1806,6 @@ body {
     margin-left: 20px;
 }
 
-/* Стили круглого переключателя */
 .theme-switch {
     position: relative;
     display: inline-block;
@@ -1814,7 +1813,10 @@ body {
     height: 26px;
 }
 
-.theme-switch input { display: none; }
+.theme-switch input 
+{ 
+    display: none; 
+}
 
 .slider {
     position: absolute;

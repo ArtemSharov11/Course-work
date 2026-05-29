@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="styles.css">  
     <link rel="stylesheet" href="mobile.css">
     <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="articles.css">
+    <link rel="stylesheet" href="articles-mobile.css">
+    <link rel="stylesheet" href="articles-tablet.css">
 </head>
 <body>
     <div id="preloader">
@@ -57,8 +60,90 @@
         <div class="dropdown-menu" id="dropdown-menu">...</div>
     </header>
 
-    <main>
-        
+    <main class="articles-page">
+        <div class="container">
+            <h1 class="font-heading-huge articles-page__title">Статьи</h1>
+
+            <nav class="articles-page__tabs" aria-label="Категории статей">
+                <a href="#" class="article-tab active">Красивые проекты</a>
+                <a href="#" class="article-tab">Звездные кухни</a>
+                <a href="#" class="article-tab">Дизайн</a>
+                <a href="#" class="article-tab">Выбор</a>
+            </nav>
+
+            <section class="articles-page__grid" aria-label="Список статей">
+                <article class="article-page-card">
+                    <div class="article-page-card__image">
+                        <img src="./Assets/img/article-1.png" alt="Кухонный интерьер">
+                        <div class="article-page-card__badges">
+                            <span>Дизайн</span>
+                            <span>Разбор</span>
+                        </div>
+                    </div>
+                    <h2 class="font-card-title">7 советов, как создать на кухне уют и красоту</h2>
+                    <div class="article-page-card__meta">
+                        <span>23.01.2023</span>
+                        <span>2 142 просмотров</span>
+                    </div>
+                </article>
+
+                <article class="article-page-card">
+                    <div class="article-page-card__image">
+                        <img src="./Assets/img/article-2.png" alt="Маленькая кухня">
+                        <div class="article-page-card__badges">
+                            <span>Дизайн</span>
+                            <span>Разбор</span>
+                        </div>
+                    </div>
+                    <h2 class="font-card-title">Маленькая кухня: 6 способов сделать ее удобной</h2>
+                    <div class="article-page-card__meta">
+                        <span>23.01.2023</span>
+                        <span>2 142 просмотров</span>
+                    </div>
+                </article>
+
+                <article class="article-page-card">
+                    <div class="article-page-card__image">
+                        <img src="./Assets/img/article-3.png" alt="Голубая кухня">
+                        <div class="article-page-card__badges">
+                            <span>Дизайн</span>
+                            <span>Разбор</span>
+                        </div>
+                    </div>
+                    <h2 class="font-card-title">Голубые кухни: дизайн, фото в интерьере</h2>
+                    <div class="article-page-card__meta">
+                        <span>23.01.2023</span>
+                        <span>2 142 просмотров</span>
+                    </div>
+                </article>
+
+                <article class="article-page-card">
+                    <div class="article-page-card__image">
+                        <img src="./Assets/img/article-1.png" alt="Кухонный интерьер">
+                        <div class="article-page-card__badges">
+                            <span>Дизайн</span>
+                            <span>Разбор</span>
+                        </div>
+                    </div>
+                    <h2 class="font-card-title">7 советов, как создать на кухне уют и красоту</h2>
+                    <div class="article-page-card__meta">
+                        <span>23.01.2023</span>
+                        <span>2 142 просмотров</span>
+                    </div>
+                </article>
+            </section>
+
+            <nav class="articles-page__pagination" aria-label="Пагинация статей">
+                <span>1 - 18 из 292</span>
+                <a href="#">Начало</a>
+                <a href="#">Пред.</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">След.</a>
+                <a href="#">Конец</a>
+            </nav>
+        </div>
     </main>
 
 

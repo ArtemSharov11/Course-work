@@ -1,0 +1,50 @@
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        min-width: 0;
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 768px;
+        padding: 0 30px;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .catalog-page-section {
+        padding-top: 48px;
+    }
+
+    .catalog-page-header {
+        margin: 0 0 36px;
+    }
+
+    .catalog-page-header .font-heading-huge {
+        font-size: 54px;
+        line-height: 58px;
+    }
+
+    .catalog-page-intro {
+        padding-left: 0;
+        max-width: 620px;
+    }
+
+    .catalog-page-intro p {
+        width: auto;
+    }
+
+    .catalog-page-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 42px 28px;
+    }
+
+    .catalog-card-image {
+        height: 260px;
+    }
+}
