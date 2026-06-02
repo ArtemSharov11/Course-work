@@ -1,3 +1,32 @@
+.breadcrumbs {
+    padding-top: 1.3rem;
+    padding-left: 0.6rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    color: var(--secondary-text);
+    transition: color 0.3s;
+}
+
+.breadcrumbs a:hover {
+    color: #00B9BE;
+}
+
+.breadcrumbs .divider {
+    margin: 0 0.6rem;
+    color: #BDBDBD;
+    font-size: 0.8rem;
+}
+
+.breadcrumbs .current {
+    color: #BDBDBD;
+    cursor: default;
+}
+
 .reviews-page {
     padding-top: 3.5rem;
     background-color: var(--bg-color);

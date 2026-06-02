@@ -15,25 +15,7 @@
         margin: 0 auto;
     }
 
-    .font-heading-huge,
-    .portfolio-title {
-        font-size: 54px;
-        line-height: 58px;
-        letter-spacing: 0;
-    }
-
-    .font-portfolio-desc {
-        font-size: 1.35rem;
-        line-height: 1.35;
-    }
-
-    .secondary-section-subtitle {
-        font-size: 0.85rem;
-        line-height: 1.5;
-    }
-
     .desktop-only,
-    .settings-controls,
     .header__nav,
     .header__contacts {
         display: none !important;
@@ -53,7 +35,6 @@
 
     .header__logo {
         padding: 0;
-        min-width: 90px;
     }
 
     .font-logo-neff {
@@ -110,151 +91,134 @@
         cursor: default;
     }
 
-    .portfolio-page {
-        background-color: var(--bg-color);
+    .reviews-page {
+        padding-top: 48px;
     }
 
-    .portfolio-title {
+    .reviews-main-title {
         margin: 0 0 55px;
         padding-bottom: 26px;
-        border-bottom: 1px solid var(--border-color);
         font-size: 64px;
         line-height: 64px;
         letter-spacing: 0.08rem;
     }
 
-    .portfolio-filters-row {
-        align-items: flex-start;
-        gap: 18px;
-        overflow-x: auto;
+    .reviews-tabs {
+        gap: 28px;
         padding-bottom: 24px;
+        overflow-x: auto;
         scrollbar-width: none;
     }
 
-    .portfolio-filters-row::-webkit-scrollbar {
+    .reviews-tabs::-webkit-scrollbar {
         display: none;
     }
 
-    .filter-pills {
-        flex-wrap: wrap;
-        gap: 8px;
+    .review-card {
+        display: grid;
+        grid-template-columns: 110px minmax(0, 1fr);
+        gap: 28px;
+        padding-bottom: 34px;
     }
 
-    .filter-pill,
-    .btn-apply {
-        padding: 10px 12px;
-        font-size: 0.8rem;
+    .review-card__avatar img {
+        width: 96px;
+        height: 96px;
     }
 
-    .portfolio-grid-4 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 42px 28px;
+    .review-card__avatar {
+        flex-shrink: 0;
     }
 
-    .portfolio-item {
+    body.dark-theme .review-card__avatar img {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+
+    .review-card__content {
         min-width: 0;
     }
 
-    .portfolio-item__image-container {
-        height: 230px;
-        border-radius: 14px;
-        margin-bottom: 12px;
+    .review-card__info {
+        margin-bottom: 22px;
     }
 
-    .main-project-img {
+    .review-card__info h2 {
+        margin-bottom: 0.2rem;
+    }
+
+    .review-card__text-container {
+        max-width: 100%;
+        margin-bottom: 28px;
+    }
+
+    .review-card__text-container p {
+        display: flex;
+        align-items: baseline;
+    }
+
+    .full-text {
+        display: none;
+    }
+
+    .review-card__text-container.active .full-text {
+        display: inline;
+    }
+
+    .review-card__text-container.active p {
+        display: block;
+    }
+
+    .review-text-content,
+    .review-text {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+    }
+
+    .review-card__text-container.active .review-text-content,
+    .review-card__text-container.active .review-text {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+    }
+
+    .btn-show-more {
+        font-size: 0.75rem;
+    }
+
+    .review-card__text-container.active .btn-show-more {
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .review-card__gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .review-img-item {
+        height: 190px;
+        border-radius: 14px;
+    }
+
+    .review-img-item img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
-    .badge-star {
-        top: 10px;
-        left: 10px;
-        font-size: 0.68rem;
-    }
-
-    .portfolio-item__likes {
-        top: 10px;
-        right: 10px;
-    }
-
-    .portfolio-item__likes span {
+    .reviews-tabs .font-tab {
         font-size: 0.75rem;
+        text-decoration: none;
     }
 
-    .portfolio-item__info {
-        gap: 6px;
+    .reviews-tabs .font-tab.active {
+        color: var(--accent-color);
+        font-weight: 700;
     }
 
-    .portfolio-item__info h3 {
-        margin-bottom: 24px;
-        font-size: 1.2rem;
-        line-height: 1.25;
-    }
-
-    .portfolio-item__meta {
-        gap: 18px;
-        flex-wrap: wrap;
-    }
-
-    .designer-label {
-        opacity: 0.6;
-    }
-
-    .pagination {
-        margin-top: 64px;
-        padding-bottom: 64px;
-    }
-
-    .pagination__list {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .pagination__item a {
-        width: 42px;
-        height: 42px;
-    }
-
-    .pagination__item--active a {
-        background-color: #F2F2F2;
-        color: #00B9BE;
-    }
-
-    .pagination__item--dots {
-        color: #757575;
-        padding: 0 0.5rem;
-    }
-
-    .pagination__item--arrow a {
-        margin-left: 1rem;
-    }
-
-    .pagination__item--arrow img {
-        width: 2.5rem;
-        height: auto;
-    }
-
-    .pagination__item:not(.pagination__item--active):not(.pagination__item--dots) a:hover {
-        color: #00B9BE;
-    }
-
-    body.dark-theme .filter-pill {
-        background: var(--tab-bg);
+    .reviews-tabs .font-tab:hover {
         color: var(--text-color);
-    }
-
-    body.dark-theme .filter-pill img,
-    body.dark-theme .pagination__item--arrow img {
-        filter: invert(1);
-    }
-
-    body.dark-theme .pagination__item--active a {
-        background-color: var(--tab-bg);
-    }
-
-    body.dark-theme .pagination__item a {
-        color: var(--secondary-text);
     }
 
     .addresses-section {
