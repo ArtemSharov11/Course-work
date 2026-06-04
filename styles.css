@@ -9,6 +9,18 @@ html {
     font-size: 16px; 
 }
 
+html.vi-font-normal {
+    font-size: 16px !important;
+}
+
+html.vi-font-large {
+    font-size: 20px !important;
+}
+
+html.vi-font-xlarge {
+    font-size: 24px !important;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -513,8 +525,10 @@ body {
 }
 
 .about-wrapper {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 463px 992px;
+    column-gap: 45px;
+    justify-content: start;
     align-items: flex-start;
 }
 
@@ -523,7 +537,7 @@ body {
 }
 
 .about-right {
-    padding-right: 24.5rem;
+    padding-right: 0;
 }
 
 .about-heading {
@@ -1875,5 +1889,225 @@ input:checked + .slider:before {
 
 .mobile-overlay {
     display: none;
+}
+
+.burger-menu {
+    display: flex;
+    width: 38px;
+    height: 34px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.burger-menu span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: var(--text-color);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.mobile-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    background: rgba(0, 0, 0, 0.45);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-overlay.is-open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.mobile-menu-content {
+    width: min(420px, 100%);
+    height: 100%;
+    overflow-y: auto;
+    padding: 28px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: -12px 0 32px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-menu-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.close-menu {
+    border: 0;
+    background: transparent;
+    color: var(--text-color);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.mobile-nav a {
+    width: fit-content;
+}
+
+.menu-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border-color);
+}
+
+.menu-settings__group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-settings__title {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.menu-settings__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.menu-settings__btn,
+.menu-settings__select,
+.menu-settings__reset {
+    min-height: 38px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    font-family: "Segoe UI", sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.menu-settings__btn {
+    padding: 0 14px;
+}
+
+.menu-settings__btn--wide,
+.menu-settings__reset {
+    width: 100%;
+}
+
+.menu-settings__btn.is-active {
+    border-color: var(--accent-color);
+    background: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.menu-settings__select {
+    width: 100%;
+    padding: 0 12px;
+}
+
+.menu-settings__check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-color);
+    font-family: "Segoe UI", sans-serif;
+    font-size: 0.95rem;
+}
+
+.menu-settings__reset {
+    padding: 0 16px;
+    text-transform: uppercase;
+}
+
+html[lang="en"] .font-nav-top {
+    font-size: 0.82rem;
+    letter-spacing: 0;
+}
+
+html[lang="en"] .font-nav-bottom,
+html[lang="en"] .font-tab,
+html[lang="en"] .btn-order,
+html[lang="en"] .font-link-blue {
+    letter-spacing: 0.025rem;
+}
+
+html[lang="en"] .header__nav-bottom {
+    gap: 1.55rem;
+}
+
+html[lang="en"] .btn-order {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+}
+
+html[lang="en"] .about-heading {
+    max-width: 31.6rem;
+    font-size: 2.65rem;
+    line-height: 1.05;
+}
+
+html[lang="en"] .about-right .secondary-section-subtitle {
+    max-width: 41.3rem;
+}
+
+html[lang="en"] .catalog__header,
+html[lang="en"] .articles-header,
+html[lang="en"] .reviews-header {
+    min-width: 0;
+}
+
+html[lang="en"] .articles-nav a,
+html[lang="en"] .articles-dark-nav a,
+html[lang="en"] .article-tab,
+html[lang="en"] .filter-pill,
+html[lang="en"] .reviews-tabs .font-tab {
+    white-space: normal;
+    line-height: 1.15;
+}
+
+html[lang="en"] .portfolio-item-title,
+html[lang="en"] .font-card-title {
+    line-height: 1.15;
+}
+
+html[lang="en"] .footer__nav-cols {
+    gap: 3.2rem;
+}
+
+html[lang="en"] .footer__info-left,
+html[lang="en"] .footer__info-middle,
+html[lang="en"] .footer__info-right,
+html[lang="en"] .footer__warning {
+    overflow-wrap: anywhere;
+}
+
+html[lang="en"] .agreement-text,
+html[lang="en"] .form-agreement p,
+html[lang="en"] .design-form__agreement p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
 }
 

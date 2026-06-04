@@ -21,16 +21,100 @@ body.dark-theme {
 }
 
 body.visually-impaired {
-    --font-main: 24px;
     --bg-color: #000000;
+    --section-bg: #000000;
+    --card-bg: #000000;
     --text-color: #ffff00;
     --secondary-text: #ffff00;
-    --border-color: #ffffff;
+    --border-color: #ffff00;
     --accent-color: #ffff00;
+    --tab-bg: #111111;
+    letter-spacing: 0.12em;
+    word-spacing: 0.16em;
 }
 
-body.visually-impaired img {
+body.visually-impaired.vi-font-large {
+    --font-main: 20px;
+}
+
+body.visually-impaired.vi-font-xlarge {
+    --font-main: 24px;
+}
+
+body.visually-impaired.vi-scheme-black-white {
+    --bg-color: #000000;
+    --section-bg: #000000;
+    --card-bg: #000000;
+    --text-color: #ffffff;
+    --secondary-text: #ffffff;
+    --accent-color: #ffffff;
+    --border-color: #ffffff;
+}
+
+body.visually-impaired.vi-scheme-black-green {
+    --bg-color: #000000;
+    --section-bg: #000000;
+    --card-bg: #000000;
+    --text-color: #00ff00;
+    --secondary-text: #00ff00;
+    --accent-color: #00ff00;
+    --border-color: #00ff00;
+}
+
+body.visually-impaired.vi-scheme-white-black {
+    --bg-color: #ffffff;
+    --section-bg: #ffffff;
+    --card-bg: #ffffff;
+    --text-color: #000000;
+    --secondary-text: #000000;
+    --accent-color: #000000;
+    --border-color: #000000;
+}
+
+body.visually-impaired.vi-scheme-beige-brown {
+    --bg-color: #f3e5c8;
+    --section-bg: #f3e5c8;
+    --card-bg: #f3e5c8;
+    --text-color: #4b2e16;
+    --secondary-text: #4b2e16;
+    --accent-color: #4b2e16;
+    --border-color: #4b2e16;
+}
+
+body.visually-impaired.vi-scheme-blue-navy {
+    --bg-color: #ccecff;
+    --section-bg: #ccecff;
+    --card-bg: #ccecff;
+    --text-color: #001f54;
+    --secondary-text: #001f54;
+    --accent-color: #001f54;
+    --border-color: #001f54;
+}
+
+body.visually-impaired * {
+    line-height: 1.5 !important;
+    text-align: left !important;
+}
+
+body.visually-impaired p {
+    max-width: 80ch;
+    margin-bottom: 1.5em;
+}
+
+body.visually-impaired.vi-hide-images img {
+    display: none !important;
+}
+
+body.visually-impaired.vi-hide-images img[alt] + .image-alt-text {
+    display: inline-block;
+}
+
+.image-alt-text {
     display: none;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    background: var(--card-bg);
 }
 
 body {
