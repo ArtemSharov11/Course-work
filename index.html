@@ -70,20 +70,20 @@
                     <div class="close-menu" id="close-btn">&times;</div>
                 </div>
                 
-                <button class="btn-order mobile-btn">ЗАКАЗАТЬ ПРОЕКТ</button>
+                <button class="btn-order mobile-btn" data-open-modal="modal-request">ЗАКАЗАТЬ ПРОЕКТ</button>
                 
                 <nav class="mobile-nav">
-                    <a href="#" class="font-nav-bottom">Кухни</a>
-                    <a href="#" class="font-nav-bottom">Шкафы</a>
-                    <a href="#" class="font-nav-bottom">Спальни</a>
-                    <a href="#" class="font-nav-bottom">Ванные</a>
-                    <a href="#" class="font-nav-bottom">Портфолио</a>
-                    <a href="#" class="font-nav-bottom">Акции</a>
-                    <a href="#" class="font-nav-bottom">Покупателям</a>
-                    <a href="#" class="font-nav-top">Франшиза</a>
-                    <a href="#" class="font-nav-top">Застройщику</a>
-                    <a href="#" class="font-nav-top">Дизайнеру</a>
-                    <a href="#" class="font-nav-top">Обратная связь</a>
+                    <a href="catalog.html" class="font-nav-bottom">Кухни</a>
+                    <a href="catalog.html" class="font-nav-bottom">Шкафы</a>
+                    <a href="catalog.html" class="font-nav-bottom">Спальни</a>
+                    <a href="catalog.html" class="font-nav-bottom">Ванные</a>
+                    <a href="portfolio.html" class="font-nav-bottom">Портфолио</a>
+                    <a href="promos.html" class="font-nav-bottom">Акции</a>
+                    <a href="articles.html" class="font-nav-bottom">Покупателям</a>
+                    <a href="promos.html" class="font-nav-top">Франшиза</a>
+                    <a href="catalog.html#design-order" class="font-nav-top">Застройщику</a>
+                    <a href="portfolio.html" class="font-nav-top">Дизайнеру</a>
+                    <a href="#modal-request" class="font-nav-top" data-open-modal="modal-request">Обратная связь</a>
                 </nav>
             </div>
         </div>
@@ -108,6 +108,24 @@
                         <div class="slider-container">
                             <div class="slide fade active"><img src="./Assets/img/promo-slide-1.png" alt=""></div>
                             <div class="slide fade"><img src="./Assets/img/promo-slide-2.png" alt=""></div>
+                            <div class="slide fade"><img src="./Assets/img/kitchen-1.png" alt="Кухня Nicolle"></div>
+                            <div class="slide fade"><img src="./Assets/img/kitchen-2.png" alt="Кухня Teramo"></div>
+                            <div class="slide fade"><img src="./Assets/img/kitchen-3.png" alt="Кухня Antro"></div>
+                            <div class="slide fade"><img src="./Assets/img/kitchen-4.png" alt="Кухня Mix 22"></div>
+                            <button class="slider-prev" type="button" aria-label="Предыдущий слайд">
+                                <img src="./Assets/icons/arrow-left.png" alt="">
+                            </button>
+                            <button class="slider-next" type="button" aria-label="Следующий слайд">
+                                <img src="./Assets/icons/arrow-right.png" alt="">
+                            </button>
+                            <div class="slider-dots" aria-label="Навигация по слайдеру">
+                                <button class="dot active" type="button" aria-label="Слайд 1"></button>
+                                <button class="dot" type="button" aria-label="Слайд 2"></button>
+                                <button class="dot" type="button" aria-label="Слайд 3"></button>
+                                <button class="dot" type="button" aria-label="Слайд 4"></button>
+                                <button class="dot" type="button" aria-label="Слайд 5"></button>
+                                <button class="dot" type="button" aria-label="Слайд 6"></button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -144,7 +162,7 @@
                             <a href="#" class="font-tab">Диваны</a>
                         </div>
                     </div>
-                    <div class="catalog__grid" id="catalog-grid">
+                    <div class="catalog__grid" id="catalog-grid" data-json="products">
                     </div>
                     <div class="catalog__action">
                         <a href="catalog.html" class="btn-outline-cyan" data-i18n="btn-more">СМОТРЕТЬ ЕЩЕ</a>
@@ -893,6 +911,6 @@
         <script src="i18n.js"></script> 
         <script src="animations.js"></script>
         <script src="settings.js"></script>
-        <script src="catalog.js"></script> 
+        <script src="data-loader.js"></script> 
     </body>
     </html>

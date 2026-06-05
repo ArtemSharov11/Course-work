@@ -14,7 +14,6 @@
 <body>
     <div id="preloader">
         <div class="preloader-content">
-            <div class="font-logo-neff">NEFF</div>
             <div class="preloader-line"></div>
         </div>
     </div>
@@ -135,6 +134,21 @@
                             <button type="button" id="btn-gen-nick" class="circle-btn-outline" style="width: 2.5rem; height: 2.5rem; flex-shrink: 0;">↻</button>
                         </div>
                         <span class="error-msg"></span>
+                    </div>
+
+                    <div class="form-group password-mode-group">
+                        <label class="secondary-section-subtitle">Способ задания пароля <span class="required">*</span></label>
+                        <div class="password-mode-options">
+                            <label class="secondary-section-subtitle password-mode-option">
+                                <input type="radio" name="password-mode" value="manual" checked>
+                                Ввести самостоятельно
+                            </label>
+                            <label class="secondary-section-subtitle password-mode-option">
+                                <input type="radio" name="password-mode" value="auto">
+                                Сгенерировать автоматически
+                            </label>
+                        </div>
+                        <button type="button" id="btn-gen-password" class="btn-outline-cyan password-generate-btn" hidden>СГЕНЕРИРОВАТЬ ПАРОЛЬ</button>
                     </div>
 
                     <!-- Пароль -->

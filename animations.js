@@ -63,6 +63,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', (e) => {
+            const link = e.target.closest('.mobile-nav a, .mobile-btn');
+            if (!link) return;
+
+            mobileMenu.classList.remove('is-open');
+            if (burgerButton) burgerButton.classList.remove('is-active');
+        });
+    }
+
 
     // 3. DROPDOWN (ВЫПАДАЮЩЕЕ МЕНЮ)
     const dropTrigger = document.getElementById('dropdown-trigger');
@@ -91,6 +101,52 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a[href="#"]').forEach(link => {
         link.addEventListener('click', (e) => e.preventDefault());
     });
+
+    const slider = document.querySelector('.slider-container');
+    const slides = document.querySelectorAll('.slider-container .slide');
+    if (slider && slides.length > 1) {
+        const prevButton = slider.querySelector('.slider-prev');
+        const nextButton = slider.querySelector('.slider-next');
+        const dots = slider.querySelectorAll('.dot');
+        let activeSlide = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+        if (activeSlide < 0) activeSlide = 0;
+        let autoplayId;
+
+        const showSlide = index => {
+            activeSlide = (index + slides.length) % slides.length;
+            slides.forEach((slide, slideIndex) => {
+                slide.classList.toggle('active', slideIndex === activeSlide);
+            });
+            dots.forEach((dot, dotIndex) => {
+                dot.classList.toggle('active', dotIndex === activeSlide);
+            });
+        };
+
+        const startAutoplay = () => {
+            clearInterval(autoplayId);
+            autoplayId = setInterval(() => showSlide(activeSlide + 1), 4500);
+        };
+
+        prevButton?.addEventListener('click', () => {
+            showSlide(activeSlide - 1);
+            startAutoplay();
+        });
+
+        nextButton?.addEventListener('click', () => {
+            showSlide(activeSlide + 1);
+            startAutoplay();
+        });
+
+        dots.forEach((dot, dotIndex) => {
+            dot.addEventListener('click', () => {
+                showSlide(dotIndex);
+                startAutoplay();
+            });
+        });
+
+        showSlide(activeSlide);
+        startAutoplay();
+    }
 });
 
 // 5. ПРЕЛОАДЕР

@@ -26,6 +26,33 @@ body.dark-theme .error-msg {
     color: #ff6b6b;
 }
 
+.password-mode-group {
+    gap: 0.8rem;
+}
+
+.password-mode-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+}
+
+.password-mode-option {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    cursor: pointer;
+}
+
+.password-mode-option input {
+    accent-color: var(--accent-color);
+}
+
+.password-generate-btn {
+    width: fit-content;
+    min-height: 2.5rem;
+    padding: 0.65rem 1.4rem;
+}
+
 .auth-card {
     background-color: var(--bg-color);
     padding: 3.5rem 4rem;

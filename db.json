@@ -1,4 +1,50 @@
 {
+  "roles": [
+    {
+      "id": "client",
+      "name": "Клиент",
+      "permissions": [
+        "view_catalog",
+        "manage_profile",
+        "manage_cart",
+        "manage_favorites",
+        "create_order"
+      ]
+    },
+    {
+      "id": "admin",
+      "name": "Администратор",
+      "permissions": [
+        "view_catalog",
+        "manage_products",
+        "manage_users",
+        "manage_orders",
+        "view_admin_panel"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "classic",
+      "name": "Классические"
+    },
+    {
+      "id": "modern",
+      "name": "Современные"
+    },
+    {
+      "id": "neoclassic",
+      "name": "Неоклассика"
+    },
+    {
+      "id": "loft",
+      "name": "Лофт"
+    },
+    {
+      "id": "scandinavian",
+      "name": "Скандинавские"
+    }
+  ],
   "products": [
     {
       "id": "1",
@@ -35,43 +81,777 @@
       "category": "modern",
       "material": "ЛДСП",
       "popular": true
-    }
-  ],
-  "categories": [
-    {
-      "id": "classic",
-      "name": "Классические"
     },
     {
-      "id": "modern",
-      "name": "Современные"
+      "id": "5",
+      "name": "Кухня Spark",
+      "price": 184450,
+      "image": "./Assets/img/kitchen-5.png",
+      "category": "modern",
+      "material": "МДФ",
+      "popular": true
     },
     {
-      "id": "neoclassic",
-      "name": "Неоклассика"
+      "id": "6",
+      "name": "Кухня Linea",
+      "price": 176900,
+      "image": "./Assets/img/kitchen.png",
+      "category": "neoclassic",
+      "material": "Эмаль",
+      "popular": false
+    },
+    {
+      "id": "7",
+      "name": "Кухня Sobchak",
+      "price": 315000,
+      "image": "./Assets/img/portfolio-1.png",
+      "category": "loft",
+      "material": "Шпон",
+      "popular": true
+    },
+    {
+      "id": "8",
+      "name": "Кухня Vector",
+      "price": 221400,
+      "image": "./Assets/img/portfolio-2.png",
+      "category": "scandinavian",
+      "material": "МДФ",
+      "popular": false
+    },
+    {
+      "id": "9",
+      "name": "Кухня Adele",
+      "price": 198700,
+      "image": "./Assets/img/portfolio-3.png",
+      "category": "classic",
+      "material": "Массив",
+      "popular": false
+    },
+    {
+      "id": "10",
+      "name": "Кухня Beton",
+      "price": 232600,
+      "image": "./Assets/img/portfolio-4.png",
+      "category": "loft",
+      "material": "Пластик",
+      "popular": true
+    },
+    {
+      "id": "11",
+      "name": "Кухня Nord",
+      "price": 147300,
+      "image": "./Assets/img/project-1.png",
+      "category": "scandinavian",
+      "material": "ЛДСП",
+      "popular": false
+    },
+    {
+      "id": "12",
+      "name": "Кухня Orlando",
+      "price": 204900,
+      "image": "./Assets/img/project-2.png",
+      "category": "neoclassic",
+      "material": "МДФ",
+      "popular": false
+    },
+    {
+      "id": "13",
+      "name": "Кухня Piano",
+      "price": 188300,
+      "image": "./Assets/img/project-3.png",
+      "category": "modern",
+      "material": "Акрил",
+      "popular": true
+    },
+    {
+      "id": "14",
+      "name": "Кухня Blanca",
+      "price": 169800,
+      "image": "./Assets/img/promo-slide-1.png",
+      "category": "classic",
+      "material": "Эмаль",
+      "popular": false
+    },
+    {
+      "id": "15",
+      "name": "Кухня Aurora",
+      "price": 214500,
+      "image": "./Assets/img/promo-slide-2.png",
+      "category": "modern",
+      "material": "МДФ",
+      "popular": true
+    },
+    {
+      "id": "16",
+      "name": "Кухня Family",
+      "price": 132900,
+      "image": "./Assets/img/article-1.png",
+      "category": "classic",
+      "material": "ЛДСП",
+      "popular": false
+    },
+    {
+      "id": "17",
+      "name": "Кухня White Story",
+      "price": 193200,
+      "image": "./Assets/img/article-2.png",
+      "category": "neoclassic",
+      "material": "МДФ",
+      "popular": false
+    },
+    {
+      "id": "18",
+      "name": "Кухня Marble",
+      "price": 241600,
+      "image": "./Assets/img/article-3.png",
+      "category": "modern",
+      "material": "Каменный декор",
+      "popular": true
+    },
+    {
+      "id": "19",
+      "name": "Кухня Dark Line",
+      "price": 257400,
+      "image": "./Assets/img/article-dark-1.png",
+      "category": "loft",
+      "material": "Шпон",
+      "popular": false
+    },
+    {
+      "id": "20",
+      "name": "Кухня Graphite",
+      "price": 226800,
+      "image": "./Assets/img/article-dark-2.png",
+      "category": "loft",
+      "material": "Пластик",
+      "popular": false
+    },
+    {
+      "id": "21",
+      "name": "Кухня City",
+      "price": 181700,
+      "image": "./Assets/img/article-dark-3.png",
+      "category": "modern",
+      "material": "ЛДСП",
+      "popular": false
+    },
+    {
+      "id": "22",
+      "name": "Кухня Studio",
+      "price": 209400,
+      "image": "./Assets/img/studio-1.png",
+      "category": "scandinavian",
+      "material": "МДФ",
+      "popular": true
+    },
+    {
+      "id": "23",
+      "name": "Кухня Gift",
+      "price": 151200,
+      "image": "./Assets/img/promo-gift.png",
+      "category": "classic",
+      "material": "ЛДСП",
+      "popular": false
+    },
+    {
+      "id": "24",
+      "name": "Кухня Installment",
+      "price": 166600,
+      "image": "./Assets/img/promo-installment.png",
+      "category": "modern",
+      "material": "МДФ",
+      "popular": false
+    },
+    {
+      "id": "25",
+      "name": "Кухня Combo",
+      "price": 175500,
+      "image": "./Assets/img/promo-combo.png",
+      "category": "neoclassic",
+      "material": "Эмаль",
+      "popular": true
+    },
+    {
+      "id": "26",
+      "name": "Кухня Review Light",
+      "price": 199900,
+      "image": "./Assets/img/review-1.png",
+      "category": "scandinavian",
+      "material": "МДФ",
+      "popular": false
+    },
+    {
+      "id": "27",
+      "name": "Кухня Review Soft",
+      "price": 187800,
+      "image": "./Assets/img/review-2.png",
+      "category": "classic",
+      "material": "Массив",
+      "popular": false
+    },
+    {
+      "id": "28",
+      "name": "Кухня Review Pro",
+      "price": 218900,
+      "image": "./Assets/img/review-3.png",
+      "category": "modern",
+      "material": "Акрил",
+      "popular": true
+    },
+    {
+      "id": "29",
+      "name": "Кухня Comfort",
+      "price": 172400,
+      "image": "./Assets/img/review-4.png",
+      "category": "neoclassic",
+      "material": "МДФ",
+      "popular": false
+    },
+    {
+      "id": "30",
+      "name": "Кухня Prestige",
+      "price": 268500,
+      "image": "./Assets/img/review-5.png",
+      "category": "loft",
+      "material": "Шпон",
+      "popular": true
     }
   ],
   "users": [
     {
-      "id": "ZpwiGB3rP5Q",
+      "id": "1",
       "name": "Шаров Артем Александрович",
       "email": "starlightsfaq708@gmail.com",
       "phone": "+375291797363",
       "dob": "2006-03-22",
       "nickname": "DarkTiger981",
       "password": "As07051977*",
-      "role": "клиент"
+      "role": "admin"
     },
     {
-      "id": "phnoytIZfdg",
-      "name": "Шаров Артем Александрович",
-      "email": "starlightsfaq708@gmail.com",
-      "phone": "+375291797363",
-      "dob": "2000-05-08",
-      "nickname": "FastTiger201",
-      "password": "As07051977*",
-      "role": "клиент"
+      "id": "2",
+      "name": "Иванова Мария Сергеевна",
+      "email": "maria.ivanova@example.com",
+      "phone": "+375291112233",
+      "dob": "1998-04-12",
+      "nickname": "SmartEagle204",
+      "password": "Maria2025!",
+      "role": "client"
+    },
+    {
+      "id": "3",
+      "name": "Петров Дмитрий Олегович",
+      "email": "d.petrov@example.com",
+      "phone": "+375292223344",
+      "dob": "1995-09-03",
+      "nickname": "FastWolf512",
+      "password": "Dima2025!",
+      "role": "client"
+    },
+    {
+      "id": "4",
+      "name": "Сидорова Анна Павловна",
+      "email": "anna.sidorova@example.com",
+      "phone": "+375293334455",
+      "dob": "2001-11-20",
+      "nickname": "BraveFox119",
+      "password": "Anna2025!",
+      "role": "client"
+    },
+    {
+      "id": "5",
+      "name": "Козлов Максим Игоревич",
+      "email": "max.kozlov@example.com",
+      "phone": "+375294445566",
+      "dob": "1992-02-18",
+      "nickname": "CoolBear742",
+      "password": "Maxim2025!",
+      "role": "client"
+    },
+    {
+      "id": "6",
+      "name": "Морозова Елена Викторовна",
+      "email": "elena.morozova@example.com",
+      "phone": "+375295556677",
+      "dob": "1989-07-07",
+      "nickname": "BrightLion305",
+      "password": "Elena2025!",
+      "role": "client"
+    },
+    {
+      "id": "7",
+      "name": "Новик Андрей Петрович",
+      "email": "andrey.novik@example.com",
+      "phone": "+375296667788",
+      "dob": "1999-12-01",
+      "nickname": "NeoShark888",
+      "password": "Andrey2025!",
+      "role": "client"
+    },
+    {
+      "id": "8",
+      "name": "Васильева Ольга Денисовна",
+      "email": "olga.vasilieva@example.com",
+      "phone": "+375297778899",
+      "dob": "1996-05-14",
+      "nickname": "SilverOwl437",
+      "password": "Olga2025!",
+      "role": "client"
+    },
+    {
+      "id": "9",
+      "name": "Громов Кирилл Андреевич",
+      "email": "kirill.gromov@example.com",
+      "phone": "+375298889900",
+      "dob": "1994-08-26",
+      "nickname": "RapidHawk612",
+      "password": "Kirill2025!",
+      "role": "client"
+    },
+    {
+      "id": "10",
+      "name": "Лебедева Дарья Ильинична",
+      "email": "daria.lebedeva@example.com",
+      "phone": "+375299990011",
+      "dob": "2000-01-30",
+      "nickname": "SoftPanda250",
+      "password": "Daria2025!",
+      "role": "client"
     }
   ],
-  "$schema": "./node_modules/json-server/schema.json"
+  "favorites": [
+    {
+      "id": "1",
+      "userId": "2",
+      "productId": "1"
+    },
+    {
+      "id": "2",
+      "userId": "2",
+      "productId": "8"
+    },
+    {
+      "id": "3",
+      "userId": "3",
+      "productId": "15"
+    },
+    {
+      "id": "4",
+      "userId": "3",
+      "productId": "22"
+    },
+    {
+      "id": "5",
+      "userId": "4",
+      "productId": "7"
+    },
+    {
+      "id": "6",
+      "userId": "4",
+      "productId": "30"
+    }
+  ],
+  "cartItems": [
+    {
+      "id": "1",
+      "userId": "2",
+      "productId": "1",
+      "quantity": 1
+    },
+    {
+      "id": "2",
+      "userId": "2",
+      "productId": "5",
+      "quantity": 1
+    },
+    {
+      "id": "3",
+      "userId": "3",
+      "productId": "12",
+      "quantity": 1
+    },
+    {
+      "id": "4",
+      "userId": "3",
+      "productId": "18",
+      "quantity": 1
+    },
+    {
+      "id": "5",
+      "userId": "4",
+      "productId": "24",
+      "quantity": 1
+    },
+    {
+      "id": "6",
+      "userId": "4",
+      "productId": "28",
+      "quantity": 1
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "userId": "2",
+      "productIds": [
+        "1",
+        "5"
+      ],
+      "status": "new",
+      "total": 344098
+    },
+    {
+      "id": "2",
+      "userId": "3",
+      "productIds": [
+        "12",
+        "18"
+      ],
+      "status": "in_progress",
+      "total": 446500
+    },
+    {
+      "id": "3",
+      "userId": "4",
+      "productIds": [
+        "24",
+        "28"
+      ],
+      "status": "done",
+      "total": 385500
+    }
+  ],
+  "dataTypes": {
+    "role": {
+      "id": "string",
+      "name": "string",
+      "permissions": "string[]"
+    },
+    "category": {
+      "id": "string",
+      "name": "string"
+    },
+    "product": {
+      "id": "string",
+      "name": "string",
+      "price": "number",
+      "image": "string",
+      "category": "string",
+      "material": "string",
+      "popular": "boolean"
+    },
+    "user": {
+      "id": "string",
+      "name": "string",
+      "email": "string",
+      "phone": "string",
+      "dob": "string",
+      "nickname": "string",
+      "password": "string",
+      "role": "string"
+    },
+    "favorite": {
+      "id": "string",
+      "userId": "string",
+      "productId": "string"
+    },
+    "cartItem": {
+      "id": "string",
+      "userId": "string",
+      "productId": "string",
+      "quantity": "number"
+    },
+    "order": {
+      "id": "string",
+      "userId": "string",
+      "productIds": "string[]",
+      "status": "string",
+      "total": "number"
+    },
+    "article": {
+      "id": "string",
+      "title": "string",
+      "image": "string",
+      "alt": "string",
+      "badges": "string[]",
+      "date": "string",
+      "views": "string"
+    },
+    "promo": {
+      "id": "string",
+      "title": "string",
+      "description": "string",
+      "image": "string",
+      "alt": "string"
+    },
+    "project": {
+      "id": "string",
+      "title": "string",
+      "style": "string",
+      "size": "string",
+      "designer": "string",
+      "image": "string",
+      "likes": "number",
+      "star": "boolean"
+    },
+    "review": {
+      "id": "string",
+      "name": "string",
+      "role": "string",
+      "avatar": "string",
+      "text": "string",
+      "gallery": "string[]"
+    }
+  },
+  "$schema": "./node_modules/json-server/schema.json",
+  "articles": [
+    {
+      "id": "1",
+      "title": "7 советов, как создать на кухне уют и красоту",
+      "image": "./Assets/img/article-1.png",
+      "alt": "Кухонный интерьер",
+      "badges": [
+        "Дизайн",
+        "Разбор"
+      ],
+      "date": "23.01.2023",
+      "views": "2 142 просмотра"
+    },
+    {
+      "id": "2",
+      "title": "Маленькая кухня: 6 способов сделать ее удобной",
+      "image": "./Assets/img/article-2.png",
+      "alt": "Маленькая кухня",
+      "badges": [
+        "Дизайн",
+        "Разбор"
+      ],
+      "date": "24.01.2023",
+      "views": "1 980 просмотров"
+    },
+    {
+      "id": "3",
+      "title": "Голубые кухни: дизайн, фото в интерьере",
+      "image": "./Assets/img/article-3.png",
+      "alt": "Голубая кухня",
+      "badges": [
+        "Цвет",
+        "Идеи"
+      ],
+      "date": "25.01.2023",
+      "views": "2 314 просмотров"
+    },
+    {
+      "id": "4",
+      "title": "Кухни П-образной планировки",
+      "image": "./Assets/img/article-dark-1.png",
+      "alt": "П-образная кухня",
+      "badges": [
+        "Планировка",
+        "Советы"
+      ],
+      "date": "26.01.2023",
+      "views": "1 746 просмотров"
+    },
+    {
+      "id": "5",
+      "title": "5 идей фартука для белой кухни",
+      "image": "./Assets/img/article-dark-2.png",
+      "alt": "Белая кухня",
+      "badges": [
+        "Материалы",
+        "Дизайн"
+      ],
+      "date": "27.01.2023",
+      "views": "1 532 просмотра"
+    },
+    {
+      "id": "6",
+      "title": "Бестселлеры NEFF для современной кухни",
+      "image": "./Assets/img/article-dark-3.png",
+      "alt": "Современная кухня",
+      "badges": [
+        "Тренды",
+        "Выбор"
+      ],
+      "date": "28.01.2023",
+      "views": "2 021 просмотр"
+    }
+  ],
+  "promos": [
+    {
+      "id": "1",
+      "title": "2+2: варочная панель и вытяжка в подарок",
+      "description": "Дарим технику при покупке кухни NEFF.",
+      "image": "./Assets/img/promo-gift.png",
+      "alt": "Акция 2+2"
+    },
+    {
+      "id": "2",
+      "title": "Суперрассрочка 0/0/12",
+      "description": "Мебель NEFF без первоначального взноса и переплаты на 12 месяцев.",
+      "image": "./Assets/img/promo-installment.png",
+      "alt": "Рассрочка"
+    },
+    {
+      "id": "3",
+      "title": "Кухня и техника: вместе выгодно",
+      "description": "Больше техники - больше скидка на кухню.",
+      "image": "./Assets/img/promo-combo.png",
+      "alt": "Комплект кухни и техники"
+    },
+    {
+      "id": "4",
+      "title": "Скидка на топ-модели месяца",
+      "description": "Специальная цена на популярные кухни из каталога.",
+      "image": "./Assets/img/promo-slide-1.png",
+      "alt": "Скидка на кухни"
+    },
+    {
+      "id": "5",
+      "title": "Бесплатный дизайн-проект",
+      "description": "Подготовим проект кухни перед заключением договора.",
+      "image": "./Assets/img/promo-slide-2.png",
+      "alt": "Дизайн-проект"
+    },
+    {
+      "id": "6",
+      "title": "Монтаж со скидкой",
+      "description": "Скидка на установку при заказе кухни с техникой.",
+      "image": "./Assets/img/kitchen-5.png",
+      "alt": "Монтаж кухни"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Кухня для Ксении Собчак",
+      "style": "Эклектика",
+      "size": "6383 x 3080 мм",
+      "designer": "NEFF Дизайн-бюро",
+      "image": "./Assets/img/portfolio-gallery-01.jpg",
+      "likes": 75,
+      "star": true
+    },
+    {
+      "id": "2",
+      "title": "Бронзовый Спарк",
+      "style": "Лофт",
+      "size": "3550 x 2100 мм",
+      "designer": "NEFF Дизайн-бюро",
+      "image": "./Assets/img/kitchen-2.png",
+      "likes": 107,
+      "star": false
+    },
+    {
+      "id": "3",
+      "title": "Место, где рождается энергия",
+      "style": "Скандинавский",
+      "size": "6383 x 3080 мм",
+      "designer": "Максимова Марина",
+      "image": "./Assets/img/portfolio-gallery-02.jpg",
+      "likes": 75,
+      "star": true
+    },
+    {
+      "id": "4",
+      "title": "Кухня для резидента Comedy Club: стекло, дерево и бетон",
+      "style": "Лофт",
+      "size": "3550 x 2100 мм",
+      "designer": "Хващевская Татьяна",
+      "image": "./Assets/img/portfolio-gallery-03.jpg",
+      "likes": 107,
+      "star": false
+    },
+    {
+      "id": "5",
+      "title": "Светлая кухня для семьи",
+      "style": "Неоклассика",
+      "size": "4200 x 2600 мм",
+      "designer": "NEFF Дизайн-бюро",
+      "image": "./Assets/img/portfolio-1.png",
+      "likes": 63,
+      "star": false
+    },
+    {
+      "id": "6",
+      "title": "Графитовая кухня с островом",
+      "style": "Современный",
+      "size": "5100 x 2900 мм",
+      "designer": "Иванова Анна",
+      "image": "./Assets/img/portfolio-2.png",
+      "likes": 91,
+      "star": true
+    },
+    {
+      "id": "7",
+      "title": "Компактная кухня в студии",
+      "style": "Минимализм",
+      "size": "2800 x 2200 мм",
+      "designer": "Петрова Ольга",
+      "image": "./Assets/img/portfolio-3.png",
+      "likes": 48,
+      "star": false
+    },
+    {
+      "id": "8",
+      "title": "Кухня с деревянными фасадами",
+      "style": "Эко",
+      "size": "4600 x 2400 мм",
+      "designer": "NEFF Дизайн-бюро",
+      "image": "./Assets/img/portfolio-4.png",
+      "likes": 84,
+      "star": false
+    }
+  ],
+  "reviews": [
+    {
+      "id": "1",
+      "name": "Ксения Собчак",
+      "role": "журналист и телеведущая",
+      "avatar": "./Assets/img/sobchak-avatar.png",
+      "text": "Первое, что говорят мои друзья, когда заходят в мой дом: какая невероятная кухня. Здесь мы проводим больше всего времени, поэтому качество и удобство были особенно важны.",
+      "gallery": [
+        "./Assets/img/project-1.png",
+        "./Assets/img/review-4.png",
+        "./Assets/img/review-5.png"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Анна Хилькевич",
+      "role": "актриса",
+      "avatar": "./Assets/img/review-user-2.png",
+      "text": "Получилось именно так, как я хотела. Кухня светлая, легкая и уютная. Здесь много воздуха, а все вокруг радует глаз.",
+      "gallery": [
+        "./Assets/img/khilkevich-1.png",
+        "./Assets/img/khilkevich-2.png",
+        "./Assets/img/khilkevich-3.png"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Мария Иванова",
+      "role": "клиент NEFF",
+      "avatar": "./Assets/img/review-user-3.png",
+      "text": "Команда помогла подобрать материалы и продумать хранение. Пользоваться кухней удобно каждый день.",
+      "gallery": [
+        "./Assets/img/review-1.png",
+        "./Assets/img/review-2.png",
+        "./Assets/img/review-3.png"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Ольга Васильева",
+      "role": "клиент NEFF",
+      "avatar": "./Assets/img/review-user-4.png",
+      "text": "Проект сделали быстро, монтаж прошел аккуратно. Особенно понравилось, что все детали согласовали заранее.",
+      "gallery": [
+        "./Assets/img/review-2.png",
+        "./Assets/img/review-4.png",
+        "./Assets/img/review-5.png"
+      ]
+    }
+  ]
 }
