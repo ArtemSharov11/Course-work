@@ -1,0 +1,117 @@
+@media (max-width: 767px) {
+    .articles-mobile-extra {
+        display: block !important;
+    }
+
+    .articles-page {
+        padding-top: 25px;
+    }
+
+    .articles-page__title {
+        margin: 0 0 25px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid var(--border-color);
+        text-transform: none;
+    }
+
+    .articles-page__tabs {
+        width: calc(100% + 30px);
+        margin: 0 0 25px -15px;
+        padding: 0 15px;
+        gap: 10px;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .articles-page__tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .article-tab {
+        min-height: 37px;
+        padding: 0 12px;
+        border-radius: 8px;
+        background: #f4f4f4;
+        white-space: nowrap;
+    }
+
+    .articles-page__grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .article-page-card {
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .article-page-card:nth-child(n+13) {
+        display: none;
+    }
+
+    .article-page-card__image {
+        width: 330px;
+        height: 190px;
+        margin: 0 0 11px;
+        border-radius: 14px;
+    }
+
+    .article-page-card__badges {
+        top: 14px;
+        left: 15px;
+        gap: 8px;
+    }
+
+    .article-page-card__badges span {
+        padding: 6px 9px;
+        border-radius: 5px;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 0.3px;
+    }
+
+    .article-page-card h2 {
+        max-width: 330px !important;
+        min-height: 0;
+        margin: 20px 0 8px;
+        line-height: 21px;
+    }
+
+    .article-page-card__meta {
+        gap: 0;
+        align-items: center;
+        font-size: 14px;
+        line-height: 21px;
+        color: var(--secondary-text);
+    }
+
+    .article-page-card__meta span + span::before {
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 14px;
+        margin: 0 13px;
+        vertical-align: -2px;
+        background: var(--border-color);
+    }
+
+    .articles-page__pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin: 0 0 50px;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .articles-page__pagination a:nth-of-type(n+4) {
+        display: none;
+    }
+
+    .articles-mobile-extra.addresses-section {
+        padding-top: 25px !important;
+    }
+}

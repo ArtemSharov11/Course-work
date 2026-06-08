@@ -1,0 +1,97 @@
+@media (max-width: 767px) {
+    .promos-section-page {
+        padding-top: 25px;
+    }
+
+    .promos-page-title {
+        margin: 0;
+        padding-bottom: 15px;
+        border-bottom: 1px solid var(--border-color);
+        font-size: 0 !important;
+        line-height: 0 !important;
+        letter-spacing: 0 !important;
+    }
+
+    .promos-page-title::before {
+        content: "Акции";
+        display: block;
+        color: var(--text-color);
+        font-family: "SangBleu Sunrise", serif;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 34px;
+        letter-spacing: 0;
+        text-transform: none;
+    }
+
+    .promos-page-layout {
+        display: block;
+    }
+
+    .promos-page-sidebar {
+        width: 100%;
+        margin: 25px 0 21px;
+    }
+
+    .promos-date-info {
+        position: static;
+        top: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .promos-date-info .font-portfolio-desc {
+        margin: 0;
+    }
+
+    .promos-page-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .promo-page-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin: 0 0 25px;
+        padding: 0 0 25px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .promo-page-item:nth-child(n+10) {
+        display: none;
+    }
+
+    .promo-page-item__img {
+        width: 330px;
+        height: 190px;
+        margin: 0 0 11px;
+        border-radius: 14px;
+    }
+
+    .promo-page-item__content {
+        display: block;
+        padding-top: 0;
+    }
+
+    .promo-page-item__content h3 {
+        margin: 0 0 8px;
+        line-height: 21px;
+    }
+
+    .promo-page-item__content p,
+    .promo-page-item__content p[style] {
+        width: 100% !important;
+        max-width: none !important;
+    }
+
+    .promo-page-item__action {
+        display: none;
+    }
+
+    .addresses-section {
+        padding-top: 25px !important;
+    }
+}

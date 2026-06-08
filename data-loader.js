@@ -2,11 +2,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const API_BASE = 'http://localhost:3000';
 
     async function fetchData(endpoint) {
-        const response = await fetch(`${API_BASE}/${endpoint}`);
-        if (!response.ok) {
-            throw new Error(`Cannot load ${endpoint}`);
+        try {
+            const response = await fetch(`${API_BASE}/${endpoint}`);
+            if (!response.ok) {
+                throw new Error(`Cannot load ${endpoint}`);
+            }
+            return response.json();
+        } catch (apiError) {
+            const response = await fetch('./db.json');
+            if (!response.ok) {
+                throw apiError;
+            }
+
+            const db = await response.json();
+            if (!Object.prototype.hasOwnProperty.call(db, endpoint)) {
+                throw apiError;
+            }
+
+            return db[endpoint];
         }
-        return response.json();
     }
 
     function formatPrice(price) {
@@ -50,10 +64,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderArticles(articles, grid) {
-        grid.innerHTML = articles.map(article => `
+        if (!articles.length) {
+            grid.innerHTML = '';
+            return;
+        }
+
+        const articlesToRender = articles.length >= 18
+            ? articles
+            : Array.from({ length: 18 }, (_, index) => articles[index % articles.length]);
+
+        grid.innerHTML = articlesToRender.map(article => `
             <article class="article-page-card">
                 <div class="article-page-card__image">
-                    <img src="${article.image}" alt="${article.alt}">
+                    <img src="${article.image}" alt="${article.alt}" loading="eager" decoding="sync">
                     <div class="article-page-card__badges">
                         ${(article.badges || []).map(badge => `<span>${badge}</span>`).join('')}
                     </div>
@@ -141,7 +164,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await fetchData(endpoint);
             renderer(data, node);
             if (window.NeffI18n) {
-                window.NeffI18n.setLanguage?.(localStorage.getItem('selectedLang') || 'ru');
+                try {
+                    window.NeffI18n.setLanguage?.(localStorage.getItem('selectedLang') || 'ru');
+                } catch (i18nError) {
+                    console.warn(i18nError);
+                }
             }
         } catch (error) {
             console.error(error);
