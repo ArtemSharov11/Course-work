@@ -1,4 +1,4 @@
-.breadcrumbs {
+﻿.breadcrumbs {
     padding-top: 1.3rem;
     padding-left: 0.6rem;
     margin-bottom: 1rem;
@@ -342,17 +342,17 @@ body.dark-theme .review-card__avatar img {
         margin: 0 0 55px -3px;
         padding-bottom: 0;
         border-bottom: none;
-        letter-spacing: 0 !important;
-        line-height: 34px !important;
+        letter-spacing: 0;
+        line-height: 34px;
         text-transform: none;
     }
 
     .reviews-studios-mobile {
-        display: flex !important;
-        width: 330px !important;
-        height: 42px !important;
-        margin: 0 0 23px !important;
-        padding: 0 20px !important;
+        display: flex;
+        width: 330px;
+        height: 42px;
+        margin: 0 0 23px;
+        padding: 0 20px;
     }
 
     .reviews-tabs {
@@ -384,9 +384,9 @@ body.dark-theme .review-card__avatar img {
         display: grid;
         grid-template-columns: 88px 1fr;
         gap: 0 19px;
-        margin: 0 !important;
+        margin: 0;
         padding: 25px 0;
-        border-bottom: 1px solid var(--border-color) !important;
+        border-bottom: 1px solid var(--border-color);
     }
 
     .review-card:nth-child(n+5) {
@@ -416,7 +416,7 @@ body.dark-theme .review-card__avatar img {
 
     .review-card__info h2,
     .review-card__info h2[style] {
-        margin: 0 0 6px !important;
+        margin: 0 0 6px;
     }
 
     .review-card__text-container {
@@ -431,10 +431,10 @@ body.dark-theme .review-card__avatar img {
     .review-text,
     .review-text-content {
         display: block;
-        width: 100% !important;
-        white-space: normal !important;
-        overflow: visible !important;
-        text-overflow: clip !important;
+        width: 100%;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
     }
 
     .btn-show-more {
@@ -457,7 +457,7 @@ body.dark-theme .review-card__avatar img {
     .review-img-item[style],
     .review-card__gallery > img {
         flex: 0 0 225px;
-        width: 225px !important;
+        width: 225px;
         height: 190px;
         border-radius: 14px;
         overflow: hidden;
@@ -466,7 +466,7 @@ body.dark-theme .review-card__avatar img {
     .review-img-item:nth-child(n+2),
     .review-card__gallery > img:nth-child(n+2) {
         flex-basis: 120px;
-        width: 120px !important;
+        width: 120px;
     }
 
     .review-img-item img,
@@ -478,6 +478,6 @@ body.dark-theme .review-card__avatar img {
     }
 
     .addresses-section {
-        padding-top: 25px !important;
+        padding-top: 25px;
     }
 }

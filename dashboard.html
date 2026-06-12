@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEFF - Личный кабинет</title>
+    <link rel="stylesheet" href="themes.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="font-logo-neff">NEFF</div>
+            <div class="preloader-line"></div>
+        </div>
+    </div>
+
+    <header class="header dashboard-header">
+        <div class="container header__container">
+            <a class="dashboard-brand" href="index.html">
+                <span class="font-logo-neff">NEFF</span>
+                <span class="font-logo-subtitle">Кухни и шкафы</span>
+            </a>
+            <nav class="dashboard-header__nav" aria-label="Навигация кабинета">
+                <a href="catalog.html">Каталог</a>
+                <a href="index.html">На сайт</a>
+                <button type="button" class="dashboard-icon-btn" id="dashboard-settings" title="Настройки" aria-label="Открыть настройки">⚙</button>
+                <button type="button" class="dashboard-logout" id="dashboard-logout">Выйти</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <div class="container">
+            <div class="dashboard-title-row">
+                <div>
+                    <p class="dashboard-eyebrow" id="dashboard-role">Личный кабинет</p>
+                    <h1 class="dashboard-title" id="dashboard-title">Панель управления</h1>
+                </div>
+                <div class="dashboard-user" id="dashboard-user"></div>
+            </div>
+
+            <nav class="dashboard-tabs" id="dashboard-tabs" aria-label="Разделы кабинета"></nav>
+            <div id="dashboard-content" class="dashboard-content" aria-live="polite"></div>
+        </div>
+    </main>
+
+    <dialog class="dashboard-dialog" id="entity-dialog">
+        <form method="dialog" class="dashboard-dialog__panel" id="entity-form">
+            <div class="dashboard-dialog__header">
+                <h2 id="entity-dialog-title">Редактирование</h2>
+                <button class="dashboard-icon-btn" value="cancel" type="submit" aria-label="Закрыть">×</button>
+            </div>
+            <div id="entity-form-fields" class="dashboard-form-grid"></div>
+            <div class="dashboard-dialog__actions">
+                <button class="dashboard-btn dashboard-btn--secondary" value="cancel" type="submit">Отмена</button>
+                <button class="dashboard-btn dashboard-btn--primary" id="entity-save" value="default" type="submit">Сохранить</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="i18n.js"></script>
+    <script src="animations.js"></script>
+    <script src="settings.js"></script>
+    <script src="api.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

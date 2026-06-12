@@ -1,4 +1,4 @@
-@media (max-width: 767px) {
+﻿@media (max-width: 767px) {
     .portfolio-page {
         padding-top: 25px;
     }
@@ -22,7 +22,7 @@
 
     .filter-pill,
     .filter-pill[style] {
-        width: auto !important;
+        width: auto;
         min-height: 37px;
         padding: 0 12px;
         border-radius: 8px;
@@ -38,7 +38,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 96px !important;
+        width: 96px;
         height: 37px;
         margin-top: 10px;
         padding: 0 12px;
@@ -97,7 +97,7 @@
     }
 
     .portfolio-item__likes::before {
-        content: "♡";
+        content: "в™Ў";
         font-size: 22px;
         line-height: 1;
         color: #0f0f0f;
@@ -114,9 +114,9 @@
 
     .portfolio-item__info h3,
     .portfolio-item__info h3[style] {
-        margin: 0 !important;
-        font-size: 18px !important;
-        line-height: 21px !important;
+        margin: 0;
+        font-size: 18px;
+        line-height: 21px;
     }
 
     .portfolio-item__meta {
@@ -166,6 +166,6 @@
     }
 
     .addresses-section {
-        padding-top: 42px !important;
+        padding-top: 42px;
     }
 }

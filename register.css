@@ -75,3 +75,117 @@ body.dark-theme .error-msg {
 .auth-card .font-heading-huge {
     color: var(--text-color);
 }
+
+@media (min-width: 740px) and (max-width: 1024px) {
+    body {
+        min-width: 0;
+        width: 100%;
+        overflow-x: hidden;
+        background: var(--bg-color);
+    }
+
+    main {
+        overflow: hidden;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 768px;
+        min-width: 0;
+        padding: 0 30px;
+        margin: 0 auto;
+    }
+
+    .desktop-only,
+    .header__nav,
+    .header__contacts {
+        display: none;
+    }
+
+    .header {
+        height: 76px;
+        background: var(--bg-color);
+    }
+
+    .header__container {
+        height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 30px;
+    }
+
+    .header__logo {
+        min-width: 90px;
+        padding: 0;
+    }
+
+    .font-logo-neff {
+        font-size: 2.4rem;
+        line-height: 2rem;
+    }
+
+    .font-logo-subtitle {
+        margin-top: 4px;
+        font-size: 0.62rem;
+        line-height: 0.75rem;
+    }
+
+    .burger-menu {
+        display: flex;
+        width: 42px;
+        height: 34px;
+        padding: 7px 4px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .burger-menu span {
+        display: block;
+        width: 34px;
+        height: 2px;
+        background: #585858;
+    }
+
+    .get-design-section {
+        min-height: calc(100vh - 76px);
+        margin: 0;
+        padding: 56px 0 72px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .design-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .auth-card {
+        width: min(100%, 520px);
+        margin: 0 auto;
+        padding: 42px 46px;
+        border-radius: 18px;
+    }
+
+    .auth-card .font-heading-huge {
+        margin-bottom: 28px;
+        font-size: 44px;
+        line-height: 48px;
+        letter-spacing: 0;
+    }
+
+    .auth-card .font-portfolio-desc,
+    .auth-card .form-input {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .password-mode-options {
+        gap: 10px 18px;
+    }
+
+    .design-submit-btn {
+        width: 100%;
+    }
+}

@@ -1,4 +1,4 @@
-@media (max-width: 767px) {
+﻿@media (max-width: 767px) {
     .promos-section-page {
         padding-top: 25px;
     }
@@ -7,13 +7,13 @@
         margin: 0;
         padding-bottom: 15px;
         border-bottom: 1px solid var(--border-color);
-        font-size: 0 !important;
-        line-height: 0 !important;
-        letter-spacing: 0 !important;
+        font-size: 0;
+        line-height: 0;
+        letter-spacing: 0;
     }
 
     .promos-page-title::before {
-        content: "Акции";
+        content: "РђРєС†РёРё";
         display: block;
         color: var(--text-color);
         font-family: "SangBleu Sunrise", serif;
@@ -83,8 +83,8 @@
 
     .promo-page-item__content p,
     .promo-page-item__content p[style] {
-        width: 100% !important;
-        max-width: none !important;
+        width: 100%;
+        max-width: none;
     }
 
     .promo-page-item__action {
@@ -92,6 +92,6 @@
     }
 
     .addresses-section {
-        padding-top: 25px !important;
+        padding-top: 25px;
     }
 }

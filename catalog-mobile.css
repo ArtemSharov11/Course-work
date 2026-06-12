@@ -1,4 +1,4 @@
-@media (max-width: 767px) {
+﻿@media (max-width: 767px) {
     .catalog-page-section {
         padding-top: 25px;
     }
@@ -21,8 +21,8 @@
     }
 
     .catalog-page-intro p[style] {
-        width: 100% !important;
-        letter-spacing: -0.14px !important;
+        width: 100%;
+        letter-spacing: -0.14px;
     }
 
     .catalog-page-tabs {

@@ -30,6 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderCatalog(products, grid) {
         const isMainPage = grid.classList.contains('catalog__grid');
         const productsToRender = isMainPage ? products.slice(0, 4) : products;
+        let currentUser = null;
+        try {
+            currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        } catch {
+            currentUser = null;
+        }
 
         grid.innerHTML = productsToRender.map(product => {
             if (isMainPage) {
@@ -45,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             return `
-                <article class="catalog-page-card">
+                <article class="catalog-page-card" data-product-id="${product.id}">
                     <div class="catalog-card-image">
                         ${product.popular ? '<span class="badge-popular">ПОПУЛЯРНОЕ</span>' : ''}
                         <img src="${product.image}" alt="${product.name}">
@@ -56,6 +62,16 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="secondary-section-subtitle">Материал: ${product.material}</span>
                         </div>
                         <p class="font-card-price">от ${formatPrice(product.price)} ₽</p>
+                        ${currentUser?.role === 'client' ? `
+                            <div class="catalog-card-actions">
+                                <button class="catalog-action-btn catalog-action-btn--favorite" type="button" data-favorite-product="${product.id}">
+                                    В избранное
+                                </button>
+                                <button class="catalog-action-btn catalog-action-btn--cart" type="button" data-cart-product="${product.id}">
+                                    В корзину
+                                </button>
+                            </div>
+                        ` : ''}
                     </div>
                     <div class="catalog-card-line"></div>
                 </article>

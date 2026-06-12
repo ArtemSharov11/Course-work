@@ -84,7 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
             ['#', 'Покупателям'],
             ['articles.html', 'Статьи'],
             ['reviews.html', 'Отзывы'],
-            ['login.html', 'Войти']
+            [localStorage.getItem('currentUser') ? 'dashboard.html' : 'login.html',
+                localStorage.getItem('currentUser') ? 'Кабинет' : 'Войти']
         ];
 
         links.forEach(([href, text]) => {
@@ -301,19 +302,31 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateAuthLinks() {
         const authLinks = document.querySelectorAll('.auth-nav-link');
         const currentUserStr = localStorage.getItem('currentUser');
+        const headerContacts = document.querySelector('.header__contacts');
+        let accountLink = document.querySelector('.account-nav-link');
+
+        if (headerContacts && !accountLink) {
+            accountLink = document.createElement('a');
+            accountLink.className = 'font-nav-top account-nav-link';
+            accountLink.style.marginRight = '0.75rem';
+            headerContacts.insertAdjacentElement('afterbegin', accountLink);
+        }
 
         if (currentUserStr) {
             const currentUser = JSON.parse(currentUserStr);
+            if (accountLink) {
+                accountLink.textContent = currentUser.role === 'admin' ? 'АДМИН-ПАНЕЛЬ' : 'КАБИНЕТ';
+                accountLink.href = 'dashboard.html';
+            }
             authLinks.forEach(link => {
-                link.textContent = `ВЫЙТИ (${currentUser.nickname})`;
-                link.href = '#';
-                link.addEventListener('click', event => {
-                    event.preventDefault();
-                    localStorage.removeItem('currentUser');
-                    window.location.reload();
-                });
+                link.textContent = currentUser.role === 'admin' ? 'АДМИН-ПАНЕЛЬ' : 'КАБИНЕТ';
+                link.href = 'dashboard.html';
             });
         } else {
+            if (accountLink) {
+                accountLink.textContent = 'ВОЙТИ';
+                accountLink.href = 'login.html';
+            }
             authLinks.forEach(link => {
                 link.textContent = 'ВОЙТИ';
                 link.href = 'login.html';

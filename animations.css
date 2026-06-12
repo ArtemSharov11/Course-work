@@ -136,6 +136,7 @@ a:hover {
 #preloader.hide {
     opacity: 0;
     visibility: hidden;
+    display: none;
 }
 
 body.dark-theme #preloader {

@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --bg-color: #ffffff;
     --section-bg: #F4F4F4;
     --card-bg: #ffffff;
@@ -92,8 +92,8 @@ body.visually-impaired.vi-scheme-blue-navy {
 }
 
 body.visually-impaired * {
-    line-height: 1.5 !important;
-    text-align: left !important;
+    line-height: 1.5;
+    text-align: left;
 }
 
 body.visually-impaired p {
@@ -102,7 +102,7 @@ body.visually-impaired p {
 }
 
 body.visually-impaired.vi-hide-images img {
-    display: none !important;
+    display: none;
 }
 
 body.visually-impaired.vi-hide-images img[alt] + .image-alt-text {

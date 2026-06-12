@@ -252,8 +252,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (response.ok) {
-                    localStorage.setItem('currentUser', JSON.stringify(newUser));
-                    window.location.href = 'index.html';
+                    const savedUser = await response.json();
+                    localStorage.setItem('currentUser', JSON.stringify(savedUser));
+                    window.location.href = 'dashboard.html';
                 } else {
                     console.error('Ошибка при сохранении пользователя');
                 }
@@ -294,7 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 localStorage.setItem('currentUser', JSON.stringify(user));
-                window.location.href = 'index.html';
+                window.location.href = 'dashboard.html';
             } catch (error) {
                 console.error('Ошибка при авторизации:', error);
             }

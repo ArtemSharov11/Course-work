@@ -1,6 +1,6 @@
-@media (max-width: 767px) {
+﻿@media (max-width: 767px) {
     .articles-mobile-extra {
-        display: block !important;
+        display: block;
     }
 
     .articles-page {
@@ -73,7 +73,7 @@
     }
 
     .article-page-card h2 {
-        max-width: 330px !important;
+        max-width: 330px;
         min-height: 0;
         margin: 20px 0 8px;
         line-height: 21px;
@@ -112,6 +112,6 @@
     }
 
     .articles-mobile-extra.addresses-section {
-        padding-top: 25px !important;
+        padding-top: 25px;
     }
 }

@@ -118,6 +118,69 @@
     padding-top: 1.4rem;
 }
 
+.catalog-card-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.catalog-action-btn {
+    min-height: 2.7rem;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.catalog-action-btn:hover,
+.catalog-action-btn.is-active {
+    border-color: var(--accent-color);
+    background: var(--accent-color);
+    color: #fff;
+}
+
+.app-toast-container {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.app-toast {
+    max-width: 22rem;
+    padding: 0.9rem 1rem;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 4px;
+    background: #171717;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(-0.5rem);
+    transition: 0.2s ease;
+}
+
+.app-toast--error {
+    border-left-color: #d64545;
+}
+
+.app-toast.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+    .catalog-card-actions {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 
 

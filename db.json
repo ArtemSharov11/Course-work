@@ -603,7 +603,6 @@
       "gallery": "string[]"
     }
   },
-  "$schema": "./node_modules/json-server/schema.json",
   "articles": [
     {
       "id": "1",
@@ -1003,5 +1002,6 @@
         "./Assets/img/review-5.png"
       ]
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
