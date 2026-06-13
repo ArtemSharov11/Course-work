@@ -171,9 +171,19 @@
                             <input type="checkbox" id="reg-agreement">
                             <span class="checkmark"></span>
                         </label>
-                        <p class="secondary-section-subtitle agreement-text">
-                            Я прочитал и согласен с <a href="#">Пользовательским соглашением</a> <span class="required">*</span>
-                        </p>
+                        <div class="agreement-content">
+                            <p class="secondary-section-subtitle agreement-text">
+                                Я прочитал и согласен с условиями <span class="required">*</span>
+                            </p>
+                            <details class="agreement-details">
+                                <summary>Пользовательское соглашение</summary>
+                                <div class="agreement-details__body">
+                                    <p>Пользователь обязуется указывать достоверные данные при регистрации и не передавать доступ к учетной записи третьим лицам.</p>
+                                    <p>Данные учетной записи используются для работы с избранным, корзиной и заказами в рамках учебного проекта.</p>
+                                    <p>Устанавливая отметку согласия, пользователь подтверждает, что прочитал и принимает указанные условия.</p>
+                                </div>
+                            </details>
+                        </div>
                     </div>
 
                     <!-- Кнопка сабмита -->
@@ -188,7 +198,7 @@
     </section>
     </main>
 
-    <footer class="footer" style="padding-left: 1.8rem;">
+    <footer class="footer" id="site-footer" style="padding-left: 1.8rem;">
         <div class="container">
             
             <div class="footer__row footer__top">

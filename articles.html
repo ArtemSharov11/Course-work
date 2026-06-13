@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Amaranth&family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="themes.css">
     <link rel="stylesheet" href="styles.css">  
-    <link rel="stylesheet" href="mobile.css">
     <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="articles.css">
     <link rel="stylesheet" href="articles-mobile.css">
@@ -89,7 +88,7 @@
                 <a href="#" class="article-tab">Телепроекты</a>
             </nav>
 
-            <section class="articles-page__grid" aria-label="Список статей" data-json="articles">
+            <section class="articles-page__grid" id="articles-list" aria-label="Список статей" data-json="articles">
                 <article class="article-page-card">
                     <div class="article-page-card__image">
                         <img src="./Assets/img/article-1.png" alt="Кухонный интерьер">
@@ -152,7 +151,7 @@
             </section>
 
         </div>
-        <section class="addresses-section articles-mobile-extra">
+        <section class="addresses-section articles-mobile-extra" id="addresses">
             <div class="container">
                 <div class="addresses-header">
                     <h2 class="font-heading-huge">АДРЕСА</h2>
@@ -202,7 +201,7 @@
             </div>
         </section>
 
-        <section class="design-order articles-mobile-extra">
+        <section class="design-order articles-mobile-extra" id="design-order">
             <div class="container design-order__container">
                 <div class="design-order__info">
                     <h2 class="font-heading-huge">Получите<br>бесплатный<br>дизайн-проект</h2>
@@ -243,7 +242,7 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="site-footer">
         <div class="container">
             
             <div class="footer__row footer__top">

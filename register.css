@@ -162,7 +162,8 @@ body.dark-theme .error-msg {
     }
 
     .auth-card {
-        width: min(100%, 520px);
+        width: min(100%, 520px) !important;
+        max-width: 100%;
         margin: 0 auto;
         padding: 42px 46px;
         border-radius: 18px;
@@ -188,4 +189,52 @@ body.dark-theme .error-msg {
     .design-submit-btn {
         width: 100%;
     }
+}
+
+@media (max-width: 739px) {
+    .auth-card {
+        width: 100% !important;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .form-agreement {
+        align-items: flex-start;
+    }
+}
+.agreement-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.agreement-details {
+    margin-top: 0.55rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--card-bg);
+}
+
+.agreement-details summary {
+    padding: 0.75rem 0.9rem;
+    color: var(--accent-color);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.agreement-details__body {
+    padding: 0 0.9rem 0.9rem;
+    color: var(--secondary-text);
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.agreement-details__body p {
+    margin: 0 0 0.6rem;
+}
+
+.agreement-details__body p:last-child {
+    margin-bottom: 0;
 }
