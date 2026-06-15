@@ -169,3 +169,36 @@
         padding-top: 42px;
     }
 }
+
+@media (max-width: 767px) {
+    .portfolio-filters-row {
+        display: flex;
+        gap: 10px;
+    }
+
+    .filter-pills {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .filter-pill.portfolio-filter-control {
+        display: grid;
+        width: 100%;
+        min-height: 0;
+        padding: 10px;
+    }
+
+    .portfolio-filter-control input,
+    .portfolio-filter-control select {
+        height: 42px;
+    }
+
+    .btn-apply,
+    .btn-apply[style],
+    #portfolio-reset {
+        width: 100% !important;
+        height: 42px;
+        margin-top: 0;
+    }
+}

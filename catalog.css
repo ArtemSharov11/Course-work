@@ -118,6 +118,37 @@
     padding-top: 1.4rem;
 }
 
+.catalog-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 3.5rem 0 1rem;
+}
+
+.catalog-pagination__button {
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.catalog-pagination__button:hover,
+.catalog-pagination__button.is-active {
+    border-color: var(--accent-color);
+    background: var(--accent-color);
+    color: #fff;
+}
+
+.catalog-pagination__button:disabled {
+    cursor: not-allowed;
+    opacity: 0.35;
+}
+
 .catalog-card-actions {
     display: grid;
     grid-template-columns: 1fr 1fr;

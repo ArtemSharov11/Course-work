@@ -39,7 +39,8 @@
 
 .portfolio-filters-row {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
     gap: 1.4rem;
     padding-bottom: 1.8rem;
     border-bottom: 0.1rem solid var(--border-color);
@@ -47,6 +48,8 @@
 
 .filter-pills {
     display: flex;
+    flex: 1 1 50rem;
+    flex-wrap: wrap;
     gap: 0.4rem;
 }
 
@@ -64,6 +67,27 @@
     cursor: default;
 }
 
+.portfolio-filter-control {
+    display: grid;
+    gap: 0.35rem;
+    min-width: 10rem;
+    color: var(--secondary-text);
+}
+
+.portfolio-filter-control--search {
+    flex: 1 1 14rem;
+}
+
+.portfolio-filter-control input,
+.portfolio-filter-control select {
+    height: 2.35rem;
+    background: var(--card-bg);
+}
+
+#portfolio-reset {
+    min-height: 2.35rem;
+}
+
 .btn-apply {
     background: #757575;
     color: white;
@@ -72,7 +96,7 @@
     border-radius: 0.5rem;
     font-weight: 600;
     font-size: 0.85rem;
-    cursor: default;
+    cursor: pointer;
 }
 
 .portfolio-grid-4 {

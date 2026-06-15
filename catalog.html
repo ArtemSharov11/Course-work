@@ -32,19 +32,19 @@
 
             <nav class="header__nav desktop-only">
                 <div class="header__nav-top">
-                    <a href="#" class="font-nav-top">франшиза</a>
-                    <a href="#" class="font-nav-top">застройщику</a>
-                    <a href="#" class="font-nav-top">дизайнеру</a>
-                    <a href="#" class="font-nav-top">обратная связь</a>
+                    <a href="index.html#about" class="font-nav-top">франшиза</a>
+                    <a href="catalog.html#design-order" class="font-nav-top">застройщику</a>
+                    <a href="portfolio.html#portfolio-projects" class="font-nav-top">дизайнеру</a>
+                    <a href="index.html#get-design" class="font-nav-top">обратная связь</a>
                 </div>
                 <div class="header__nav-bottom">
                     <a href="catalog.html" class="font-nav-bottom">кухни</a>
-                    <a href="#" class="font-nav-bottom">шкафы</a>
-                    <a href="#" class="font-nav-bottom">спальни</a>
-                    <a href="#" class="font-nav-bottom">ванные</a>
+                    <a href="catalog.html?collection=wardrobes#catalog-products" class="font-nav-bottom">шкафы</a>
+                    <a href="catalog.html?collection=bedrooms#catalog-products" class="font-nav-bottom">спальни</a>
+                    <a href="catalog.html?collection=bathrooms#catalog-products" class="font-nav-bottom">ванные</a>
                     <a href="portfolio.html" class="font-nav-bottom">портфолио</a>
                     <a href="promos.html" class="font-nav-bottom">акции</a>
-                    <a href="#" class="font-nav-bottom">покупателям</a>
+                    <a href="index.html#process" class="font-nav-bottom">покупателям</a>
                 </div>
             </nav>
 
@@ -79,11 +79,46 @@
                 </header>
 
                 <nav class="catalog-page-tabs">
-                    <a href="#" class="font-tab active">КУХНИ</a>
-                    <a href="#" class="font-tab">ШКАФЫ</a>
-                    <a href="#" class="font-tab">ВАННЫЕ</a>
-                    <a href="#" class="font-tab">ДИВАНЫ</a>
+                    <a href="catalog.html#catalog-products" class="font-tab active">КУХНИ</a>
+                    <a href="catalog.html?collection=wardrobes#catalog-products" class="font-tab">ШКАФЫ</a>
+                    <a href="catalog.html?collection=bathrooms#catalog-products" class="font-tab">ВАННЫЕ</a>
+                    <a href="catalog.html?collection=sofas#catalog-products" class="font-tab">ДИВАНЫ</a>
                 </nav>
+
+                <div class="collection-tools catalog-tools" aria-label="Поиск, фильтрация и сортировка каталога">
+                    <label class="collection-tools__search">
+                        <span>Поиск</span>
+                        <input id="catalog-search" type="search" placeholder="Название кухни" autocomplete="off">
+                    </label>
+                    <label>
+                        <span>Стиль</span>
+                        <select id="catalog-category">
+                            <option value="">Все стили</option>
+                            <option value="modern">Современный</option>
+                            <option value="classic">Классика</option>
+                            <option value="neoclassic">Неоклассика</option>
+                            <option value="loft">Лофт</option>
+                            <option value="scandinavian">Скандинавский</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Материал</span>
+                        <select id="catalog-material">
+                            <option value="">Все материалы</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Сортировка</span>
+                        <select id="catalog-sort">
+                            <option value="default">По умолчанию</option>
+                            <option value="price-asc">Сначала дешевле</option>
+                            <option value="price-desc">Сначала дороже</option>
+                            <option value="name">По названию</option>
+                        </select>
+                    </label>
+                    <button class="collection-tools__reset" id="catalog-reset" type="button">Сбросить</button>
+                </div>
+                <p class="collection-results secondary-section-subtitle" id="catalog-results" aria-live="polite"></p>
 
                 <div class="catalog-page-grid" id="catalog-grid" data-json="products">
                     
@@ -429,7 +464,7 @@
                                 <span class="checkmark-h"></span>
                             </label>
                             <p class="secondary-section-subtitle agreement-text-h">
-                                Согласен с обработкой персональных данных в соответствии с <a href="">Лицензионным соглашением</a>
+                                Согласен с обработкой персональных данных в соответствии с <a href="register.html#agreement">Лицензионным соглашением</a>
                             </p>
                         </div>
 
@@ -449,19 +484,19 @@
 
                 <nav class="articles-dark-nav-wrapper">
                     <div class="articles-dark-nav">
-                        <a href="#" class="dark-tab active" style="padding: 0.7rem 1.3rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Красивые проекты</a>
-                        <a href="#" class="dark-tab" style="padding: 0.7rem 1.3rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Звездные кухни</a>
-                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Дизайн</a>
-                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Выбор</a>
-                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Тренды</a>
-                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Разбор</a>
-                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Уход</a>
-                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Достижения</a>
-                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Кухни наших сотрудников</a>
-                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Мария в СМИ</a>
-                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Проект месяца</a>
-                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Дайджест</a>
-                        <a href="#" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Выставки</a>
+                        <a href="articles.html?tag=красивые-проекты#articles-list" class="dark-tab active" style="padding: 0.7rem 1.3rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Красивые проекты</a>
+                        <a href="articles.html?tag=звездные-кухни#articles-list" class="dark-tab" style="padding: 0.7rem 1.3rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Звездные кухни</a>
+                        <a href="articles.html?tag=дизайн#articles-list" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Дизайн</a>
+                        <a href="articles.html?tag=выбор#articles-list" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Выбор</a>
+                        <a href="articles.html?tag=тренды#articles-list" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Тренды</a>
+                        <a href="articles.html?tag=разбор#articles-list" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Разбор</a>
+                        <a href="articles.html?tag=уход#articles-list" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Уход</a>
+                        <a href="articles.html?tag=достижения#articles-list" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Достижения</a>
+                        <a href="articles.html?tag=кухни-наших-сотрудников#articles-list" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Кухни наших сотрудников</a>
+                        <a href="articles.html?tag=мария-в-сми#articles-list" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Мария в СМИ</a>
+                        <a href="articles.html?tag=проект-месяца#articles-list" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Проект месяца</a>
+                        <a href="articles.html?tag=дайджест#articles-list" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Дайджест</a>
+                        <a href="articles.html?tag=выставки#articles-list" class="dark-tab" style="padding: 0.7rem 1rem 0.6rem 0.8rem; letter-spacing: 0.02rem; font-size: 0.85rem;">Выставки</a>
                     </div>
                 </nav>
 
@@ -661,7 +696,7 @@
                                 <span class="checkmark"></span>
                             </label>
                             <p class="secondary-section-subtitle agreement-text">
-                                Согласен с обработкой персональных данных в соответствии с <a href="#">Лицензионным соглашением</a>
+                                Согласен с обработкой персональных данных в соответствии с <a href="register.html#agreement">Лицензионным соглашением</a>
                             </p>
                         </div>
 
@@ -682,8 +717,8 @@
                     <div class="font-logo-subtitle">Кухни и шкафы</div>
                 </div>
                 <div class="footer__socials">
-                    <a href="#" class="social-link"><img src="./Assets/icons/instagram.png" alt="Inst"></a>
-                    <a href="#" class="social-link"><img src="./Assets/icons/vk.png" alt="VK"></a>
+                    <a href="https://www.instagram.com/" class="social-link"><img src="./Assets/icons/instagram.png" alt="Inst"></a>
+                    <a href="https://vk.com/" class="social-link"><img src="./Assets/icons/vk.png" alt="VK"></a>
                 </div>
             </div>
 
@@ -697,31 +732,31 @@
                 <div class="footer__nav-cols">
                     <div class="footer__col" style="margin-right: 7.7rem;">
                         <h4 class="font-nav-bottom">КУХНИ</h4>
-                        <a href="#" class="secondary-section-subtitle">Современные</a>
-                        <a href="#" class="secondary-section-subtitle">Классические</a>
-                        <a href="#" class="secondary-section-subtitle">Кухни неоклассика</a>
-                        <a href="#" class="secondary-section-subtitle">Мебель для ванных</a>
+                        <a href="catalog.html?category=modern#catalog-products" class="secondary-section-subtitle">Современные</a>
+                        <a href="catalog.html?category=classic#catalog-products" class="secondary-section-subtitle">Классические</a>
+                        <a href="catalog.html?category=neoclassic#catalog-products" class="secondary-section-subtitle">Кухни неоклассика</a>
+                        <a href="catalog.html?collection=bathrooms#catalog-products" class="secondary-section-subtitle">Мебель для ванных</a>
                     </div>
                     <div class="footer__col" style="margin-right: 6.6rem; margin-bottom: 0.8rem;">
                         <h4 class="font-nav-bottom">ШКАФЫ</h4>
-                        <a href="#" class="secondary-section-subtitle">Выполненные проекты</a>
-                        <a href="#" class="secondary-section-subtitle">Полезные статьи</a>
-                        <a href="#" class="secondary-section-subtitle">Отзывы</a>
-                        <a href="#" class="secondary-section-subtitle">Дизайн кухни</a>
+                        <a href="portfolio.html#portfolio-projects" class="secondary-section-subtitle">Выполненные проекты</a>
+                        <a href="articles.html#articles-list" class="secondary-section-subtitle">Полезные статьи</a>
+                        <a href="reviews.html#reviews-list" class="secondary-section-subtitle">Отзывы</a>
+                        <a href="articles.html?tag=дизайн#articles-list" class="secondary-section-subtitle">Дизайн кухни</a>
                     </div>
                     <div class="footer__col" style="margin-right: 6.5rem;">
                         <h4 class="font-nav-bottom">ДЕТСКИЕ</h4>
-                        <a href="#" class="secondary-section-subtitle">Выполненные проекты</a>
-                        <a href="#" class="secondary-section-subtitle">Полезные статьи</a>
-                        <a href="#" class="secondary-section-subtitle">Отзывы</a>
-                        <a href="#" class="secondary-section-subtitle">Дизайн кухни</a>
+                        <a href="portfolio.html#portfolio-projects" class="secondary-section-subtitle">Выполненные проекты</a>
+                        <a href="articles.html#articles-list" class="secondary-section-subtitle">Полезные статьи</a>
+                        <a href="reviews.html#reviews-list" class="secondary-section-subtitle">Отзывы</a>
+                        <a href="articles.html?tag=дизайн#articles-list" class="secondary-section-subtitle">Дизайн кухни</a>
                     </div>
                     <div class="footer__col" style="margin-right: 7.3rem;">
                         <h4 class="font-nav-bottom">СПАЛЬНИ</h4>
-                        <a href="#" class="secondary-section-subtitle">Выполненные проекты</a>
-                        <a href="#" class="secondary-section-subtitle">Полезные статьи</a>
-                        <a href="#" class="secondary-section-subtitle">Отзывы</a>
-                        <a href="#" class="secondary-section-subtitle">Дизайн кухни</a>
+                        <a href="portfolio.html#portfolio-projects" class="secondary-section-subtitle">Выполненные проекты</a>
+                        <a href="articles.html#articles-list" class="secondary-section-subtitle">Полезные статьи</a>
+                        <a href="reviews.html#reviews-list" class="secondary-section-subtitle">Отзывы</a>
+                        <a href="articles.html?tag=дизайн#articles-list" class="secondary-section-subtitle">Дизайн кухни</a>
                     </div>
                 </div>
             </div>

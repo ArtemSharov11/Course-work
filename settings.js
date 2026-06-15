@@ -76,12 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const links = [
             ['catalog.html', 'Кухни'],
-            ['#', 'Шкафы'],
-            ['#', 'Спальни'],
-            ['#', 'Ванные'],
+            ['catalog.html?collection=wardrobes#catalog-products', 'Шкафы'],
+            ['catalog.html?collection=bedrooms#catalog-products', 'Спальни'],
+            ['catalog.html?collection=bathrooms#catalog-products', 'Ванные'],
             ['portfolio.html', 'Портфолио'],
             ['promos.html', 'Акции'],
-            ['#', 'Покупателям'],
+            ['index.html#process', 'Покупателям'],
             ['articles.html', 'Статьи'],
             ['reviews.html', 'Отзывы'],
             [localStorage.getItem('currentUser') ? 'dashboard.html' : 'login.html',
@@ -334,6 +334,135 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function showSiteNotice(message) {
+        let notice = document.querySelector('.site-notice');
+        if (!notice) {
+            notice = document.createElement('div');
+            notice.className = 'site-notice';
+            notice.setAttribute('role', 'status');
+            body.appendChild(notice);
+        }
+        notice.textContent = message;
+        notice.classList.add('is-visible');
+        clearTimeout(showSiteNotice.timeoutId);
+        showSiteNotice.timeoutId = setTimeout(() => notice.classList.remove('is-visible'), 2600);
+    }
+
+    function setupCommonActions() {
+        document.addEventListener('click', event => {
+            const button = event.target.closest('button');
+            if (!button || (button.type === 'submit' && button.form) || button.dataset.openModal) return;
+
+            const label = button.textContent.replace(/\s+/g, ' ').trim().toLowerCase();
+            const go = target => {
+                window.location.href = target;
+            };
+
+            if (['заказать проект', 'оставить заявку', 'бесплатный дизайн-проект', 'задать вопрос'].includes(label)) {
+                go('index.html#get-design');
+                return;
+            }
+            if (label === 'все студии') {
+                go(document.getElementById('addresses') ? '#addresses' : 'index.html#addresses');
+                return;
+            }
+            if (label === 'перейти в каталог кухонь') {
+                go('catalog.html#catalog-products');
+                return;
+            }
+            if (label === 'смотреть еще') {
+                if (button.closest('.articles-section, .articles-section-dark')) go('articles.html#articles-list');
+                else if (button.closest('.completed-projects, .portfolio-section')) go('portfolio.html#portfolio-projects');
+                else go('catalog.html#catalog-products');
+                return;
+            }
+            if (button.classList.contains('circle-btn') || button.classList.contains('circle-btn-outline')) {
+                if (button.closest('.promos-section, .promo-page-item')) go('promos.html#promotions-list');
+                else if (button.closest('.articles-section, .article-page-card')) go('articles.html#articles-list');
+                else if (button.closest('.reviews-section, .review-card')) go('reviews.html#reviews-list');
+                else if (button.closest('.portfolio-section, .portfolio-item, .project-card')) go('portfolio.html#portfolio-projects');
+                else if (button.closest('.address-card, .address-item')) go(document.getElementById('addresses') ? '#addresses' : 'index.html#addresses');
+            }
+        });
+
+        document.querySelectorAll('button.filter-pill').forEach(button => {
+            button.addEventListener('click', () => button.classList.toggle('active'));
+        });
+        document.querySelectorAll('.btn-apply').forEach(button => {
+            button.addEventListener('click', () => showSiteNotice('Фильтры применены'));
+        });
+
+        document.querySelectorAll('form').forEach(form => {
+            if (['register-form', 'login-form', 'entity-form', 'profile-form'].includes(form.id)) return;
+            form.addEventListener('submit', event => {
+                event.preventDefault();
+                showSiteNotice('Заявка отправлена');
+                form.reset();
+            });
+        });
+    }
+
+    function setupCommonActionsStable() {
+        document.addEventListener('click', event => {
+            const button = event.target.closest('button');
+            if (!button || (button.type === 'submit' && button.form) || button.dataset.openModal) return;
+
+            const label = button.textContent.replace(/\s+/g, ' ').trim().toLowerCase();
+            const go = target => {
+                window.location.href = target;
+            };
+
+            const orderLabels = [
+                '\u0437\u0430\u043a\u0430\u0437\u0430\u0442\u044c \u043f\u0440\u043e\u0435\u043a\u0442',
+                '\u043e\u0441\u0442\u0430\u0432\u0438\u0442\u044c \u0437\u0430\u044f\u0432\u043a\u0443',
+                '\u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0434\u0438\u0437\u0430\u0439\u043d-\u043f\u0440\u043e\u0435\u043a\u0442',
+                '\u0437\u0430\u0434\u0430\u0442\u044c \u0432\u043e\u043f\u0440\u043e\u0441'
+            ];
+
+            if (orderLabels.includes(label)) {
+                go('index.html#get-design');
+                return;
+            }
+            if (label === '\u0432\u0441\u0435 \u0441\u0442\u0443\u0434\u0438\u0438') {
+                go(document.getElementById('addresses') ? '#addresses' : 'index.html#addresses');
+                return;
+            }
+            if (label === '\u043f\u0435\u0440\u0435\u0439\u0442\u0438 \u0432 \u043a\u0430\u0442\u0430\u043b\u043e\u0433 \u043a\u0443\u0445\u043e\u043d\u044c') {
+                go('catalog.html#catalog-products');
+                return;
+            }
+            if (label === '\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0435\u0449\u0435') {
+                if (button.closest('.articles-section, .articles-section-dark')) go('articles.html#articles-list');
+                else if (button.closest('.completed-projects, .portfolio-section')) go('portfolio.html#portfolio-projects');
+                else go('catalog.html#catalog-products');
+                return;
+            }
+            if (button.classList.contains('circle-btn') || button.classList.contains('circle-btn-outline')) {
+                if (button.closest('.promos-section, .promo-page-item')) go('promos.html#promotions-list');
+                else if (button.closest('.articles-section, .article-page-card')) go('articles.html#articles-list');
+                else if (button.closest('.reviews-section, .review-card')) go('reviews.html#reviews-list');
+                else if (button.closest('.portfolio-section, .portfolio-item, .project-card')) go('portfolio.html#portfolio-projects');
+                else if (button.closest('.address-card, .address-item')) go(document.getElementById('addresses') ? '#addresses' : 'index.html#addresses');
+            }
+        });
+
+        document.querySelectorAll('button.filter-pill').forEach(button => {
+            button.addEventListener('click', () => button.classList.toggle('active'));
+        });
+        document.querySelectorAll('.btn-apply').forEach(button => {
+            button.addEventListener('click', () => showSiteNotice('\u0424\u0438\u043b\u044c\u0442\u0440\u044b \u043f\u0440\u0438\u043c\u0435\u043d\u0435\u043d\u044b'));
+        });
+
+        document.querySelectorAll('form').forEach(form => {
+            if (['register-form', 'login-form', 'entity-form', 'profile-form'].includes(form.id)) return;
+            form.addEventListener('submit', event => {
+                event.preventDefault();
+                showSiteNotice('\u0417\u0430\u044f\u0432\u043a\u0430 \u043e\u0442\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0430');
+                form.reset();
+            });
+        });
+    }
+
     ensureMenu();
     bindControls();
     if (window.NeffI18n) {
@@ -342,4 +471,5 @@ document.addEventListener('DOMContentLoaded', () => {
     applyTheme(getSaved(STORAGE.theme, 'light'));
     applyImpairedSettings();
     updateAuthLinks();
+    setupCommonActionsStable();
 });
