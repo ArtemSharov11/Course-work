@@ -214,6 +214,17 @@
     .slider-next {
         width: 54px;
         height: 54px;
+        background: transparent;
+        overflow: visible;
+    }
+
+    .slider-prev img,
+    .slider-next img {
+        display: block;
+        width: 54px;
+        height: 54px;
+        max-width: none;
+        object-fit: contain;
     }
 
     .slider-prev {
@@ -404,15 +415,17 @@
 
     .portfolio-section .container {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        column-gap: 15px;
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 0;
     }
 
     .portfolio__header-line,
     .portfolio__tabs-line,
     .portfolio-item-1,
+    .portfolio-item-2,
+    .portfolio-item-3,
     .portfolio__footer {
-        grid-column: 1 / -1;
+        grid-column: 1;
     }
 
     .portfolio__footer {
@@ -425,27 +438,17 @@
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 15px;
-        margin: 0 0 43px;
+        margin: 0 0 36px;
     }
 
     .item-1-text-wrap,
     .item-2-text-wrap,
     .item-3-text-wrap {
-        display: contents;
+        display: block;
         width: 100%;
         padding: 0;
         text-align: left;
         border: none;
-    }
-
-    .portfolio-item-2,
-    .portfolio-item-3 {
-        display: contents;
-    }
-
-    .item-2-text-wrap,
-    .item-3-text-wrap {
-        display: block;
     }
 
     .item-1-photo-wrap,
@@ -459,8 +462,18 @@
 
     .item-1-photo-wrap,
     .item-3-photo-wrap {
-        grid-column: span 2;
+        grid-column: 1 / -1;
         height: 360px;
+    }
+
+    .item-1-photo-wrap {
+        grid-row: 1;
+    }
+
+    .item-1-text-wrap {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        margin-top: 14px;
     }
 
     .item-2-photo-left,
@@ -484,8 +497,8 @@
         display: block;
         grid-column: 1 / -1;
         height: 360px;
-        margin-top: 20px;
-        order: 5;
+        margin-top: 0;
+        order: 1;
     }
 
     .item-1-main-img,
@@ -499,7 +512,6 @@
     .item-1-text-wrap .section-title,
     .item-2-text-wrap .section-title,
     .item-3-text-wrap .section-title {
-        grid-column: span 2;
         margin: 0;
         font-size: 1.75rem;
         line-height: 2rem;
@@ -518,14 +530,14 @@
     }
 
     .item-2-text-wrap {
-        grid-column: 1;
+        grid-column: 1 / -1;
         order: 3;
         margin-top: 14px;
     }
 
     .item-3-text-wrap {
-        grid-column: 2;
-        order: 4;
+        grid-column: 1 / -1;
+        order: 2;
         margin-top: 14px;
     }
 
@@ -536,17 +548,16 @@
     .portfolio-item-1 .font-portfolio-desc,
     .portfolio-item-2 .font-portfolio-desc,
     .portfolio-item-3 .font-portfolio-desc {
-        grid-column: span 2;
         max-width: 520px;
-        margin: -8px 0 0;
+        margin: 10px 0 0;
     }
 
     .portfolio-item-1 .font-portfolio-desc {
-        margin-top: 4px;
+        margin-top: 10px;
     }
 
     .portfolio-item-2 .font-portfolio-desc {
-        margin-top: 12px;
+        margin-top: 10px;
     }
 
     .portfolio-item-2 .font-portfolio-desc,
@@ -557,12 +568,12 @@
     }
 
     .portfolio-item-3 .font-portfolio-desc {
-        margin-top: 12px;
+        margin-top: 10px;
     }
 
     .portfolio-item-2 .portfolio-meta-wrapper,
     .portfolio-item-3 .portfolio-meta-wrapper {
-        margin-top: 16px;
+        margin-top: 14px;
     }
 
     .portfolio-meta-wrapper {
@@ -570,7 +581,6 @@
         flex-direction: column;
         visibility: visible;
         opacity: 1;
-        grid-column: span 2;
         align-items: flex-start;
         gap: 8px;
         padding-top: 0;
@@ -770,6 +780,16 @@
         padding-top: 0;
         padding-bottom: 28px;
         margin-bottom: 28px;
+    }
+
+    .benefit-item:nth-child(3) .benefit-icon {
+        border-color: transparent;
+    }
+
+    .benefit-item:nth-child(3) .benefit-icon img {
+        width: 70px;
+        height: 70px;
+        max-width: none;
     }
 
     .benefit-text {
@@ -1049,8 +1069,10 @@
     }
 
     .modal-drawer__content {
-        width: min(620px, 100%);
+        width: min(560px, calc(100vw - 96px));
+        max-width: none;
         padding: 38px 32px;
+        border-radius: 18px 0 0 18px;
     }
 
     .portfolio-section {
@@ -1063,16 +1085,16 @@
 
     .portfolio__footer {
         order: 10;
-        margin-top: 259px;
+        margin-top: 8px;
     }
 
     .item-3-photo-wrap {
-        margin-top: 212px;
+        margin-top: 0;
     }
 
     .reviews-section {
-        padding-top: 114px;
-        margin-top: -74px;
+        padding-top: 80px;
+        margin-top: 0;
     }
 
     .reviews-tabs {
@@ -1111,6 +1133,7 @@
     .articles-grid {
         display: grid;
         grid-template-columns: repeat(3, 220px);
+        align-items: stretch;
         gap: 24px;
         width: 100%;
     }
@@ -1119,7 +1142,11 @@
         display: flex;
         width: 220px;
         min-width: 0;
-        height: auto;
+        height: 100% !important;
+    }
+
+    .article-item .font-card-title {
+        min-height: 58px;
     }
 
     .article-item:nth-child(n + 3) {
@@ -1132,7 +1159,7 @@
     }
 
     .articles-action {
-        margin-top: 49px;
+        margin-top: 32px;
     }
 
     .addresses-header {
@@ -1200,17 +1227,19 @@
     }
 
     .design-info {
+        min-width: 0;
         padding: 70px 0 0;
     }
 
     .design-title {
-        width: auto;
-        max-width: none;
+        width: 100%;
+        max-width: 290px;
         color: #fff;
-        font-size: 3.8rem;
-        line-height: 1.08;
-        letter-spacing: 0.04rem;
+        font-size: 3rem;
+        line-height: 1.06;
+        letter-spacing: 0.02rem;
         text-transform: none;
+        overflow-wrap: anywhere;
     }
 
     .design-card {
@@ -1259,6 +1288,7 @@
 
     .footer[style],
     .footer {
+        margin-top: 24px;
         padding: 0 0 25px !important;
         background: var(--bg-color);
     }
@@ -1315,15 +1345,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 50px;
-        height: 50px;
+        width: 42px;
+        height: 42px;
         border-radius: 50%;
-        background: #f4f4f4;
+        background: transparent;
     }
 
     .footer__socials .social-link img {
-        max-width: 20px;
-        max-height: 20px;
+        display: block;
+        width: 42px;
+        height: 42px;
+        max-width: none;
+        max-height: none;
         object-fit: contain;
     }
 

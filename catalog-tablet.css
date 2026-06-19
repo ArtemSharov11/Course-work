@@ -631,15 +631,19 @@
     .design-order__info,
     .design-order__info[style] {
         flex: initial;
+        min-width: 0;
         padding: 70px 0 0 !important;
     }
 
     .design-order__info .font-heading-huge {
+        width: 100%;
+        max-width: 290px;
         color: #FFFFFF;
-        font-size: 3.8rem;
-        line-height: 1.08;
+        font-size: 3rem;
+        line-height: 1.06;
         text-transform: none;
-        letter-spacing: 0.04rem;
+        letter-spacing: 0.02rem;
+        overflow-wrap: anywhere;
     }
 
     .design-order__card {
@@ -765,6 +769,7 @@
 
     .footer[style],
     .footer {
+        margin-top: 24px;
         padding: 0 0 25px !important;
         background: var(--bg-color);
     }
@@ -804,15 +809,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 50px;
-        height: 50px;
+        width: 42px;
+        height: 42px;
         border-radius: 50%;
-        background: #f4f4f4;
+        background: transparent;
     }
 
     .footer__socials .social-link img {
-        max-width: 20px;
-        max-height: 20px;
+        display: block;
+        width: 42px;
+        height: 42px;
+        max-width: none;
+        max-height: none;
         object-fit: contain;
     }
 
@@ -934,5 +942,38 @@
 
     .footer__warning .secondary-section-subtitle[style] {
         width: 354px !important;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1024px) {
+    body.dark-theme .design-order__card {
+        background: #0f0f0f;
+    }
+
+    body.dark-theme .design-form__input,
+    body.dark-theme .design-form__select {
+        color: #ffffff;
+        caret-color: #ffffff;
+    }
+
+    body.dark-theme .design-form__input::placeholder {
+        color: #b0b0b0;
+        opacity: 1;
+    }
+
+    body.dark-theme .design-form__group label,
+    body.dark-theme .form-agreement,
+    body.dark-theme .agreement-text {
+        color: #b0b0b0;
+    }
+
+    body.dark-theme .form-agreement a,
+    body.dark-theme .agreement-text a {
+        color: inherit;
+    }
+
+    body.dark-theme .design-form__select option {
+        color: #ffffff;
+        background: #0f0f0f;
     }
 }

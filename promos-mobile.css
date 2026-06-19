@@ -13,7 +13,7 @@
     }
 
     .promos-page-title::before {
-        content: "РђРєС†РёРё";
+        content: "АКЦИИ";
         display: block;
         color: var(--text-color);
         font-family: "SangBleu Sunrise", serif;
@@ -93,5 +93,112 @@
 
     .addresses-section {
         padding-top: 25px;
+    }
+
+    .get-design-section {
+        display: block;
+        width: 100%;
+        min-height: 0;
+        margin: 50px 0 0;
+        padding: 0;
+        background-image: url("./Assets/img/design-bg.png");
+        background-size: 404px 190px;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+    }
+
+    .get-design-section .design-wrapper {
+        display: flex;
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .get-design-section .design-info {
+        order: 1;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 219px 15px 0;
+    }
+
+    .get-design-section .design-title {
+        width: 100%;
+        max-width: 330px;
+        margin: 0;
+        color: var(--text-color);
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: 0;
+        text-transform: none;
+    }
+
+    .get-design-section .design-card {
+        order: 2;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: none;
+        max-height: none;
+        margin: 0;
+        padding: 18px 15px 0;
+        border-radius: 0;
+        background: var(--bg-color);
+        box-shadow: none;
+    }
+
+    .get-design-section .design-form {
+        display: block;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .get-design-section .form-group {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        padding: 0 0 13px;
+        flex-direction: column;
+        gap: 5px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .get-design-section .form-group + .form-group {
+        margin-top: 14px;
+    }
+
+    .get-design-section .form-input,
+    .get-design-section .form-select {
+        box-sizing: border-box;
+        width: 100%;
+        height: 35px;
+        min-width: 0;
+        padding: 0;
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .get-design-section .form-agreement {
+        display: flex;
+        width: 100%;
+        margin: 18px 0;
+        padding: 0;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .get-design-section .agreement-text {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .get-design-section .design-submit-btn {
+        width: 100%;
+        margin: 0;
     }
 }

@@ -153,6 +153,10 @@ document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('load', function() {
     const preloader = document.getElementById('preloader');
     if (preloader) {
-        setTimeout(() => preloader.classList.add('hide'), 600);
+        setTimeout(() => {
+            preloader.classList.add('hide');
+            preloader.addEventListener('transitionend', () => preloader.remove(), { once: true });
+            setTimeout(() => preloader.remove(), 700);
+        }, 600);
     }
 });

@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     async function addToCart(productId) {
+        document.getElementById('preloader')?.remove();
         const allItems = await api.get('cartItems');
         const existing = allItems.filter(item =>
             String(item.userId) === String(currentUser.id) &&

@@ -3224,10 +3224,13 @@ html[lang="en"] .design-form__agreement p {
         border-top: 1px solid #e1e1e1;
     }
 
-    .footer__col {
+    .footer__col,
+    .footer__col[style] {
         position: relative;
         display: block;
-        margin: 0;
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0 !important;
         padding: 13px 0 14px;
         border-bottom: 1px solid #e1e1e1;
     }
@@ -3240,15 +3243,20 @@ html[lang="en"] .design-form__agreement p {
         display: none;
     }
 
+    .footer__col::before {
+        display: none;
+    }
+
     .footer__col::after {
         content: "";
         position: absolute;
         right: 0;
-        top: 14px;
+        top: 50%;
         width: 21px;
         height: 21px;
         background: url("./Assets/icons/arrow-pagination.png") center / contain no-repeat;
         opacity: 0.8;
+        transform: translateY(-50%);
     }
 
     .footer__info {

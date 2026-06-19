@@ -143,16 +143,32 @@
     position: absolute;
     top: 0.8rem; right: 0.8rem;
     background: white;
-    padding: 0.3rem 0.5rem;
-    border-radius: 0.4rem;
+    min-width: 4.25rem;
+    min-height: 2.75rem;
+    padding: 0.4rem 0.7rem;
+    border-radius: 0.5rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.3rem;
     z-index: 2;
 }
 
+.portfolio-item__likes img {
+    display: none;
+}
+
+.portfolio-item__likes::before {
+    content: "\2661";
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 1.65rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
 .portfolio-item__likes span {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 700;
     color: #000;
 }
@@ -265,7 +281,7 @@ body.dark-theme .pagination__item--arrow img {
 
 .addresses-section {
     margin-top: 0;
-    padding-top: 0.2rem;
+    padding-top: 4rem;
 }
 
 .design-order {

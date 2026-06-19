@@ -123,3 +123,39 @@ body {
     font-size: var(--font-main);
     transition: background 0.3s, color 0.3s;
 }
+
+/* Request forms shared by catalog, articles, portfolio, promos and reviews. */
+body.dark-theme :is(.design-order__card, .design-card) {
+    background: #0f0f0f;
+}
+
+body.dark-theme .design-form :is(.design-form__input, .design-form__select, .form-input, .form-select) {
+    color: var(--text-color);
+    caret-color: var(--text-color);
+}
+
+body.dark-theme .design-form :is(.design-form__input, .form-input)::placeholder {
+    color: var(--secondary-text);
+    opacity: 1;
+}
+
+body.dark-theme .design-form :is(.design-form__select, .form-select) option {
+    color: var(--text-color);
+    background-color: #0f0f0f;
+}
+
+body.dark-theme .design-form :is(.design-form__group, .form-group) label,
+body.dark-theme .design-form :is(.design-form__agreement, .form-agreement, .agreement-text) {
+    color: var(--secondary-text);
+}
+
+body.dark-theme .design-form :is(.design-form__agreement, .form-agreement, .agreement-text) a {
+    color: inherit;
+}
+
+body.dark-theme .design-form :is(.design-form__input, .form-input):-webkit-autofill,
+body.dark-theme .design-form :is(.design-form__input, .form-input):-webkit-autofill:hover,
+body.dark-theme .design-form :is(.design-form__input, .form-input):-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--text-color);
+    caret-color: var(--text-color);
+}

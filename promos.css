@@ -151,3 +151,8 @@ body.dark-theme .circle-btn-outline img {
 .design-info {
     padding-top: 4.8rem;
 }
+
+.get-design-section .form-group {
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--border-color);
+}

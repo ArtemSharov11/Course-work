@@ -114,4 +114,113 @@
     .articles-mobile-extra.addresses-section {
         padding-top: 25px;
     }
+
+    .articles-mobile-extra.design-order {
+        display: block;
+        width: 100%;
+        min-height: 0;
+        margin: 50px 0 0;
+        padding: 0;
+        background-image: url("./Assets/img/design-bg.png");
+        background-size: 404px 190px;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+    }
+
+    .articles-mobile-extra .design-order__container {
+        display: flex;
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .articles-mobile-extra .design-order__info,
+    .articles-mobile-extra .design-order__info[style] {
+        order: 1;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 219px 15px 0 !important;
+    }
+
+    .articles-mobile-extra .design-order__info .font-heading-huge {
+        width: 100%;
+        max-width: 330px;
+        margin: 0;
+        color: var(--text-color);
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: 0;
+        text-transform: none;
+    }
+
+    .articles-mobile-extra .design-order__card {
+        order: 2;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: none;
+        max-height: none;
+        margin: 0;
+        padding: 18px 15px 0;
+        border-radius: 0;
+        background: var(--bg-color);
+        box-shadow: none;
+    }
+
+    .articles-mobile-extra .design-form {
+        display: block;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .articles-mobile-extra .design-form__group {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        padding: 0 0 13px;
+        flex-direction: column;
+        gap: 5px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .articles-mobile-extra .design-form__group + .design-form__group {
+        margin-top: 14px;
+    }
+
+    .articles-mobile-extra .design-form__input,
+    .articles-mobile-extra .design-form__select {
+        box-sizing: border-box;
+        width: 100%;
+        height: 35px;
+        min-width: 0;
+        padding: 0;
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .articles-mobile-extra .design-form__agreement {
+        display: flex;
+        width: 100%;
+        margin: 18px 0;
+        padding: 0;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .articles-mobile-extra .design-form__agreement p {
+        margin: 0;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .articles-mobile-extra .design-form__btn {
+        width: 100%;
+        margin: 0;
+    }
 }

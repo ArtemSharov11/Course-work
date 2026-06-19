@@ -115,7 +115,7 @@
     }
 
     .portfolio-title {
-        margin: 0 0 55px;
+        margin: 48px 0 55px;
         padding-bottom: 26px;
         border-bottom: 1px solid var(--border-color);
         font-size: 64px;
@@ -278,7 +278,98 @@
 
     .addresses-section {
         margin-top: 0;
-        padding-top: 0;
+        padding-top: 70px;
+    }
+
+    .addresses-header {
+        margin-bottom: 30px;
+        padding: 0 0 24px;
+    }
+
+    .addresses-header .font-heading-huge {
+        font-size: 64px;
+        line-height: 64px;
+    }
+
+    .addresses-body {
+        display: block;
+        padding-left: 0;
+    }
+
+    .addresses-sidebar {
+        width: 100%;
+        margin-bottom: 26px;
+    }
+
+    .addresses-sidebar .font-portfolio-desc {
+        margin-bottom: 4px;
+    }
+
+    .address-card {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .address-card__main {
+        display: grid;
+        grid-template-columns: 222px minmax(0, 1fr);
+        grid-template-rows: auto auto;
+        column-gap: 26px;
+        row-gap: 22px;
+        align-items: start;
+        padding-right: 0;
+    }
+
+    .address-card__img {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        width: 222px;
+        height: 140px;
+        border-radius: 14px;
+    }
+
+    .address-card__info {
+        grid-column: 2;
+        grid-row: 1;
+        min-width: 0;
+        gap: 5px;
+    }
+
+    .address-card__info .font-portfolio-desc {
+        font-size: 1.55rem;
+        line-height: 1.2;
+    }
+
+    .address-details {
+        margin-top: 14px;
+    }
+
+    .address-card__meta {
+        grid-column: 2;
+        grid-row: 2;
+        min-width: 0;
+        gap: 14px;
+        padding-right: 0;
+        text-align: left;
+    }
+
+    .address-hours,
+    .address-phones p {
+        white-space: nowrap;
+    }
+
+    .address-card__action {
+        display: none;
+    }
+
+    .addresses-footer {
+        margin-top: 38px;
+    }
+
+    .addresses-footer .btn-outline-cyan {
+        width: 350px;
+        padding-right: 20px;
+        padding-left: 20px;
     }
 
     .design-order {
@@ -299,15 +390,19 @@
     .design-order__info,
     .design-order__info[style] {
         flex: initial;
+        min-width: 0;
         padding: 70px 0 0 !important;
     }
 
     .design-order__info .font-heading-huge {
+        width: 100%;
+        max-width: 290px;
         color: #FFFFFF;
-        font-size: 3.8rem;
-        line-height: 1.08;
-        letter-spacing: 0.04rem;
+        font-size: 3rem;
+        line-height: 1.06;
+        letter-spacing: 0.02rem;
         text-transform: none;
+        overflow-wrap: anywhere;
     }
 
     .design-order__card {
@@ -385,6 +480,7 @@
 
     .footer[style],
     .footer {
+        margin-top: 24px;
         padding: 0 0 25px !important;
         background: var(--bg-color);
     }
@@ -424,15 +520,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 50px;
-        height: 50px;
+        width: 42px;
+        height: 42px;
         border-radius: 50%;
-        background: #f4f4f4;
+        background: transparent;
     }
 
     .footer__socials .social-link img {
-        max-width: 20px;
-        max-height: 20px;
+        display: block;
+        width: 42px;
+        height: 42px;
+        max-width: none;
+        max-height: none;
         object-fit: contain;
     }
 

@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const body = document.body;
+    const currentPage = window.location.pathname.split('/').pop().toLowerCase();
+    const isAuthPage = currentPage === 'login.html' || currentPage === 'register.html';
 
     function getSaved(key, fallback) {
         return localStorage.getItem(key) || fallback;
@@ -348,6 +350,100 @@ document.addEventListener('DOMContentLoaded', () => {
         showSiteNotice.timeoutId = setTimeout(() => notice.classList.remove('is-visible'), 2600);
     }
 
+    function ensureRequestModal() {
+        if (isAuthPage) {
+            document.getElementById('modal-request')?.remove();
+            return;
+        }
+
+        let modal = document.getElementById('modal-request');
+
+        if (!modal) {
+            modal = document.createElement('div');
+            modal.id = 'modal-request';
+            modal.className = 'modal-drawer';
+            modal.innerHTML = `
+                <div class="modal-drawer__overlay"></div>
+                <div class="modal-drawer__content">
+                    <button type="button" class="modal-close-btn" aria-label="Закрыть">&times;</button>
+                    <h2 class="font-heading-huge modal-drawer__title">ЗАЯВКА</h2>
+                    <div class="service-selector">
+                        <div class="service-card active">
+                            <div class="service-card__header">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <div class="info-icon">i</div>
+                            </div>
+                            <p class="service-card__text">Бесплатный<br>дизайн-проект</p>
+                        </div>
+                        <div class="service-card active">
+                            <div class="service-card__header">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <div class="info-icon">i</div>
+                            </div>
+                            <p class="service-card__text">Консультация<br>дизайнера</p>
+                        </div>
+                    </div>
+                    <form class="modal-form">
+                        <div class="modal-input-group">
+                            <label class="secondary-section-subtitle">Имя</label>
+                            <input type="text" placeholder="Ваше имя" class="modal-input">
+                        </div>
+                        <div class="modal-input-group">
+                            <label class="secondary-section-subtitle">Телефон</label>
+                            <input type="tel" placeholder="+7 (000) 000-00-00" class="modal-input">
+                        </div>
+                        <div class="modal-input-group">
+                            <label class="secondary-section-subtitle">Город</label>
+                            <select class="modal-input">
+                                <option>Москва и область</option>
+                                <option>Санкт-Петербург</option>
+                            </select>
+                        </div>
+                        <button type="button" class="additional-trigger" data-modal-extra>ДОПОЛНИТЕЛЬНО +</button>
+                        <div class="modal-extra-fields" hidden>
+                            <textarea placeholder="Ваш комментарий..." class="modal-input"></textarea>
+                        </div>
+                        <div class="form-agreement modal-form__agreement">
+                            <label class="checkbox-container">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                            </label>
+                            <p class="secondary-section-subtitle">
+                                Согласен с обработкой персональных данных в соответствии с
+                                <a href="register.html#agreement">Лицензионным соглашением</a>
+                            </p>
+                        </div>
+                        <button type="submit" class="btn-order modal-form__submit">ОТПРАВИТЬ ЗАЯВКУ</button>
+                    </form>
+                </div>
+            `;
+            body.appendChild(modal);
+        }
+
+        document.querySelectorAll('.footer-btn').forEach(button => {
+            button.dataset.openModal = 'modal-request';
+        });
+
+        document.addEventListener('click', event => {
+            const extraButton = event.target.closest('[data-modal-extra]');
+            if (!extraButton) return;
+
+            const fields = extraButton.closest('.modal-form')?.querySelector('.modal-extra-fields, #extra-fields');
+            if (!fields) return;
+
+            const opening = fields.hidden || fields.style.display === 'none';
+            fields.hidden = !opening;
+            fields.style.display = opening ? 'block' : 'none';
+            extraButton.textContent = opening ? 'СКРЫТЬ -' : 'ДОПОЛНИТЕЛЬНО +';
+        });
+    }
+
     function setupCommonActions() {
         document.addEventListener('click', event => {
             const button = event.target.closest('button');
@@ -464,6 +560,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     ensureMenu();
+    ensureRequestModal();
     bindControls();
     if (window.NeffI18n) {
         window.NeffI18n.setLanguage(localStorage.getItem('selectedLang') || 'ru');

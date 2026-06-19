@@ -42,8 +42,9 @@
 }
 
 .review-card {
-    display: flex;
-    gap: 19.5rem;
+    display: grid;
+    grid-template-columns: 15.6rem minmax(0, 1fr);
+    gap: 3.8rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--border-color);
 }
@@ -53,6 +54,8 @@
 }
 
 .review-card__avatar img {
+    width: 7rem;
+    height: 7rem;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
@@ -89,6 +92,7 @@
 
 .review-card__content {
     flex-grow: 1;
+    min-width: 0;
 }
 
 .review-card__info {
@@ -132,15 +136,76 @@
 }
 
 .review-img-item {
+    min-width: 0;
     height: 27rem;
     border-radius: 1.25rem;
     overflow: hidden;
 }
 
-.review-img-item img {
+.review-img-item img,
+.review-card__gallery > img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+@media (max-width: 739px) {
+    .reviews-page {
+        padding-top: 25px;
+        overflow-x: hidden;
+    }
+
+    .reviews-main-title {
+        margin: 20px 0 25px;
+        padding-bottom: 20px;
+        font-size: 36px;
+        line-height: 1.08;
+        letter-spacing: 0;
+        overflow-wrap: anywhere;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .reviews-tabs {
+        gap: 8px;
+        overflow-x: auto;
+    }
+
+    .review-card {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        width: 100%;
+        padding-bottom: 28px;
+    }
+
+    .review-card__avatar img {
+        width: 72px;
+        height: 72px;
+    }
+
+    .review-card__info,
+    .review-card__text-container {
+        margin-bottom: 18px;
+    }
+
+    .review-text,
+    .review-text-content {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+    }
+
+    .review-card__gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+    }
+
+    .review-img-item {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        border-radius: 10px;
+    }
 }
 
 body.dark-theme .review-card__avatar img {
@@ -205,7 +270,7 @@ body.dark-theme .review-card__avatar img {
 
 .addresses-section {
     margin-top: 0;
-    padding-top: 0.2rem;
+    padding-top: 4rem;
 }
 
 .design-order {
@@ -349,7 +414,9 @@ body.dark-theme .review-card__avatar img {
 
     .reviews-studios-mobile {
         display: flex;
-        width: 330px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 330px;
         height: 42px;
         margin: 0 0 23px;
         padding: 0 20px;
@@ -450,7 +517,18 @@ body.dark-theme .review-card__avatar img {
         display: flex;
         width: calc(100% + 15px);
         gap: 20px;
-        overflow: hidden;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        overscroll-behavior-x: contain;
+        touch-action: pan-x;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .review-card__gallery::-webkit-scrollbar {
+        display: none;
     }
 
     .review-img-item,
@@ -461,6 +539,8 @@ body.dark-theme .review-card__avatar img {
         height: 190px;
         border-radius: 14px;
         overflow: hidden;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
     }
 
     .review-img-item:nth-child(n+2),
@@ -478,6 +558,116 @@ body.dark-theme .review-card__avatar img {
     }
 
     .addresses-section {
-        padding-top: 25px;
+        padding-top: 42px;
+    }
+
+    .design-order {
+        display: block;
+        width: 100%;
+        min-height: 0;
+        margin: 50px 0 0;
+        padding: 0;
+        background-image: url("./Assets/img/design-bg.png");
+        background-size: 404px 190px;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+    }
+
+    .design-order__container {
+        display: flex;
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .design-order__info,
+    .design-order__info[style] {
+        order: 1;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 219px 15px 0 !important;
+    }
+
+    .design-order__info .font-heading-huge {
+        width: 100%;
+        max-width: 330px;
+        margin: 0;
+        color: var(--text-color);
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: 0;
+        text-transform: none;
+    }
+
+    .design-order__card {
+        order: 2;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: none;
+        max-height: none;
+        margin: 0;
+        padding: 18px 15px 0;
+        border-radius: 0;
+        background: var(--bg-color);
+        box-shadow: none;
+    }
+
+    .design-order .design-form {
+        display: block;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .design-order .design-form__group {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        padding: 0 0 13px;
+        flex-direction: column;
+        gap: 5px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .design-order .design-form__group + .design-form__group {
+        margin-top: 14px;
+    }
+
+    .design-order .design-form__input,
+    .design-order .design-form__select {
+        box-sizing: border-box;
+        width: 100%;
+        height: 35px;
+        min-width: 0;
+        padding: 0;
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .design-order .form-agreement,
+    .design-order .design-form__agreement {
+        display: flex;
+        width: 100%;
+        margin: 18px 0;
+        padding: 0;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .design-order .design-form__agreement p {
+        margin: 0;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .design-order .design-form__btn {
+        width: 100%;
+        margin: 0;
     }
 }

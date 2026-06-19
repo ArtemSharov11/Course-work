@@ -16,7 +16,6 @@
                 const payload = await response.json();
                 message = payload.message || message;
             } catch {
-                // JSON Server may return an empty response body.
             }
             throw new Error(message);
         }

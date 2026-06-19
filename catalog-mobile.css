@@ -142,7 +142,6 @@
         gap: 5px;
         padding-bottom: 13px;
         margin-bottom: 14px;
-        border-bottom: 1px solid var(--border-color);
     }
 
     .form-group-h input,
@@ -263,5 +262,196 @@
         margin-top: 0;
         gap: 21px;
         max-width: none;
+    }
+
+    .addresses-main {
+        margin: 0;
+        padding: 49px 0 0;
+        background: var(--bg-color);
+    }
+
+    .addresses-main .section-divider {
+        margin: 0 0 25px;
+        padding: 0 0 15px !important;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .addresses-layout {
+        display: block;
+        padding: 0;
+    }
+
+    .addresses-layout .addresses-sidebar {
+        width: 100%;
+        margin: 0 0 21px;
+    }
+
+    .address-item {
+        display: grid;
+        grid-template-columns: 125px minmax(0, 1fr);
+        gap: 14px 15px;
+        align-items: start;
+        width: 100%;
+        padding: 0 0 25px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .address-item__img {
+        display: block;
+        width: 125px;
+        height: 123px;
+        overflow: hidden;
+        border-radius: 14px;
+    }
+
+    .address-item__img img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .address-item__info {
+        display: flex;
+        min-width: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 7px;
+    }
+
+    .address-item__info h4,
+    .address-item__info h4[style] {
+        margin: 0 !important;
+    }
+
+    .address-item__info > img {
+        display: block;
+        width: auto;
+        height: 22px;
+        object-fit: contain;
+    }
+
+    .address-item__text {
+        display: flex;
+        min-width: 0;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .address-item__text p {
+        margin: 0;
+    }
+
+    .address-item__contacts,
+    .address-item__action {
+        display: none;
+    }
+
+    .addresses-main .section-action,
+    .addresses-main .section-action[style] {
+        margin: 25px 0 0 !important;
+    }
+
+    .design-order {
+        display: block;
+        width: 100%;
+        min-height: 0;
+        margin: 50px 0 0;
+        padding: 0;
+        background-image: url("./Assets/img/design-bg.png");
+        background-size: 404px 190px;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+    }
+
+    .design-order__container {
+        display: flex;
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .design-order__info,
+    .design-order__info[style] {
+        order: 1;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 219px 15px 0 !important;
+    }
+
+    .design-order__info .font-heading-huge {
+        width: 100%;
+        max-width: 330px;
+        margin: 0;
+        color: var(--text-color);
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: 0;
+        text-transform: none;
+    }
+
+    .design-order__card {
+        order: 2;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: none;
+        max-height: none;
+        margin: 0;
+        padding: 18px 15px 0;
+        border-radius: 0;
+        background: var(--bg-color);
+        box-shadow: none;
+    }
+
+    .design-order .design-form {
+        display: block;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .design-order .design-form__group {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        padding: 0 0 13px;
+        flex-direction: column;
+        gap: 5px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .design-order .design-form__group + .design-form__group {
+        margin-top: 14px;
+    }
+
+    .design-order .design-form__input,
+    .design-order .design-form__select {
+        box-sizing: border-box;
+        width: 100%;
+        height: 35px;
+        min-width: 0;
+        padding: 0;
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .design-order .form-agreement,
+    .design-order .design-form__agreement {
+        display: flex;
+        width: 100%;
+        margin: 18px 0;
+        padding: 0;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .design-order .design-form__btn {
+        width: 100%;
+        margin: 0;
     }
 }

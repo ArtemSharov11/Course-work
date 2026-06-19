@@ -421,12 +421,16 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p class="secondary-section-subtitle">${review.role}</p>
                     </div>
                     <div class="review-card__text-container">
-                        <p class="review-text secondary-section-subtitle" style="white-space: normal; width: 56rem;">
+                        <p class="review-text secondary-section-subtitle">
                             ${review.text}
                         </p>
                     </div>
                     <div class="review-card__gallery">
-                        ${(review.gallery || []).map(src => `<img src="${src}" alt="${review.name}">`).join('')}
+                        ${(review.gallery || []).map(src => `
+                            <div class="review-img-item">
+                                <img src="${src}" alt="${review.name}">
+                            </div>
+                        `).join('')}
                     </div>
                 </div>
             </article>

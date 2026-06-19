@@ -555,7 +555,6 @@
     flex-grow: 1;
     display: flex;
     gap: 1.5rem;
-    border-bottom: 1px solid var(--border-color);
 }
 
 .address-item__img {
