@@ -395,6 +395,55 @@
     transform: translateY(0);
 }
 
+@media (max-width: 1024px) {
+    html {
+        font-size: 16px;
+    }
+
+    body {
+        min-width: 0;
+        width: 100%;
+        overflow-x: hidden;
+        background: var(--bg-color);
+    }
+
+    .dashboard-header {
+        width: 100%;
+    }
+
+    .dashboard-header .container,
+    .dashboard .container {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0 auto;
+        padding-inline: 1.5rem;
+        box-sizing: border-box;
+    }
+
+    .dashboard-header .header__container {
+        height: auto;
+        min-height: 4.75rem;
+        align-items: center;
+    }
+
+    .dashboard {
+        min-height: calc(100vh - 4.75rem);
+        padding: 2.5rem 0 4rem;
+    }
+
+    .dashboard-title {
+        font-size: clamp(2rem, 7vw, 3.5rem);
+        line-height: 1.08;
+    }
+
+    .dashboard-profile {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
 @media (max-width: 900px) {
     .dashboard-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -411,6 +460,25 @@
 }
 
 @media (max-width: 640px) {
+    .dashboard-header .container,
+    .dashboard .container {
+        padding-inline: 0.9375rem;
+    }
+
+    .dashboard-header .header__container {
+        min-height: 4rem;
+    }
+
+    .dashboard-brand .font-logo-neff {
+        font-size: 2rem;
+        line-height: 1.7rem;
+    }
+
+    .dashboard-brand .font-logo-subtitle {
+        font-size: 0.5rem;
+        line-height: 0.625rem;
+    }
+
     .dashboard-header__nav a {
         display: none;
     }
@@ -419,8 +487,31 @@
         gap: 0.35rem;
     }
 
+    .dashboard-icon-btn {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
+    .dashboard-logout {
+        font-size: 0.7rem;
+    }
+
     .dashboard {
         padding-top: 2rem;
+    }
+
+    .dashboard-title-row {
+        gap: 1rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .dashboard-title {
+        font-size: 2rem;
+    }
+
+    .dashboard-tabs {
+        margin-inline: -0.9375rem;
+        padding-inline: 0.9375rem;
     }
 
     .dashboard-toolbar {
@@ -441,5 +532,17 @@
 
     .dashboard-field--wide {
         grid-column: auto;
+    }
+
+    .dashboard-profile {
+        padding: 1rem;
+    }
+
+    .dashboard-dialog {
+        width: calc(100% - 1rem);
+    }
+
+    .dashboard-dialog__panel {
+        padding: 1rem;
     }
 }

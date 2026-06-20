@@ -1,0 +1,178 @@
+.not-found-logo-link {
+    text-decoration: none;
+}
+
+.not-found-header-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.not-found-page {
+    min-height: calc(100vh - 14rem);
+    background:
+        radial-gradient(circle at 18% 18%, rgba(0, 185, 190, 0.12), transparent 28rem),
+        linear-gradient(135deg, var(--bg-color) 0%, rgba(0, 185, 190, 0.05) 100%);
+}
+
+.not-found-hero {
+    padding: 7.5rem 0 8.5rem;
+}
+
+.not-found-hero__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6rem;
+}
+
+.not-found-hero__content {
+    max-width: 47rem;
+}
+
+.not-found-hero__eyebrow {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+    color: #00B9BE;
+    margin-bottom: 1.5rem;
+}
+
+.not-found-hero__code {
+    font-family: "SangBleu Sunrise", serif;
+    font-size: 10rem;
+    font-weight: 400;
+    line-height: 0.9;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.not-found-hero__title {
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1.7rem;
+}
+
+.not-found-hero__text {
+    max-width: 37rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 2.4rem;
+}
+
+.not-found-hero__actions {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.not-found-hero__primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 12rem;
+    text-decoration: none;
+}
+
+.not-found-hero__secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 13rem;
+    height: 3.4rem;
+    border: 0.0625rem solid #00B9BE;
+    border-radius: 0.35rem;
+    color: #00B9BE;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.25s;
+}
+
+.not-found-hero__secondary:hover {
+    background: #00B9BE;
+    color: #fff;
+}
+
+.not-found-hero__card {
+    width: 32rem;
+    min-height: 30rem;
+    border: 0.0625rem solid rgba(0, 185, 190, 0.3);
+    border-radius: 1.6rem;
+    background: rgba(255, 255, 255, 0.58);
+    box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4rem;
+    padding: 3rem;
+}
+
+.not-found-hero__card-number {
+    font-family: "SangBleu Sunrise", serif;
+    font-size: 8rem;
+    line-height: 1;
+    color: var(--text-color);
+}
+
+.not-found-hero__card-line {
+    width: 0.12rem;
+    height: 10rem;
+    background: #00B9BE;
+    opacity: 0.45;
+}
+
+.not-found-footer {
+    padding: 2.5rem 0;
+    border-top: 0.0625rem solid rgba(0, 0, 0, 0.08);
+    background: var(--bg-color);
+}
+
+.not-found-footer__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.not-found-footer__links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+    body {
+        min-width: 0;
+    }
+
+    .not-found-hero {
+        padding: 5rem 1.25rem 6rem;
+    }
+
+    .not-found-hero__container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .not-found-hero__card {
+        width: 100%;
+        min-height: 18rem;
+    }
+
+    .not-found-footer {
+        padding: 2rem 1.25rem;
+    }
+
+    .not-found-footer__container,
+    .not-found-footer__links {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

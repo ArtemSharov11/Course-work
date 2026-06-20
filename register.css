@@ -76,6 +76,43 @@ body.dark-theme .error-msg {
     color: var(--text-color);
 }
 
+body.auth-page .get-design-section {
+    margin: 0;
+    padding: 5rem 0 5.2rem !important;
+    min-height: calc(100vh - 6rem) !important;
+    background-size: cover;
+    background-position: center;
+}
+
+body.auth-page .design-wrapper {
+    width: 100%;
+    max-width: 45rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    justify-content: center !important;
+}
+
+body.auth-page .auth-card {
+    width: min(100%, 35rem) !important;
+    margin: 0 auto !important;
+    box-sizing: border-box;
+}
+
+body.register-page .auth-card {
+    width: min(100%, 45rem) !important;
+}
+
+body.auth-page .design-submit-btn {
+    width: 100%;
+    min-height: 3.125rem;
+    padding: 0 1.25rem;
+}
+
+body.auth-page .footer {
+    padding-left: 0 !important;
+}
+
 @media (min-width: 740px) and (max-width: 1024px) {
     body {
         min-width: 0;
@@ -188,10 +225,37 @@ body.dark-theme .error-msg {
 
     .design-submit-btn {
         width: 100%;
+        min-height: 50px;
+        padding: 0 20px;
     }
 }
 
 @media (max-width: 739px) {
+    body.auth-page .get-design-section {
+        padding: 3rem 0 3.5rem !important;
+        min-height: calc(100vh - 50px) !important;
+        background-size: cover;
+        background-position: center;
+    }
+
+    body.auth-page .design-wrapper {
+        max-width: 100%;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+
+    body.auth-page .footer .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    body.auth-page .footer__warning .secondary-section-subtitle[style] {
+        width: auto !important;
+        max-width: 100%;
+    }
+
     .auth-card {
         width: 100% !important;
         max-width: 100%;
